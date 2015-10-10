@@ -8,9 +8,11 @@ This is my personal template to start a new front-end project.
 
 ```
 .
+src
 ├── css (CSS files)
 │   ├── vendor (optional, Vendor CSS files)
 │   ├── fonts.css
+│   ├── print.css
 │   └── style.css
 ├── fonts (Font files)
 ├── img (Images for layout)
@@ -32,8 +34,8 @@ This is my personal template to start a new front-end project.
 
 ### Links ###
 
-* [HTML5BP](https://github.com/h5bp/html5-boilerplate "HTML5 Boilerplate")
-* [Bootstrap](http://getbootstrap.com/getting-started/ "Twitter Bootstrap")
-* [Vanilla by CSSWizardry](https://github.com/csswizardry/vanilla "Vanilla by CSSWizardry")
-* [Cordova Docs](http://cordova.apache.org/docs/en/5.1.1/guide/overview/ "Apache Cordova Docs")
-* [PhoneGap Docs](http://docs.phonegap.com/ "PhoneGap Docs")
+* [W3C Validator (X)HTML](http://validator.w3.org/ "W3C Validator")
+* [W3C Validator CSS](http://jigsaw.w3.org/css-validator/ "CSS Validator")
+* [Can I Use](http://caniuse.com/ "Can I Use")
+* [HTML5Please](http://html5please.com/ "HTML5Please")
+* [HTML5 Outliner](https://gsnedders.html5.org/outliner/ "HTML5 Outliner")

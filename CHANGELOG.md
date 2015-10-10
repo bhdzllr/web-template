@@ -1,8 +1,17 @@
 # Changelog #
 
+
 ## HEAD ##
 
 * null
+
+
+## Version 0.0.2 ##
+
+* HTML Markup examples
+* Meta changes in `<head>`
+* Add "print.css"
+* Add Piwik tracking code
 
 
 ## Version 0.0.1 ##

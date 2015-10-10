@@ -2,10 +2,20 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
 		<title>Page Title | Website Title</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+		<meta name="description" content="Add page description here" />
+		<meta name="keywords" content="key, words" />
+		<meta name="author" content="Author Name" />
+		<meta name="publisher" content="Publisher" />
+		<meta name="robots" content="index, follow" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
 	</head>
 	<body>
 		<!--[if lt IE 8]>
@@ -15,10 +25,300 @@
 			</p>
 		<![endif]-->
 
-		<h1>Hello, World!</h1>
+		<header id="site-header"> <!-- Site header -->
+			<h1>
+				<a href="/" title="Home - Webiste Title">Website Title</a>
+			</h1>
+			<p>Website Tagline</p>
+
+			<a href="#main" title="Skip to content" class="screen-reader-text">Content</a>
+			<a href="#nav" title="Skip to menu" class="screen-reader-text">Menu</a>
+		</header>
+
+		<nav id="nav"> <!-- Site nav, if needed move into header -->
+			<h1>Site navigation</h1>
+			<ul>
+				<li><a href="#" title="Go to page 1">Page 1</a>
+				<li><a href="#" title="Go to page 2">Page 2</a>
+				<li><a href="#" title="Go to page 3">Page 3</a>
+			</ul>
+		</nav>
+
+		<main role="main" id="main"> <!-- Main content, only unique and central content -->
+			<article>
+				<header>
+					<h1>Heading 1: Page Title (or article title)</h1>
+					<p>Subtitle</p>
+					<p>Lead</p>
+				</header>
+
+				<div> <!-- if `<section>` is used (when page has comments) ... -->
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+					sed diam nonumy eirmod tempor invidunt ut labore et dolore
+					magna aliquyam erat, sed diam voluptua.</p>
+
+					<h2>Heading 2</h2> <!-- ... then `<h1>Heading 1</h1>` must be used -->
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+					sed diam nonumy <strong>eirmod tempor</strong> invidunt ut
+					labore et dolore magna aliquyam erat, sed diam voluptua.
+					At vero eos et accusam et justo duo dolores et ea rebum.
+					Stet <a href="#" title="#">clita kasd</a> gubergren, no sea
+					takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+					<h2>Heading 3</h2>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+					sed diam nonumy eirmod tempor invidunt ut labore et dolore
+					magna aliquyam erat, sed diam voluptua. At vero eos et
+					accusam et <abbr title="attribute">attr</abbr>
+					justo duo dolores et ea rebum. Stet clita kasd gubergren,
+					no sea takimata <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+					sanctus est Lorem ipsum dolor sit amet.</p>
+
+					<h3>Heading 2</h3>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+					sed diam nonumy <small>eirmod tempor invidunt</small>
+					ut labore et dolore	magna aliquyam erat, sed diam voluptua.
+					At vero eos et accusam et justo duo dolores et ea rebum.
+					Stet clita kasd	gubergren, no sea <em>takimata sanctus</em>
+					est Lorem H<sub>2</sub>O ipsum dolor
+					sit amet. <sup>[1]</sup></p>
+
+					<h2>Blockquote</h2>
+
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+					sed diam nonumy eirmod tempor invidunt ut labore et dolore
+					magna <del datetime="0000-00-00">aliquyam erat</del>
+					<ins datetime="0000-00-00">sed diam voluptua</ins>.</p>
+
+					<blockquote>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						Integer posuere erat a ante.</p>
+						<cite title="Source Title">Source Title or Author</cite>
+					</blockquote>
+
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+					sed diam nonumy eirmod tempor invidunt ut labore et dolore
+					magna aliquyam erat, sed diam voluptua.</p>
+
+					<h2>Lists</h2>
+
+					<h3>Unordered List</h3>
+					<ul>
+						<li>Point 1</li>
+						<li>Point 2
+							<ul>
+								<li>Point 2.1</li>
+							</ul>
+						</li>
+						<li>Point 3</li>
+					</ul>
+
+					<h3>Ordered List</h3>
+					<ol>
+						<li>Point 1</li>
+						<li>Point 2</li>
+						<li>Point 3</li>
+					</ol>
+
+					<h3>Description List</h3>
+					<p>Good to use in <code>&lt;aside&gt;</code> element
+					as glossary.</p>
+					<dl>
+						<dt>Term</dt>
+						<dd>Description of the term</dd>
+					</dl>
+
+					<h2>Preformatted Text and Code</h2>
+
+					<pre>
+						Sample text ...
+					</pre>
+
+					<pre>
+						<code>
+						&lt;p&gt;Sample html ...&lt;/p&gt;
+
+						if (new == old) {
+							make nothing;
+						}
+						</code>
+					</pre>
+
+					<h2>Tables</h2>
+
+					<table>
+						<caption>Caption or summary</caption>
+						<thead>
+							<tr>
+								<th>Überschrift 1</th>
+								<th>Überschrift 2</th>
+								<th>Überschrift 3</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td>Footer 1</td>
+								<td>Footer 2</td>
+								<td>Footer 3</td>
+							</tr>
+						</tfoot>
+						<tbody>
+							<tr>
+								<td>Inhalt</td>
+								<td>Inhalt</td>
+								<td>Inhalt</td>
+							</tr>
+							<tr>
+								<td>Inhalt</td>
+								<td>Inhalt</td>
+								<td>Inhalt</td>
+							</tr>
+							<tr>
+								<td>Inhalt</td>
+								<td>Inhalt</td>
+								<td>Inhalt</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h2>Forms</h2>
+					<form id="contact" method="post" action="<?php echo $_SERVER['SCRIPT_NAME']; ?>">
+						<fieldset>
+						<legend>Message Data</legend> <!-- name for data to server, id for label -->
+							<label for="sender">Your Name: </label>
+							<input type="text" name="sender" id="sender" placeholder="Placeholder"/>
+							<span>Supporting Text</span>
+
+							<input type="checkbox" name="check" id="check" checked="checked" />
+							<label for="check">Check</label>
+
+							<input type="radio" name="opt" id="opt1" value="Opt 1" checked="checked" />
+							<label for="opt1">Option one is this and that—be sure to include why it's great</label>
+
+							<input type="radio" name="opt" id="opt2" value="Opt 2" />
+							<label for="opt2">Option two can be something else and selecting it will deselect option one</label>
+
+							<label for="range">Range</label>
+							<input name="range" id="range" type="range" min="0" max="100" value="0"> 
+							<output for="range" name="range">0</output> from 100
+
+							<select>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+
+							<select multiple="multiple">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="3" cols="30"></textarea>
+
+							<input type="submit" name="send" id="send" value="Send" />
+						</fieldset>
+					</form>
+				</div>
+
+				<aside> <!-- Untitled -->
+					<section>
+						<h2>Sidenote 1</h2>
+						<p>Note</p>
+					</section>
+
+					<section>
+						<h2>Sidenote 2</h2>
+						<p>Note</p>
+					</section>
+				</aside>
+
+				<section>
+					<h1>Comments</h1>
+
+					<article>
+						<footer>
+							<p>Posted by Name on 00.00.0000 / 00:00 (GMT)</p>
+						</footer>
+
+						<p>Comment text.</p>
+					</article>
+
+					<article>
+						<footer>
+							<p>Posted by Name on 00.00.0000 / 00:00 (GMT)</p>
+						</footer>
+
+						<p>Comment text.</p>
+					</article>
+				</section>
+
+				<footer>
+					<p>Published on TT.MM.JJJJ, 00:00 (GMT)</p>
+					<address>
+						Author: <a href="mailto:mail@example.com" title="Mail the author">Author</a>
+					</address>
+
+					<h2>Footnotes</h2>
+					<dl>
+						<dt>[1]</dt>
+						<dd>Description</dd>
+					</dl>
+
+
+					<h2>Share and Like</h2>
+					<ul>
+						<a href="#" title="Share on Twitter">Twitter</a>
+						<a href="#" title="Star on GitHub">GitHub</a>
+					</ul>
+				</footer>
+			</article>
+		</main>
+
+		<div>
+			<h2>Sidebar</h2>
+		</div>
+
+		<footer>
+			<h2>Site footer</h2>
+			<p>
+				<small>&copy; 2015 bhdzllr</small>
+				<a href="#site-header" title="Scroll to top">Top</a>
+			</p>
+
+			<address>
+				<strong>Company Name</strong><br />
+				Street 00<br />
+				0000 Zip<br />
+				<abbr title="Telephone">T:</abbr> +43(0) 1 234 567-8
+			</address>
+		</footer>
 
 		<script type="text/javascript" src="js/vendor/jquery.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
-		<!-- Analytics Code -->
+		<!-- Piwik -->
+		<script type="text/javascript">
+		var _paq = _paq || [];
+
+		_paq.push(['trackPageView']);
+		_paq.push(['enableLinkTracking']);
+
+		(function() {
+			var u="//example.com/piwik/"; // Set link to piwik
+
+			_paq.push(['setTrackerUrl', u+'piwik.php']);
+			_paq.push(['setSiteId', 1]); // Set site id
+		
+			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+			g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+		})();
+		</script>
+		<noscript><p><img src="//example.com/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+		<!-- End Piwik Code -->
 	</body>
 </html>
