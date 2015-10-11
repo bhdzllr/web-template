@@ -1,0 +1,188 @@
+ /**
+  * CSS Document - Description
+  * Description
+  *
+  * @author    bhdzllr
+  * @license   license
+  * @copyright copyright
+  * @todo      text
+  */
+ 
+html, body {
+	margin: 0;
+	padding: 0;
+	
+	color: #222222;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.45em;
+}
+
+/**
+ * ********** Minimal Normalize ********** 
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	/* IE, not valid, hasLayout
+	*display: inline;
+    *zoom: 1; */
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222222;
+}
+
+embed,
+iframe,
+object,
+video {
+	max-width: 100%; /* Make sure videos and embeds fit their containers. */
+}
+
+a img {
+	border: none;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+abbr {
+	cursor: help;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid #CCCCCC;
+}
+
+input, 
+textarea {
+	outline: 0;
+}
+
+/**
+ * *********** Base **********
+ */
+
+a,
+a:link,
+a:visited {
+}
+
+a:focus,
+a:hover,
+a:active {
+}
+
+p {
+	margin: 1em;
+}
+
+img {
+	/** Responsive Images */
+	width: auto; /* IE 8 fix */
+	max-width: 100% !important;
+	height: auto;
+	
+	border: none;
+}
+
+textarea {
+	max-width: 90%;
+	max-height: 320px;
+	resize: vertical;
+	overflow: auto;
+	vertical-align: top;
+}
+
+.browsehappy {
+	background-color: #FFF666;
+	
+	color: #222222;
+	line-height: 3em;
+	text-align: center;
+}
+
+.browsehappy a {
+	color: #222222;
+}
+
+/**
+ * ********** Section ********** 
+ */
+
+#wrapper {
+	min-height: 100%;
+	height: auto !important; 
+	height: 100%;
+}
+
+/** Desktop First */
+@media only screen and (max-width: 320px) {
+}
+
+/** Mobile First */
+@media only screen and (min-width: 320px) {
+}
+
+/** Print */
+@media print {
+	* {
+		background: transparent;
+	}
+}
+
+/**
+ * ********** HTML5BP Clearfix: contain floats **********
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ * `contenteditable` attribute is included anywhere else in the document.
+ * Otherwise it causes space to appear at the top and bottom of elements
+ * that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ * `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+	*zoom: 1;
+}

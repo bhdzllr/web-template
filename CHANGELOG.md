@@ -3,15 +3,26 @@
 
 ## HEAD ##
 
-* null
+...
+
+
+## Version 0.0.3 ##
+
+* Prevent FOUC, add class `no-js`. Do not use Modernizr
+* Add "createHTML5Elements.js".
+* Add conditional comment for IE (CSS fix), not in `<html>` element,
+  because "X-UA-Compatible" is among.
+* Rename "plugins.js" to "plugins.min.js" because minified version 
+  should be used.
+* Add basic CSS.
 
 
 ## Version 0.0.2 ##
 
-* HTML Markup examples
-* Meta changes in `<head>`
-* Add "print.css"
-* Add Piwik tracking code
+* HTML Markup examples.
+* Meta changes in `<head>`.
+* Add "print.css".
+* Add Piwik tracking code.
 
 
 ## Version 0.0.1 ##
@@ -23,7 +34,7 @@
   with "jquery" and empty "plugin.js".
 * Embed "style.css", "jquery.min.js" and "main.js" in index file.
 * Add comment for tracking code.
-* Add conditional comment for IE < 8.
+* Add conditional comment for IE < 8 (browse happy).
 * Change ".htaccess" absolute path example.
 
 
