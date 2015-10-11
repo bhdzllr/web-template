@@ -6,6 +6,14 @@
 ...
 
 
+## Version 0.0.4 ##
+
+* Remove "fonts.css", place fonts in "style.css".
+* Remove "print.css" and place code in "style.css" withing meda query.
+* Add fallback print CSS for IE <= 8.
+* Add "screen-reader-text"-class.
+
+
 ## Version 0.0.3 ##
 
 * Prevent FOUC, add class `no-js`. Do not use Modernizr

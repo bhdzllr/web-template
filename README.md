@@ -11,8 +11,8 @@ This is my personal template to start a new front-end project.
 src
 ├── css (CSS files)
 │   ├── vendor (optional, Vendor CSS files)
-│   ├── fonts.css
-│   ├── print.css
+│   ├── lte-ie8-fix.css
+│   ├── lte-ie8-print.css
 │   └── style.css
 ├── fonts (Font files)
 ├── img (Images for layout)
