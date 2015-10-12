@@ -1,33 +1,52 @@
 # Web Template #
 
-This is my personal template to start a new front-end project.
+This is my personal template to start a new front-end project
+and also for learning purpose.
+The "src" folder holds some examples, the "dist" folder can be used as it is.
 
-```
 
 ## Folder Structure ##
 
 ```
 .
-src
-├── css (CSS files)
-│   ├── vendor (optional, Vendor CSS files)
-│   ├── lte-ie8-fix.css
-│   ├── lte-ie8-print.css
-│   └── style.css
-├── fonts (Font files)
-├── img (Images for layout)
-│   ├── icons (optional, Icons for the website, not app icons)
-│   └── mobile (optional, Resources for mobile devices)
-│   │   ├── icon (App icons)
-│   │   └── splash (Splash screens)
-├── js (JavaScript files)
-│   ├── vendor (Vendor JS, e.g. jQuery, Modernizr, ...)
-│   │   ├── jquery.min.js
-│   │   └── plugins.min.js
-│   └── main.js
-├── .htaccess
-├── favicon.ico
-└── index.php
+├─ dist
+│  ├── css
+│  │   ├── lte-ie8-fix.css
+│  │   ├── lte-ie8-print.css
+│  │   └── style.css
+│  ├── fonts
+│  ├── img
+│  │   └── icons
+│  ├── js
+│  │   ├── vendor
+│  │   │   ├── jquery.min.js
+│  │   │   └── plugins.min.js
+│  │   ├── createHTML5Elements.js
+│  │   └── main.js
+│  ├── .htaccess
+│  ├── favicon.ico
+│  └── index.php
+└─ src
+   ├── css (CSS files)
+   │   ├── vendor (optional, Vendor CSS files)
+   │   ├── lte-ie8-fix.css
+   │   ├── lte-ie8-print.css
+   │   └── style.css
+   ├── fonts (Font files)
+   ├── img (Images for layout)
+   │   ├── icons (optional, Icons for the website, not app icons)
+   │   └── mobile (optional, Resources for mobile devices)
+   │       ├── icon (App icons)
+   │       └── splash (Splash screens)
+   ├── js (JavaScript files)
+   │   ├── vendor (Vendor JS, e.g. jQuery, Modernizr, ...)
+   │   │   ├── jquery.min.js
+   │   │   └── plugins.min.js
+   │   ├── createHTML5Elements.js
+   │   └── main.js
+   ├── .htaccess
+   ├── favicon.ico
+   └── index.php
 ```
 
 ## Appendix ##

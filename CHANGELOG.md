@@ -1,9 +1,10 @@
 # Changelog #
 
 
-## HEAD ##
+## Version 0.0.5 ##
 
-...
+* Add JavaScript example.
+* Prepare for "dist" folder.
 
 
 ## Version 0.0.4 ##
