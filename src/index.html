@@ -31,6 +31,7 @@
 			</p>
 		<![endif]-->
 
+		<!--removeIf(production)-->
 		<header id="site-header"> <!-- Site header -->
 			<h1>
 				<a href="/" title="Home - Webiste Title">Website Title</a>
@@ -304,10 +305,12 @@
 				<abbr title="Telephone">T:</abbr> +43(0) 1 234 567-8
 			</address>
 		</footer>
+		<!--endRemoveIf(production)-->
 
-		<script type="text/javascript" src="js/vendor/jquery.min.js"></script>
-		<script type="text/javascript" src="js/vendor/plugins.min.js"></script>
+		<script type="text/javascript" src="js/vendor/jquery.min.js"></script><!--removeIf(production)-->
+		<script type="text/javascript" src="js/vendor/plugins.min.js"></script><!--endRemoveIf(production)-->
 		<script type="text/javascript" src="js/main.js"></script>
+		<!-- Analytics Code --><!--removeIf(production)-->
 		<!-- Piwik -->
 		<script type="text/javascript">
 		var _paq = _paq || [];
@@ -326,6 +329,6 @@
 		})();
 		</script>
 		<noscript><p><img src="//example.com/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-		<!-- End Piwik Code -->
+		<!-- End Piwik Code --><!--endRemoveIf(production)-->
 	</body>
 </html>

@@ -1,6 +1,12 @@
 # Changelog #
 
 
+## Version 1.0.0 ##
+
+* Distribute files into "dist" directory with Gulp.
+* Add empty favicon.
+
+
 ## Version 0.0.5 ##
 
 * Add JavaScript example.

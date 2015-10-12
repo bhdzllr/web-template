@@ -1,3 +1,4 @@
+//removeIf(production) 
 /**
  * File description
  *
@@ -9,15 +10,20 @@
  * @version      1.0
  * @todo         text
  */
+//EndRemoveIf(production) 
 
 /**
  * Main module
  *
  * Basic interface functions
  *
- * @dependencies Lib, Lib
+ * @author       bhdzllr
+ * @link         http://github.com/bhdzllr
+ * @copyright    (c) 2015
+ * @license	     -
+ * @dependencies jQuery
  * @version      1.0
- * @todo         text
+ * @todo         -
  */
 var NAMESPACE = NAMESPACE || {};
 NAMESPACE.Main = (function($) {
@@ -25,9 +31,11 @@ NAMESPACE.Main = (function($) {
 	
 	/** Private */
 
+	//removeIf(production) 
 	var x        = 0;      // Window x width
 	var xBound   = 850;    // Bound for x
 	var xElement = '#nav'; // Selector for element to hide/show
+	//EndRemoveIf(production) 
 
 	/**
 	 * Prepare DOM
@@ -41,10 +49,14 @@ NAMESPACE.Main = (function($) {
 	 * Setup up event listeners
 	 */
 	function initListeners() {
+		//removeIf(production) 
 		$(window).resize(resizeFallback);
 		$('[href="#site-header"]').click(scrollToTop);
+		//EndRemoveIf(production) 
+		// $('[href="#site-header"]').click(scrollToTop);
 	}
 
+	//removeIf(production) 
 	/**
 	 * Fallback, if window gets resized
 	 */
@@ -55,6 +67,7 @@ NAMESPACE.Main = (function($) {
 			jQ(xElement).show();
 		}	
 	}
+	//EndRemoveIf(production) 
 
 	/**
 	 * Scroll page to top
@@ -71,6 +84,7 @@ NAMESPACE.Main = (function($) {
 		return false;
 	}
 
+	//removeIf(production) 
 	/**
 	 * Description
 	 *
@@ -89,6 +103,7 @@ NAMESPACE.Main = (function($) {
 	function exampleComments() {
 		// code ...
 	}
+	//EndRemoveIf(production) 
 
 	/** Public */
 	

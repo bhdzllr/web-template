@@ -19,13 +19,7 @@
  * ********** Base ***********
  */
  
-html, body {/*removeIf(production)*/
-	margin: 0;
-	padding: 0;
-	
-	color: #222222;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	/*endRemoveIf(production)*/
+html, body {
 	font-size: 1em;
 	line-height: 1.45em;
 }
@@ -160,21 +154,7 @@ textarea {
  * ********** Section ********** 
  */
 
-/*removeIf(production)*/
-#wrapper {
-	min-height: 100%;
-	height: auto !important; 
-	height: 100%;
-}
 
-/** Desktop First */
-@media only screen and (max-width: 320px) {
-}
-
-/** Mobile First */
-@media only screen and (min-width: 320px) {
-}
-/*endRemoveIf(production)*/
 
 /**
  * ********** Helpers **********

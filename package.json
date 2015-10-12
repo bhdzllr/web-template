@@ -1,0 +1,23 @@
+{
+	"name": "web-template",
+	"description": "Front-end web template",
+	"author": "bhdzllr",
+	"private": true,
+	"version": "1.0.0",
+	"scripts": {
+		"build": "gulp"
+	},
+	"devDependencies": {
+		"del": "^2.0.0",
+		"glob": "^5.0.0",
+		"gulp": "^3.9.0",
+		"gulp-remove-code": "^1.0.2",
+		"jquery": "1.11.3"
+	},
+	"web-template-configs": {
+		"directories": {
+			"dist": "./dist",
+			"src": "./src"
+		}
+  }
+}
