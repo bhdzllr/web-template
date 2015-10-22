@@ -2,7 +2,8 @@
 
 This is my personal template to start a new front-end project
 and also for learning purpose.
-The "src" folder holds some examples, the "dist" folder can be used as it is.
+The "src" folder holds some examples, the "dist" folder can be used
+as starting point.
 
 
 ## Folder Structure ##
@@ -16,7 +17,6 @@ The "src" folder holds some examples, the "dist" folder can be used as it is.
 │  │   └── style.css
 │  ├── fonts
 │  ├── img
-│  │   └── icons
 │  ├── js
 │  │   ├── vendor
 │  │   │   ├── jquery.min.js

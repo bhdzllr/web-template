@@ -61,10 +61,10 @@ NAMESPACE.Main = (function($) {
 	 * Fallback, if window gets resized
 	 */
 	function resizeFallback() {
-		x = jQ(window).width();
+		x = $(window).width();
 
 		if (x > xBound) {
-			jQ(xElement).show();
+			$(xElement).show();
 		}	
 	}
 	//EndRemoveIf(production) 

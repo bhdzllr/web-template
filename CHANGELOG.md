@@ -1,6 +1,13 @@
 # Changelog #
 
 
+## HEAD ##
+
+* Replace spaces with tabs in "style.css".
+* Fix jQuery no conflict in "main.js".
+* README update.
+
+
 ## Version 1.0.0 ##
 
 * Distribute files into "dist" directory with Gulp.
