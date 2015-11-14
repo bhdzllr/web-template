@@ -16,12 +16,24 @@
 
 
 /**
+ * *********** Base **********
+ */
+
+html, body {
+	margin: 0;
+	padding: 0;
+	
+	font-size: 1em;
+	line-height: 1.45em;
+}
+
+/**
  * ********** Minimal Normalize ********** 
  */
 
 html {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;     /* IE: Prevent text size adjust after device orientation change */
+	-webkit-text-size-adjust: 100%; /* iOS: Prevent text size adjust after device orientation change */
 }
 
 article,
@@ -38,14 +50,18 @@ summary {
 	display: block;
 }
 
+[hidden],
+template {
+	display: none;
+}
+
 audio,
 canvas,
 progress,
 video {
 	display: inline-block;
-	/* IE, not valid, hasLayout
-	*display: inline;
-    *zoom: 1; */
+	*display: inline; /** IE hasLayout */
+	*zoom: 1;         /** IE hasLayout */
 }
 
 html,
@@ -62,6 +78,11 @@ textarea {
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
+}
+
+input, 
+textarea {
+	outline: 0;
 }
 
 embed,
@@ -84,27 +105,9 @@ abbr {
 	cursor: help;
 }
 
-hr {
-	border: none;
-	border-top: 1px solid #CCCCCC;
-}
-
-input, 
-textarea {
-	outline: 0;
-}
-
 /**
  * *********** Base **********
  */
-
-html, body {
-	margin: 0;
-	padding: 0;
-	
-	font-size: 1em;
-	line-height: 1.45em;
-}
 
 a,
 a:link,
@@ -126,16 +129,27 @@ img {
 	max-width: 100% !important;
 	height: auto;
 	
-	border: none;
+	border: none; /** No border in older IEs, if wrapped with `a` */
 }
 
 textarea {
-	max-width: 90%;
-	max-height: 320px;
-	resize: vertical;
-	overflow: auto;
 	vertical-align: top;
+	overflow: auto;
+
+	max-height: 320px;
+
+	resize: vertical;
 }
+
+/**
+ * ********** Section ********** 
+ */
+
+
+
+/**
+ * ********** Helpers **********
+ */
 
 .browsehappy {
 	background-color: #FFF666;
@@ -148,16 +162,6 @@ textarea {
 .browsehappy a {
 	color: #222222;
 }
-
-/**
- * ********** Section ********** 
- */
-
-
-
-/**
- * ********** Helpers **********
- */
 
 .screen-reader-text {
 	overflow: hidden;
