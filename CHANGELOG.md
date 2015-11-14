@@ -7,6 +7,9 @@
 * Fix jQuery no conflict in "main.js".
 * README update.
 * Add designer meta tag.
+* Remove duplicate comment in "style.css".
+* Change name in "package.json".
+* Remove "keywords" meta tag, useless nowadays, like "revisit-after".
 
 
 ## Version 1.0.0 ##
@@ -65,4 +68,5 @@
 
 * Basic HTML5 template, with HTML5 doctype, `lang="en"`, `charset="utf-8"`, 
   compatibility mode `IE=edge` and viewport.
+* Do not use Chrome Frame anymore.
 * Basic htaccess file.
