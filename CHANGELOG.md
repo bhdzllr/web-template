@@ -10,6 +10,7 @@
 * Remove duplicate comment in "style.css".
 * Change name in "package.json".
 * Remove "keywords" meta tag, useless nowadays, like "revisit-after".
+* Refactor "style.css".
 
 
 ## Version 1.0.0 ##
