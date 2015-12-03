@@ -12,6 +12,7 @@
 * Remove "keywords" meta tag, useless nowadays, like "revisit-after".
 * Refactor "style.css".
 * Add link rel for shortcut icon only in src.
+* Syntax changes in "gulpfile.js".
 
 
 ## Version 1.0.0 ##

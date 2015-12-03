@@ -1,10 +1,12 @@
 var gulp = require('gulp');
-var del = require('del');
+var del  = require('del');
 
-var pkg = require('./package.json');
+var pkg  = require('./package.json');
 var dirs = pkg['web-template-configs'].directories;
 
 var removeCode = require('gulp-remove-code');
+
+console.log('Version ' + pkg.version);
 
 gulp.task('default', ['clean:after']);
 
@@ -40,16 +42,14 @@ gulp.task('modify', ['copy'], function () {
 	gulp.src(['node_modules/jquery/dist/jquery.min.js'])
 		.pipe(gulp.dest(dirs.dist + '/js/vendor/'));
 
-	console.log('Version ' + pkg.version);
-
 	return;
 });
 
 gulp.task('clean:after', ['modify'], function () {
 	return del([
 		// dirs.dist + '/img/*',
-		dirs.dist + '/img/icons/',
-		dirs.dist + '/img/mobile/',
+		dirs.dist + '/img/icons',
+		dirs.dist + '/img/mobile',
 		// dirs.dist + '/fonts/*',
 		dirs.dist + '/js/vendor/plugins.min.js'
 	]);
