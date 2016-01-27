@@ -3,6 +3,8 @@
 
 ## HEAD ##
 
+* Remove year from footer.
+* Add "media" attribute for IE conditional comments.
 * Replace spaces with tabs in "style.css".
 * Fix jQuery no conflict in "main.js".
 * README update.
