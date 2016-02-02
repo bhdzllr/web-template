@@ -3,6 +3,8 @@
 
 ## HEAD ##
 
+* Remove some meta tags.
+* Outline changes.
 * Remove year from footer.
 * Add "media" attribute for IE conditional comments.
 * Replace spaces with tabs in "style.css".
