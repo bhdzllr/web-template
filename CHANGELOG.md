@@ -17,6 +17,7 @@
 * Refactor "style.css".
 * Add link rel for shortcut icon only in src.
 * Syntax changes in "gulpfile.js".
+* Use `p` as wrapping element for form input as recommended in HTML5 specification.
 
 
 ## Version 1.0.0 ##

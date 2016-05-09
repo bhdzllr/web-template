@@ -192,43 +192,61 @@
 					<form id="contact" method="post" action="<?php echo $_SERVER['SCRIPT_NAME']; ?>">
 						<fieldset>
 						<legend>Message Data</legend> <!-- name for data to server, id for label -->
-							<label for="sender">Your Name: </label>
-							<input type="text" name="sender" id="sender" placeholder="Placeholder"/>
-							<span>Supporting Text</span>
+							<p>
+								<label for="sender">Your Name: </label>
+								<input type="text" name="sender" id="sender" placeholder="Placeholder"/>
+								<span>Supporting Text</span>
+							</p>
+							<p>
+								<input type="checkbox" name="check" id="check" checked="checked" />
+								<label for="check">Check</label>
+							</p>
 
-							<input type="checkbox" name="check" id="check" checked="checked" />
-							<label for="check">Check</label>
+							<p>
+								<input type="radio" name="opt" id="opt1" value="Opt 1" checked="checked" />
+								<label for="opt1">Option one is this and that—be sure to include why it's great</label>
+							</p>
 
-							<input type="radio" name="opt" id="opt1" value="Opt 1" checked="checked" />
-							<label for="opt1">Option one is this and that—be sure to include why it's great</label>
+							<p>
+								<input type="radio" name="opt" id="opt2" value="Opt 2" />
+								<label for="opt2">Option two can be something else and selecting it will deselect option one</label>
+							<p>
+								<label for="range">Range</label>
+								<input name="range" id="range" type="range" min="0" max="100" value="0"> 
+							</p>
 
-							<input type="radio" name="opt" id="opt2" value="Opt 2" />
-							<label for="opt2">Option two can be something else and selecting it will deselect option one</label>
+							<p>
+								<output for="range" name="range">0</output> from 100
+							</p>
 
-							<label for="range">Range</label>
-							<input name="range" id="range" type="range" min="0" max="100" value="0"> 
-							<output for="range" name="range">0</output> from 100
+							<p>
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</p>
 
-							<select>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
+							<p>
+								<select multiple="multiple">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</p>
 
-							<select multiple="multiple">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
+							<p>
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="3" cols="30"></textarea>
+							</p>
 
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="3" cols="30"></textarea>
-
-							<input type="submit" name="send" id="send" value="Send" />
+							<p>
+								<input type="submit" name="send" id="send" value="Send" />
+							</p>
 						</fieldset>
 					</form>
 				</div>
