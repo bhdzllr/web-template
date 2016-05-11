@@ -88,14 +88,15 @@ NAMESPACE.Main = (function($) {
 	/**
 	 * Description
 	 *
-	 * @author  Bergi (http://stackoverflow.com/users/1048572/bergi)
-	 * @see     {@link http://stackoverflow.com/questions/15298912/javascript-generating-combinations-from-n-arrays-with-m-elements}
+	 * @author  Bergi (http://example.com/)
+	 * @see     {@link http://example.com/}
 	 * @todo    todo
 	 *
 	 * @param   {Object}  name Description
 	 * @param   {Array}   name Description
 	 * @param   {string}  name Description
 	 * @param   {number}  name Description
+	 *
 	 * @returns {boolean}      Description
 	 *
 	 * @deprecated

@@ -1,6 +1,6 @@
 # Web Template #
 
-This is my personal template to start a new front-end project
+This is a personal template to start a new front-end project
 and also for learning purpose.
 The "src" folder holds some examples, the "dist" folder can be used
 as starting point.
@@ -19,8 +19,7 @@ as starting point.
 │  ├── img
 │  ├── js
 │  │   ├── vendor
-│  │   │   ├── jquery.min.js
-│  │   │   └── plugins.min.js
+│  │   │   └── jquery.min.js
 │  │   ├── createHTML5Elements.js
 │  │   └── main.js
 │  ├── .htaccess

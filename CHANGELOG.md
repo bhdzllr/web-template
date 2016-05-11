@@ -3,6 +3,15 @@
 
 ## HEAD ##
 
+* ...
+
+
+## Version 1.0.1 ##
+
+* Add `<mark>` example.
+* Update jQuery from 1.11.3 to 1.12.3.
+* Add media object.
+* Use `p` as wrapping element for form input as recommended in HTML5 specification.
 * Remove some meta tags.
 * Outline changes.
 * Remove year from footer.
@@ -17,7 +26,6 @@
 * Refactor "style.css".
 * Add link rel for shortcut icon only in src.
 * Syntax changes in "gulpfile.js".
-* Use `p` as wrapping element for form input as recommended in HTML5 specification.
 
 
 ## Version 1.0.0 ##
