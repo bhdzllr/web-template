@@ -3,7 +3,7 @@
 
 ## HEAD ##
 
-* ...
+* Move `<abbr>` styling to from "Minimal Normalize" to "Base".
 
 
 ## Version 1.0.1 ##

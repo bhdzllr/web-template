@@ -59,10 +59,6 @@ textarea {
 	line-height: inherit;
 }
 
-abbr {
-	cursor: help;
-}
-
 audio,
 canvas,
 progress,
@@ -91,11 +87,9 @@ audio:not([controls]) {
 html, body {
 	margin: 0;
 	padding: 0;
-	/*removeIf(production)*/
 
 	color: #222222;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	/*endRemoveIf(production)*/
 	font-size: 1em;
 	line-height: 1.45em;
 }
@@ -130,6 +124,10 @@ textarea {
 	max-height: 320px;
 
 	resize: vertical;
+}
+
+abbr {
+	cursor: help;
 }
 
 /**
