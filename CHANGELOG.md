@@ -3,6 +3,7 @@
 
 ## HEAD ##
 
+* Add Bram Steins Font Face Observer.
 * Move `<abbr>` styling to from "Minimal Normalize" to "Base".
 
 

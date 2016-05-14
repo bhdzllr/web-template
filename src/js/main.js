@@ -7,7 +7,7 @@
  * @copyright    (c) JJJJ
  * @license	     license
  * @dependencies Lib, Lib
- * @version      1.0
+ * @version      1.0.0
  * @todo         text
  */
 //EndRemoveIf(production) 
@@ -22,7 +22,7 @@
  * @copyright    (c) 2015
  * @license	     -
  * @dependencies jQuery
- * @version      1.0
+ * @version      1.0.0
  * @todo         -
  */
 var NAMESPACE = NAMESPACE || {};
@@ -42,7 +42,14 @@ NAMESPACE.Main = (function($) {
 	 * Hide and show different containers at startup
 	 */
 	function initDOM() {
+		/** FOUC */
 		$('html').removeClass('no-js');
+
+		/** FOIT */
+		var observer = new FontFaceObserver('Font Family');
+		observer.check().then(function () {
+			document.documentElement.className += ' js-fonts-loaded';
+		});
 	}
 
 	/**
