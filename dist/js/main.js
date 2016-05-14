@@ -8,7 +8,7 @@
  * @copyright    (c) 2015
  * @license	     -
  * @dependencies jQuery
- * @version      1.0
+ * @version      1.0.0
  * @todo         -
  */
 var NAMESPACE = NAMESPACE || {};

@@ -57,6 +57,9 @@ textarea {
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
+
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
 }
 
 audio,
