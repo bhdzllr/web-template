@@ -1,6 +1,8 @@
 //removeIf(production) 
 /**
- * File description
+ * File title (optional)
+ *
+ * File description.
  *
  * @author       bhdzllr
  * @link         http://example.com/
@@ -15,7 +17,7 @@
 /**
  * Main module
  *
- * Basic interface functions
+ * Basic interface functions.
  *
  * @author       bhdzllr
  * @link         http://github.com/bhdzllr
@@ -38,8 +40,8 @@ NAMESPACE.Main = (function($) {
 	//EndRemoveIf(production) 
 
 	/**
-	 * Prepare DOM
-	 * Hide and show different containers at startup
+	 * Prepare DOM.
+	 * Hide and show different containers at startup.
 	 */
 	function initDOM() {
 		/** FOUC */
@@ -53,7 +55,7 @@ NAMESPACE.Main = (function($) {
 	}
 
 	/**
-	 * Setup up event listeners
+	 * Setup up event listeners.
 	 */
 	function initListeners() {
 		//removeIf(production) 
@@ -65,7 +67,7 @@ NAMESPACE.Main = (function($) {
 
 	//removeIf(production) 
 	/**
-	 * Fallback, if window gets resized
+	 * Fallback, if window gets resized.
 	 */
 	function resizeFallback() {
 		x = $(window).width();
@@ -77,7 +79,7 @@ NAMESPACE.Main = (function($) {
 	//EndRemoveIf(production) 
 
 	/**
-	 * Scroll page to top
+	 * Scroll page to top.
 	 *
 	 * @returns {Boolean} False (prevent default event)
 	 */
@@ -93,9 +95,11 @@ NAMESPACE.Main = (function($) {
 
 	//removeIf(production) 
 	/**
-	 * Description
+	 * Title (optional)
 	 *
-	 * @author  Bergi (http://example.com/)
+	 * Description.
+	 *
+	 * @author  Author (http://example.com/)
 	 * @see     {@link http://example.com/}
 	 * @todo    todo
 	 *
@@ -117,8 +121,8 @@ NAMESPACE.Main = (function($) {
 	
 	return {
 		/**
-		 * Initialize
-		 * Call DOM preparation and call event listener setup
+		 * Initialize.
+		 * Call DOM preparation and call event listener setup.
 		 */
 		init: function() {
 			initDOM();

@@ -1,7 +1,7 @@
 /**
  * Main module
  *
- * Basic interface functions
+ * Basic interface functions.
  *
  * @author       bhdzllr
  * @link         http://github.com/bhdzllr
@@ -18,8 +18,8 @@ NAMESPACE.Main = (function($) {
 	/** Private */
 
 	/**
-	 * Prepare DOM
-	 * Hide and show different containers at startup
+	 * Prepare DOM.
+	 * Hide and show different containers at startup.
 	 */
 	function initDOM() {
 		/** FOUC */
@@ -33,14 +33,14 @@ NAMESPACE.Main = (function($) {
 	}
 
 	/**
-	 * Setup up event listeners
+	 * Setup up event listeners.
 	 */
 	function initListeners() {
 		// $('[href="#site-header"]').click(scrollToTop);
 	}
 
 	/**
-	 * Scroll page to top
+	 * Scroll page to top.
 	 *
 	 * @returns {Boolean} False (prevent default event)
 	 */
@@ -58,8 +58,8 @@ NAMESPACE.Main = (function($) {
 	
 	return {
 		/**
-		 * Initialize
-		 * Call DOM preparation and call event listener setup
+		 * Initialize.
+		 * Call DOM preparation and call event listener setup.
 		 */
 		init: function() {
 			initDOM();
