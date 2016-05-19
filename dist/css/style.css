@@ -57,9 +57,30 @@ textarea {
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
+}
 
-	-webkit-appearance: none;
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	/*
+	-webkit-appearance: button;
 	-webkit-border-radius: 0;
+	*/
+	cursor: pointer;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+textarea {
+	/*
+	-webkit-border-radius: 0;
+	-webkit-appearance: none;
+	*/
 }
 
 audio,
