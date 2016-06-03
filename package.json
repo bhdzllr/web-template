@@ -3,7 +3,7 @@
 	"description": "Front-end web template",
 	"author": "bhdzllr",
 	"private": true,
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"scripts": {
 		"build": "gulp"
 	},
@@ -12,7 +12,7 @@
 		"glob": "^5.0.0",
 		"gulp": "^3.9.0",
 		"gulp-remove-code": "^1.0.2",
-		"jquery": "1.11.3"
+		"jquery": "1.12.3"
 	},
 	"web-template-configs": {
 		"directories": {

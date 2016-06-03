@@ -24,7 +24,7 @@ as starting point.
 │  │   └── main.js
 │  ├── .htaccess
 │  ├── favicon.ico
-│  └── index.php
+│  └── index.html
 └─ src
    ├── css (CSS files)
    │   ├── vendor (optional, Vendor CSS files)
@@ -45,7 +45,8 @@ as starting point.
    │   └── main.js
    ├── .htaccess
    ├── favicon.ico
-   └── index.php
+   ├── index.html
+   └── standalone.html
 ```
 
 ## Appendix ##

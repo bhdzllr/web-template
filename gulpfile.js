@@ -47,6 +47,7 @@ gulp.task('modify', ['copy'], function () {
 
 gulp.task('clean:after', ['modify'], function () {
 	return del([
+		dirs.dist + '/standalone.html',
 		// dirs.dist + '/img/*',
 		dirs.dist + '/img/icons',
 		dirs.dist + '/img/mobile',

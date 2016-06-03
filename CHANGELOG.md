@@ -3,9 +3,11 @@
 
 ## HEAD ##
 
+* Add "standalone.html".
+* Update "package.json".
 * Add webkit appearance normalize and form input types.
 * Refactor JavaScript main file.
-* Add Bram Steins Font Face Observer.
+* Add Bram Stein's Font Face Observer.
 * Move `<abbr>` styling to from "Minimal Normalize" to "Base".
 
 
