@@ -19,7 +19,7 @@
 				background: #FFFFFF;
 				
 				color: #222222;
-				font-family: 'Roboto', Arial, sans-serif;
+				font-family: Arial, sans-serif;
 				font-size: 1em;
 				line-height: 1.45em;
 			}
@@ -29,13 +29,11 @@
 		<!-- Content -->
 
 		<script type="text/javascript">
-			document.onreadystatechange = function() {
-				if (document.readyState === 'complete') {
-					
-					console.debug('Standalone...');
-					
-				}
-			};
+			(function () {
+
+				console.debug('Standalone...');
+
+			})();
 		</script>
 	</body>
 </html>

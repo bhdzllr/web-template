@@ -1,6 +1,6 @@
 /**
- * Create semantic HTML5 Elements for IE < 9
- * Other older browsers can handle it via CSS
+ * Create semantic HTML5 Elements for IE < 9.
+ * Other older browsers can handle it via CSS.
  */
 
 var e = ('abbr,article,aside,audio,canvas,datalist,details,' +

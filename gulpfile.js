@@ -52,6 +52,6 @@ gulp.task('clean:after', ['modify'], function () {
 		dirs.dist + '/img/icons',
 		dirs.dist + '/img/mobile',
 		// dirs.dist + '/fonts/*',
-		dirs.dist + '/js/vendor/plugins.min.js'
+		// dirs.dist + '/js/vendor/plugins.min.js'
 	]);
 });

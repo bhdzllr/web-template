@@ -3,6 +3,8 @@
 
 ## HEAD ##
 
+* Browse Happy layout changes.
+* JS Syntax changes.
 * Add "standalone.html".
 * Update "package.json".
 * Add webkit appearance normalize and form input types.

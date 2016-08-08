@@ -223,10 +223,11 @@ abbr {
  */
 
 .browsehappy {
+	padding: 0.25em;
+
 	background-color: #FFF666;
 	
 	color: #222222;
-	line-height: 3em;
 	text-align: center;
 }
 

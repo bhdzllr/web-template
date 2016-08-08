@@ -28,7 +28,7 @@
  * @todo         -
  */
 var NAMESPACE = NAMESPACE || {};
-NAMESPACE.Main = (function($) {
+NAMESPACE.Main = (function ($) {
 	'use strict';
 	
 	/** Private */
@@ -129,7 +129,7 @@ NAMESPACE.Main = (function($) {
 			initListeners();
 		}
 	}
-}(jQuery));
+})(jQuery);
 
 /**
  * On document ready ...
