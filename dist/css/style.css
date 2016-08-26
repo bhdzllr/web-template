@@ -266,10 +266,12 @@ abbr {
 }
 
 /**
- * ********** HTML5BP Print styles **********
+ * ********** Print styles **********
  */
 
 @media print {
+	/** HTML5BP */
+
 	*,
 	*:before,
 	*:after,
@@ -335,4 +337,8 @@ abbr {
 	h3 {
 		page-break-after: avoid;
 	}
+
+	/** Custom */
+
+	
 }

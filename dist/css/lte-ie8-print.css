@@ -1,6 +1,8 @@
 /**
- * CSS Document - Print styles form HTML5BP
+ * Print styles for IE lte 8
  */
+
+/** HTML5BP */
 
 *,
 *:before,
@@ -61,3 +63,7 @@ h2,
 h3 {
 	page-break-after: avoid;
 }
+
+/** Custom */
+
+
