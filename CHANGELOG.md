@@ -3,6 +3,8 @@
 
 ## HEAD ##
 
+* Remove font comment from CSS.
+  Use fonts via `<link>`.
 * Fix print style `<link>`.
 * Browse Happy layout changes.
 * JS syntax changes.
