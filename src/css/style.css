@@ -26,6 +26,7 @@ figure,
 footer,
 header,
 main,
+menu,
 nav,
 section,
 summary {
@@ -45,6 +46,7 @@ textarea {
 	color: inherit;
 }
 
+button,
 input,
 select,
 textarea {
@@ -54,27 +56,38 @@ textarea {
 }
 
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	/*
+[type="button"],
+[type="reset"],
+[type="submit"] {
 	-webkit-appearance: button;
 	-webkit-border-radius: 0;
-	*/
+
 	cursor: pointer;
 }
 
-input[type="text"],
-input[type="search"],
-input[type="email"],
-input[type="url"],
-input[type="tel"],
-input[type="number"],
+input,
 textarea {
-	/*
+	/*	
 	-webkit-border-radius: 0;
 	-webkit-appearance: none;
 	*/
+}
+
+[type="text"],
+[type="search"],
+[type="email"],
+[type="url"],
+[type="tel"],
+[type="number"] {}
+
+textarea {
+	vertical-align: top;
+	overflow: auto;
+}
+
+input::-moz-focus-inner {
+	border: 0;  /** Button size fix. */
+	padding: 0; /** Button size fix. */
 }
 
 audio,
@@ -98,6 +111,16 @@ audio:not([controls]) {
 	height: 0;
 }
 
+fieldset {
+	overflow: hidden; /** Older iOS Placeholder Bug */
+}
+
+[type="submit"], button {
+	height: 3em;
+	padding: 0.25em;
+	border: 2px solid silver;
+}
+
 /**
  * *********** Base **********
  */
@@ -109,9 +132,10 @@ html, body {
 	color: #222222;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 1em;
-	line-height: 1.45em;
+	line-height: 1.625em;
 }
 
+.no-js body,
 .js-fonts-loaded body {
 	font-family: 'Font Family', sans-serif;
 }
@@ -132,11 +156,11 @@ p {
 
 img {
 	/** Responsive Images */
-	width: auto; /* IE 8 fix */
+	width: auto;
 	max-width: 100% !important;
 	height: auto;
 	
-	border: none; /** No border in older IEs, if wrapped with `a` */
+	border: none;
 }
 
 textarea {
@@ -209,6 +233,7 @@ abbr {
 
 /** Mobile First */
 @media only screen and (min-width: 320px) {
+	/** Show hidden element like dropping navigations (!important) */
 }
 /*endRemoveIf(production)*/
 
@@ -261,8 +286,8 @@ abbr {
 
 .clearfix:before,
 .clearfix:after {
-	content: " "; /* 1 */
-	display: table; /* 2 */
+	content: " ";
+	display: table;
 }
 
 .clearfix:after {
@@ -277,17 +302,15 @@ abbr {
  * ********** Print styles **********
  */
 
+/** HTML5BP */
 @media print {
-	/** HTML5BP */
-
 	*,
 	*:before,
 	*:after,
 	*:first-letter,
 	*:first-line {
 		background: transparent !important;
-		color: #000 !important; /* Black prints faster:
-								   http://www.sanbeiji.com/archives/953 */
+		color: #000 !important;
 		box-shadow: none !important;
 		text-shadow: none !important;
 	}
@@ -304,11 +327,6 @@ abbr {
 	abbr[title]:after {
 		content: " (" attr(title) ")";
 	}
-
-	/*
-	 * Don't show links that are fragment identifiers,
-	 * or use the `javascript:` pseudo protocol
-	 */
 
 	a[href^="#"]:after,
 	a[href^="javascript:"]:after {
@@ -344,9 +362,10 @@ abbr {
 	h2,
 	h3 {
 		page-break-after: avoid;
-	}
+	}	
+}
 
-	/** Custom */
+/** Custom */
+@media print {
 
-	
 }

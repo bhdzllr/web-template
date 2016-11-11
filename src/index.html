@@ -43,7 +43,7 @@
 		</header>
 
 		<nav id="nav"> <!-- Site nav, if needed move into header -->
-			<h1>Site navigation</h1>
+			<h2>Site navigation</h2>
 			<ul>
 				<li><a href="#" title="Go to page 1">Page 1</a>
 				<li><a href="#" title="Go to page 2">Page 2</a>
@@ -64,7 +64,7 @@
 					sed diam nonumy eirmod tempor invidunt ut labore et dolore
 					magna aliquyam erat, sed diam voluptua.</p>
 
-					<h2>Heading 2</h2> <!-- ... then `<h1>Heading 1</h1>` must be used -->
+					<h2>Heading 2</h2> <!-- ... then `<h1>Heading 1</h1>` can be used -->
 					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 					sed diam nonumy <strong>eirmod tempor</strong> invidunt ut
 					labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -72,7 +72,7 @@
 					Stet <a href="#" title="#">clita kasd</a> gubergren, no sea
 					takimata sanctus est Lorem ipsum dolor sit amet.</p>
 
-					<h2>Heading 3</h2>
+					<h2>Heading 2</h2>
 					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 					sed diam nonumy eirmod tempor invidunt ut labore et dolore
 					magna aliquyam erat, sed diam voluptua. At vero eos et
@@ -81,7 +81,7 @@
 					no sea takimata <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
 					sanctus est Lorem ipsum dolor sit amet.</p>
 
-					<h3>Heading 2</h3>
+					<h3>Heading 3</h3>
 					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 					sed diam nonumy <small>eirmod tempor invidunt</small>
 					ut labore et dolore	magna aliquyam erat, sed diam voluptua.
@@ -190,7 +190,7 @@
 
 					<h2>Forms</h2>
 
-					<form id="contact" method="post" action="<?php echo $_SERVER['SCRIPT_NAME']; ?>">
+					<form id="contact" method="post" action="/">
 						<fieldset>
 						<legend>Message Data</legend> <!-- name for data to server, id for label -->
 							<p>
@@ -263,7 +263,9 @@
 							</p>
 
 							<p>
-								<input type="submit" name="send" id="send" value="Send" />
+								<input type="submit" name="send" id="send" value="Send" class="btn" />
+								<button class="btn">Button</button>
+								<a href="#" title="Cancel" class="btn">Cancel</a>
 							</p>
 						</fieldset>
 					</form>
@@ -301,12 +303,12 @@
 
 				<aside> <!-- Untitled -->
 					<section>
-						<h1>Sidenote 1</h1>
+						<h2>Sidenote 1</h2>
 						<p>Note</p>
 					</section>
 
 					<section>
-						<h1>Sidenote 2</h1>
+						<h2>Sidenote 2</h2>
 						<p>Note</p>
 					</section>
 				</aside>

@@ -1,9 +1,7 @@
 # Web Template #
 
-This is a personal template to start a new front-end project
-and also for learning purpose.
-The "src" folder holds some examples, the "dist" folder can be used
-as starting point.
+This is a personal template to start a new front-end project and also for learning purpose.
+The "src" folder holds some examples, the "dist" folder can be used as starting point.
 
 
 ## Folder Structure ##
@@ -57,4 +55,3 @@ as starting point.
 * [W3C Validator CSS](http://jigsaw.w3.org/css-validator/ "CSS Validator")
 * [Can I Use](http://caniuse.com/ "Can I Use")
 * [HTML5Please](http://html5please.com/ "HTML5Please")
-* [HTML5 Outliner](https://gsnedders.html5.org/outliner/ "HTML5 Outliner")

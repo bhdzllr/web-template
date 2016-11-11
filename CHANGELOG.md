@@ -1,18 +1,21 @@
 # Changelog #
 
 
-## HEAD ##
+## Version 1.0.2 ##
 
+* HTML Update.
+* JS syntax changes.
+  Remove responsive fallback in JS.
+  Use media query instead.
+* Update styles.
 * Update to jQuery 1.12.4.
 * Remove font comment from CSS.
-  Use fonts via `<link>`.
+  Use fonts via `<link>` instead.
 * Fix print style `<link>`.
 * Browse Happy layout changes.
-* JS syntax changes.
 * Add "standalone.html".
 * Update "package.json".
 * Add webkit appearance normalize and form input types.
-* Refactor JavaScript main file.
 * Add Bram Stein's Font Face Observer.
 * Move `<abbr>` styling to from "Minimal Normalize" to "Base".
 

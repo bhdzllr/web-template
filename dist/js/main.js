@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Main module
  *
@@ -5,7 +7,7 @@
  *
  * @author       bhdzllr
  * @link         http://github.com/bhdzllr
- * @copyright    (c) 2015
+ * @copyright    (c) 2016
  * @license	     -
  * @dependencies jQuery
  * @version      1.0.0
@@ -13,9 +15,9 @@
  */
 var NAMESPACE = NAMESPACE || {};
 NAMESPACE.Main = (function ($) {
-	'use strict';
-	
 	/** Private */
+
+	
 
 	/**
 	 * Prepare DOM.
@@ -27,7 +29,7 @@ NAMESPACE.Main = (function ($) {
 
 		/** FOIT */
 		var observer = new FontFaceObserver('Font Family');
-		observer.check().then(function () {
+		observer.load().then(function () {
 			document.documentElement.className += ' js-fonts-loaded';
 		});
 	}
@@ -36,7 +38,8 @@ NAMESPACE.Main = (function ($) {
 	 * Setup up event listeners.
 	 */
 	function initListeners() {
-		// $('[href="#site-header"]').click(scrollToTop);
+		$('.js-scroll-top').click(scrollToTop);
+		$('[href="#site-header"]').click(scrollToTop);
 	}
 
 	/**
@@ -66,7 +69,7 @@ NAMESPACE.Main = (function ($) {
 			initListeners();
 		}
 	}
-})(jQuery);
+}(jQuery));
 
 /**
  * On document ready ...

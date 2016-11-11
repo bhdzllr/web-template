@@ -1,18 +1,4 @@
-//removeIf(production) 
-/**
- * File title (optional)
- *
- * File description.
- *
- * @author       bhdzllr
- * @link         http://example.com/
- * @copyright    (c) JJJJ
- * @license	     license
- * @dependencies Lib, Lib
- * @version      1.0.0
- * @todo         text
- */
-//EndRemoveIf(production) 
+"use strict";
 
 /**
  * Main module
@@ -21,7 +7,7 @@
  *
  * @author       bhdzllr
  * @link         http://github.com/bhdzllr
- * @copyright    (c) 2015
+ * @copyright    (c) 2016
  * @license	     -
  * @dependencies jQuery
  * @version      1.0.0
@@ -29,15 +15,9 @@
  */
 var NAMESPACE = NAMESPACE || {};
 NAMESPACE.Main = (function ($) {
-	'use strict';
-	
 	/** Private */
 
-	//removeIf(production) 
-	var x        = 0;      // Window x width
-	var xBound   = 850;    // Bound for x
-	var xElement = '#nav'; // Selector for element to hide/show
-	//EndRemoveIf(production) 
+	
 
 	/**
 	 * Prepare DOM.
@@ -49,7 +29,7 @@ NAMESPACE.Main = (function ($) {
 
 		/** FOIT */
 		var observer = new FontFaceObserver('Font Family');
-		observer.check().then(function () {
+		observer.load().then(function () {
 			document.documentElement.className += ' js-fonts-loaded';
 		});
 	}
@@ -58,25 +38,9 @@ NAMESPACE.Main = (function ($) {
 	 * Setup up event listeners.
 	 */
 	function initListeners() {
-		//removeIf(production) 
-		$(window).resize(resizeFallback);
+		$('.js-scroll-top').click(scrollToTop);
 		$('[href="#site-header"]').click(scrollToTop);
-		//EndRemoveIf(production) 
-		// $('[href="#site-header"]').click(scrollToTop);
 	}
-
-	//removeIf(production) 
-	/**
-	 * Fallback, if window gets resized.
-	 */
-	function resizeFallback() {
-		x = $(window).width();
-
-		if (x > xBound) {
-			$(xElement).show();
-		}	
-	}
-	//EndRemoveIf(production) 
 
 	/**
 	 * Scroll page to top.
@@ -108,7 +72,7 @@ NAMESPACE.Main = (function ($) {
 	 * @param   {string}  name Description
 	 * @param   {number}  name Description
 	 *
-	 * @returns {boolean}      Description
+	 * @returns {boolean} Description
 	 *
 	 * @deprecated
 	 */
@@ -129,7 +93,7 @@ NAMESPACE.Main = (function ($) {
 			initListeners();
 		}
 	}
-})(jQuery);
+}(jQuery));
 
 /**
  * On document ready ...
