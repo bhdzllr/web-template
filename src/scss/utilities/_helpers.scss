@@ -1,0 +1,47 @@
+/**
+ * ********** Helpers **********
+ */
+
+.browsehappy {
+	padding: 0.25em;
+
+	background-color: #FFF666;
+	
+	color: #222222;
+	text-align: center;
+}
+
+.browsehappy a {
+	color: #222222;
+}
+
+.offscreen {
+	position: absolute;
+	left: -1000em;
+}
+
+.screen-reader-text {
+	overflow: hidden;
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
+.screen-reader-text:focus,
+.screen-reader-text:active {
+	display: block;
+	overflow: visible;
+	position: static;
+	z-index: 100000;
+
+	width: auto;
+	height: auto;
+
+	clip: auto;
+}

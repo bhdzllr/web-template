@@ -1,0 +1,12 @@
+/**
+ * ********** Grid **********
+ */
+
+.site-width {
+	max-width: $width-site;
+	margin: 0 auto;
+}
+
+.row {
+	@extend .clearfix;
+}

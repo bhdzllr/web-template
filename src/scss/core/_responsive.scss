@@ -1,0 +1,13 @@
+/**
+ * ********** Responsive **********
+ */
+
+/** Desktop First */
+@media only screen and (max-width: $break-last) {
+	//
+}
+
+/** Mobile First */
+@media only screen and (min-width: $break-last) {
+	// Show hidden element like dropping navigations (!important)
+}

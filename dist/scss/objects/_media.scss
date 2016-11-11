@@ -1,0 +1,39 @@
+/**
+ * ********** Media Object **********
+ */
+
+.media {
+}
+
+.media,
+.media__body {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.media__meta {
+	float: left;
+
+	margin-right: 2%;
+}
+
+.media__meta img {
+	vertical-align: top;
+
+	background-color: #333333;
+}
+
+.media h3 {
+	margin-top: 0;
+}
+
+.media__body p:last-child {
+	margin-bottom: 0;
+}
+
+.media--flipped .media__meta {
+	float: right;
+
+	margin-right: 0px;
+	margin-left: 2%;
+}

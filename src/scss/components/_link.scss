@@ -1,0 +1,21 @@
+/**
+ * ********** Link **********
+ */
+
+a,
+a:link {
+	color: $color-primary;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: $color-secondary;
+	text-decoration: underline;
+}
+
+a:focus,
+a:hover,
+a:active {
+	color: lighten($color-primary, 5%);
+	text-decoration: underline;
+}

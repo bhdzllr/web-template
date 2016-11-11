@@ -1,0 +1,105 @@
+/**
+ * ********** Minimal Normalize ********** 
+ */
+
+html {
+	-ms-text-size-adjust: 100%;     /* IE: Prevent text size adjust after device orientation change */
+	-webkit-text-size-adjust: 100%; /* iOS: Prevent text size adjust after device orientation change */
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+	color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+	-webkit-border-radius: 0;
+
+	cursor: pointer;
+}
+
+input,
+textarea {
+	/*	
+	-webkit-border-radius: 0;
+	-webkit-appearance: none;
+	*/
+}
+
+[type="text"],
+[type="search"],
+[type="email"],
+[type="url"],
+[type="tel"],
+[type="number"] {}
+
+textarea {
+	vertical-align: top;
+	overflow: auto;
+}
+
+input::-moz-focus-inner {
+	border: 0;  /** Button size fix. */
+	padding: 0; /** Button size fix. */
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	*display: inline; /** IE hasLayout */
+	*zoom: 1;         /** IE hasLayout */
+}
+
+embed,
+iframe,
+object,
+video {
+	max-width: 100%;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+fieldset {
+	overflow: hidden; /** Older iOS Placeholder Bug */
+}

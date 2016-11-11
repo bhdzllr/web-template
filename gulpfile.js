@@ -39,7 +39,7 @@ gulp.task('modify', ['copy'], function () {
 		.pipe(removeCode({ production: true }))
 		.pipe(gulp.dest(dirs.dist + '/js/'));
 
-	gulp.src(['node_modules/jquery/dist/jquery.min.js'])
+	gulp.src(['/node_modules/jquery/dist/jquery.min.js'])
 		.pipe(gulp.dest(dirs.dist + '/js/vendor/'));
 
 	return;

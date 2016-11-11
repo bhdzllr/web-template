@@ -1,6 +1,11 @@
 # Changelog #
 
 
+## Version 2.0.0 ##
+
+* Move to SASS/SCSS.
+
+
 ## Version 1.0.2 ##
 
 * HTML Update.
