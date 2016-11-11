@@ -1,6 +1,11 @@
 # Changelog #
 
 
+## HEAD ##
+
+* Remove duplicated FOUC hook.
+
+
 ## Version 2.0.0 ##
 
 * Move to SASS/SCSS.

@@ -24,9 +24,6 @@ NAMESPACE.Main = (function ($) {
 	 * Hide and show different containers at startup.
 	 */
 	function initDOM() {
-		/** FOUC */
-		$('html').removeClass('no-js');
-
 		/** FOIT */
 		var observer = new FontFaceObserver('Font Family');
 		observer.load().then(function () {
