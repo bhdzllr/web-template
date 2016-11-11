@@ -3,6 +3,7 @@
 
 ## HEAD ##
 
+* Update to jQuery 1.12.4.
 * Remove font comment from CSS.
   Use fonts via `<link>`.
 * Fix print style `<link>`.
