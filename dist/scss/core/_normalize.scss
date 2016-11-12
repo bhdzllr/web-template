@@ -27,12 +27,24 @@ template {
 	display: none;
 }
 
+::-moz-selection {
+	text-shadow: none;
+}
+
+::selection {
+	text-shadow: none;
+}
+
 html,
 button,
 input,
 select,
 textarea {
 	color: inherit;
+}
+
+fieldset {
+	overflow: hidden; /** Older iOS Placeholder Bug */
 }
 
 button,
@@ -45,7 +57,7 @@ textarea {
 }
 
 button,
-[type="button"],
+html [type="button"],
 [type="reset"],
 [type="submit"] {
 	-webkit-appearance: button;
@@ -98,8 +110,4 @@ video {
 audio:not([controls]) {
 	display: none;
 	height: 0;
-}
-
-fieldset {
-	overflow: hidden; /** Older iOS Placeholder Bug */
 }

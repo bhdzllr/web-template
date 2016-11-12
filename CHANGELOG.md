@@ -4,6 +4,7 @@
 ## HEAD ##
 
 * Remove duplicated FOUC hook.
+* Minimal Normalize update.
 
 
 ## Version 2.0.0 ##
