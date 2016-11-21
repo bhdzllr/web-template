@@ -5,6 +5,7 @@
 
 * Remove duplicated FOUC hook.
 * Minimal Normalize update.
+* Fix wrong loop for creating HTML5 elements.
 
 
 ## Version 2.0.0 ##

@@ -8,6 +8,6 @@ var e = ('abbr,article,aside,audio,canvas,datalist,details,' +
 	'progress,section,summary,time,video').split(',');
 var i = e.length;
 
-while (--i) {
+while (i--) {
 	document.createElement(e[i]);
 }
