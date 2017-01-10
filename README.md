@@ -49,7 +49,7 @@ The "src" folder holds some examples, the "dist" folder can be used as starting 
    │   ├── utilities (Helping classes)
    │   └── vendor (Vendor CSS)
    ├── .htaccess
-   ├── favicon.ico
+   ├── favicon.ico (32 x 32)
    ├── index.html
    └── standalone.html
 ```

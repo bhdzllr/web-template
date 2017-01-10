@@ -62,7 +62,6 @@ html [type="button"],
 [type="submit"] {
 	-webkit-appearance: button;
 	-webkit-border-radius: 0;
-
 	cursor: pointer;
 }
 
@@ -87,8 +86,8 @@ textarea {
 }
 
 input::-moz-focus-inner {
-	border: 0;  /** Button size fix. */
-	padding: 0; /** Button size fix. */
+	border: 0;  /** Button size fix */
+	padding: 0; /** Button size fix */
 }
 
 audio,
@@ -110,4 +109,12 @@ video {
 audio:not([controls]) {
 	display: none;
 	height: 0;
+}
+
+abbr {
+	cursor: help;
+}
+
+img {
+	border: none;
 }

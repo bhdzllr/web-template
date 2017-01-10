@@ -17,6 +17,28 @@ html, body {
 	font-family: $font-primary, sans-serif;
 }
 
+h1 {
+	font-size: 1.75em;
+}
+
+h2 {
+	font-size: 1.35em;
+}
+
+h3 {
+	font-size: 1.15em;
+}
+
+h4,
+h5,
+h6 {
+	font-size: 1.05em;
+}
+
+p {
+	margin: 1em 0;
+}
+
 .align-left {
 	float: left;
 }
