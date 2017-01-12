@@ -6,7 +6,7 @@
 * Remove duplicated FOUC hook.
 * Minimal Normalize update.
 * Fix wrong loop for creating HTML5 elements.
-* Move style for HTML text tags to "_base.scss" and other small style changes.
+* Structural changes in SASS files.
 
 
 ## Version 2.0.0 ##
