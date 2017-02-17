@@ -44,6 +44,7 @@ The "src" folder holds some examples, the "dist" folder can be used as starting 
    ├── scss
    │   ├── components (CSS components, reusable, theme through mixins from core theme)
    │   ├── core (Core files)
+   │   ├── modules (CSS Modules, composition of components and objects)
    │   ├── objects (CSS Objects, reusable, just layout, no theme)
    │   ├── pages (Custom style for pages)
    │   ├── utilities (Helping classes)
