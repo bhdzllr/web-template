@@ -9,6 +9,7 @@
 * Structural changes in SASS files.
 * Remove deprecated CSS clip property.
 * SASS note in README, add "module" folder.
+* JS syntax changes.
 
 
 ## Version 2.0.0 ##

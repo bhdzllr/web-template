@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  * Main module
  *
@@ -15,6 +13,8 @@
  */
 var NAMESPACE = NAMESPACE || {};
 NAMESPACE.Main = (function ($) {
+	'use strict';
+
 	/** Private */
 
 	
@@ -36,7 +36,6 @@ NAMESPACE.Main = (function ($) {
 	 */
 	function initListeners() {
 		$('.js-scroll-top').click(scrollToTop);
-		$('[href="#site-header"]').click(scrollToTop);
 	}
 
 	/**
@@ -64,10 +63,10 @@ NAMESPACE.Main = (function ($) {
 	 * @see     {@link http://example.com/}
 	 * @todo    todo
 	 *
-	 * @param   {Object}  name Description
-	 * @param   {Array}   name Description
-	 * @param   {string}  name Description
-	 * @param   {number}  name Description
+	 * @param {Object} name Description
+	 * @param {Array}  name Description
+	 * @param {string} name Description
+	 * @param {number} name Description
 	 *
 	 * @returns {boolean} Description
 	 *
@@ -85,16 +84,16 @@ NAMESPACE.Main = (function ($) {
 		 * Initialize.
 		 * Call DOM preparation and call event listener setup.
 		 */
-		init: function() {
+		init: function () {
 			initDOM();
 			initListeners();
 		}
 	}
-}(jQuery));
+})(jQuery);
 
 /**
  * On document ready ...
  */
-$(function() {
+$(function () {
 	NAMESPACE.Main.init();
 });
