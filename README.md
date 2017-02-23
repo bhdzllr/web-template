@@ -3,6 +3,9 @@
 This is a personal template to start a new front-end project and also for learning purpose.
 The "src" folder holds some examples, the "dist" folder can be used as starting point.
 
+To convert SASS use: `sass --watch scss/main.scss:css/style.css` to watch for
+changes and convert automatically.
+
 
 ## Folder Structure ##
 
@@ -44,7 +47,7 @@ The "src" folder holds some examples, the "dist" folder can be used as starting 
    ├── scss
    │   ├── components (CSS components, reusable, theme through mixins from core theme)
    │   ├── core (Core files)
-   │   ├── modules (CSS Modules, composition of components and objects)
+   │   ├── modules (CSS Modules, composition of objects and components)
    │   ├── objects (CSS Objects, reusable, just layout, no theme)
    │   ├── pages (Custom style for pages)
    │   ├── utilities (Helping classes)

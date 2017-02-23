@@ -7,6 +7,8 @@
 * Minimal Normalize update.
 * Fix wrong loop for creating HTML5 elements.
 * Structural changes in SASS files.
+* Remove deprecated CSS clip property.
+* SASS note in README, add "module" folder.
 
 
 ## Version 2.0.0 ##

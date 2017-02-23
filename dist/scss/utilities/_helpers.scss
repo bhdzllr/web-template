@@ -30,7 +30,6 @@
 	padding: 0;
 
 	border: 0;
-	clip: rect(0 0 0 0);
 }
 
 .screen-reader-text:focus,
@@ -42,6 +41,4 @@
 
 	width: auto;
 	height: auto;
-
-	clip: auto;
 }

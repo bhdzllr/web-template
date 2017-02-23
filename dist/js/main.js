@@ -7,7 +7,7 @@
  *
  * @author       bhdzllr
  * @link         http://github.com/bhdzllr
- * @copyright    (c) 2016
+ * @copyright    (c) 2016 - 2017
  * @license	     -
  * @dependencies jQuery
  * @version      1.0.0

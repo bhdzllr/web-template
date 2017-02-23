@@ -3,7 +3,7 @@
  *
  * @author    bhdzllr
  * @link      http://github.com/bhdzllr | http://twitter.com/bhdzllr
- * @copyright (c) 2016
+ * @copyright (c) 2016 - 2017
  * @license   -
  * @todo      -
  */
@@ -25,7 +25,9 @@
 @import 'components/button';
 @import 'components/page-header';
 
-@import 'pages/custom-page-style';
+// @import 'modules/module-name';
+
+// @import 'pages/custom-page-style';
 
 @import 'utilities/clearfix';
 @import 'utilities/helpers';
@@ -33,5 +35,3 @@
 @import 'core/responsive';
 
 @import 'core/print';
-
-/** sass --watch scss/main.scss:css/style.css */
