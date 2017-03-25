@@ -78,11 +78,15 @@ textarea {
 [type="email"],
 [type="url"],
 [type="tel"],
-[type="number"] {}
+[type="number"] {
+	outline: none;
+}
 
 textarea {
 	vertical-align: top;
 	overflow: auto;
+
+	outline: none;
 }
 
 input::-moz-focus-inner {

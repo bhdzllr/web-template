@@ -10,6 +10,7 @@
 * Remove deprecated CSS clip property.
 * SASS note in README, add "module" folder.
 * JS syntax changes.
+* Remove outline on input fields and textarea.
 
 
 ## Version 2.0.0 ##
