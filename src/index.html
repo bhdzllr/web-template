@@ -13,22 +13,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<script type="text/javascript">document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');</script>
-		<!--[if lt IE 9]><script type="text/javascript" src="js/createHTML5Elements.js"></script><![endif]-->
 
 		<!--removeIf(production)-->
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 		<!--endRemoveIf(production)--><!-- <link rel="stylesheet" href="https://fonturl.com"> -->
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
-		<!--[if lte IE 8]>
-		<link rel="stylesheet" href="css/lte-ie8-fix.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="css/lte-ie8-print.css" type="text/css" media="print" />
-		<![endif]-->
 	</head>
 	<body>
-		<!--[if lte IE 8]>
+		<!--[if lte IE 9]>
 		<div class="browsehappy">
-			<p>Sie verwenden einen <strong>veralteten</strong> Browser. Bitte <a href="http://browsehappy.com/" title="Browser Upgrade">aktualisieren Sie Ihren Browser</a> um ein besseres Surferlebnis zu erhalten.</p>
 			<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+			<p>Sie verwenden einen <strong>veralteten</strong> Browser. Bitte <a href="http://browsehappy.com/" title="Browser Upgrade">aktualisieren Sie Ihren Browser</a> um ein besseres Surferlebnis zu erhalten.</p>
 		</div>
 		<![endif]-->
 
@@ -60,7 +55,7 @@
 					<p>Lead</p>
 				</header>
 
-				<div> <!-- if `<section>` is used (when page has comments) ... -->
+				<div> <!-- if `<section>` is used (e.g. when page has comments) ... -->
 					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 					sed diam nonumy eirmod tempor invidunt ut labore et dolore
 					magna aliquyam erat, sed diam voluptua.</p>
@@ -376,28 +371,9 @@
 		</footer>
 		<!--endRemoveIf(production)-->
 
-		<script type="text/javascript" src="js/vendor/jquery.min.js"></script><!--removeIf(production)-->
-		<script type="text/javascript" src="js/vendor/plugins.min.js"></script><!--endRemoveIf(production)-->
+		<script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+		<script type="text/javascript" src="js/vendor/plugins.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
-		<!-- Analytics Code --><!--removeIf(production)-->
-		<!-- Piwik -->
-		<script type="text/javascript">
-		var _paq = _paq || [];
-
-		_paq.push(['trackPageView']);
-		_paq.push(['enableLinkTracking']);
-
-		(function() {
-			var u="//example.com/piwik/"; // Set link to piwik
-
-			_paq.push(['setTrackerUrl', u+'piwik.php']);
-			_paq.push(['setSiteId', 1]); // Set site id
-		
-			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-			g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-		})();
-		</script>
-		<noscript><p><img src="//example.com/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-		<!-- End Piwik Code --><!--endRemoveIf(production)-->
+		<!-- Analytics Code -->
 	</body>
 </html>

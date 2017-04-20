@@ -13,15 +13,14 @@ changes and convert automatically.
 .
 ├─ dist
 │  ├── css
-│  │   ├── lte-ie8-fix.css
-│  │   ├── lte-ie8-print.css
-│  │   └── style.css (SASS build)
+│  │   ├── style.css (SASS build)
+│  │   └── style.css.map (SASS build)
 │  ├── fonts
 │  ├── img
 │  ├── js
 │  │   ├── vendor
-│  │   │   └── jquery.min.js
-│  │   ├── createHTML5Elements.js
+│  │   │   ├── jquery.min.js
+│  │   │   └── plugins.min.js
 │  │   └── main.js
 │  ├── .htaccess
 │  ├── favicon.ico
@@ -29,9 +28,8 @@ changes and convert automatically.
 └─ src
    ├── css (CSS files)
    │   ├── vendor (Vendor CSS files, optional)
-   │   ├── lte-ie8-fix.css
-   │   ├── lte-ie8-print.css
-   │   └── style.css (SASS build)
+   │   ├── style.css (SASS build)
+   │   └── style.css.map (SASS build)
    ├── fonts (Font files)
    ├── img (Images for layout)
    │   ├── icons (Icons for the website, not app icons, optional)
@@ -42,7 +40,6 @@ changes and convert automatically.
    │   ├── vendor (Vendor JS, e.g. jQuery, Modernizr, ...)
    │   │   ├── jquery.min.js
    │   │   └── plugins.min.js
-   │   ├── createHTML5Elements.js
    │   └── main.js
    ├── scss
    │   ├── components (CSS components, reusable, theme through mixins from core theme)
@@ -66,3 +63,4 @@ changes and convert automatically.
 * [W3C Validator CSS](http://jigsaw.w3.org/css-validator/ "CSS Validator")
 * [Can I Use](http://caniuse.com/ "Can I Use")
 * [HTML5Please](http://html5please.com/ "HTML5Please")
+* [MDN](https://developer.mozilla.org/de/ "Mozilla Developer Network")

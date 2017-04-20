@@ -1,6 +1,12 @@
 # Changelog #
 
 
+## Version 3.0.0 ##
+
+* Drop IE 8 support.
+* Remove Piwik code.
+
+
 ## Version 2.1.0 ##
 
 * Remove duplicated FOUC hook.
