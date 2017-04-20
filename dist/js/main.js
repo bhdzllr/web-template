@@ -68,7 +68,7 @@ NAMESPACE.Main = (function ($) {
 })(jQuery);
 
 /**
- * On document ready ...
+ * Startup
  */
 $(function () {
 	NAMESPACE.Main.init();

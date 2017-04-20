@@ -13,6 +13,7 @@
 @import 'core/base';
 @import 'core/theme';
 @import 'core/layout';
+@import 'core/responsive';
 
 @import 'objects/grid';
 @import 'objects/media';
@@ -23,15 +24,12 @@
 @import 'components/list';
 @import 'components/form';
 @import 'components/button';
-@import 'components/page-header';
 
-// @import 'modules/module-name';
+@import 'modules/page-header';
 
 // @import 'pages/custom-page-style';
 
 @import 'utilities/clearfix';
 @import 'utilities/helpers';
-
-@import 'core/responsive';
 
 @import 'core/print';

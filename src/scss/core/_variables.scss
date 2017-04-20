@@ -5,8 +5,8 @@
 $color-white: #FFFFFF;
 $color-black: #000000;
 
-$color-primary:   #00B050;
-$color-secondary: #508446;
+$color-primary:    #00B050;
+$color-secondary:  #508446;
 $color-background: #FFFFFF;
 
 $color-text:    #333333;
@@ -16,9 +16,15 @@ $color-info:     blue;
 $color-positive: green;
 $color-negative: red;
 
-$font-primary:   'Helvetica Neue';
-$font-secondary: 'Arial';
+$font-primary:   'Helvetica Neue', Helvetica;
+$font-secondary: Arial;
+$font-stack:     $font-primary, $font-secondary, sans-serif;
+$font-web:       'Open Sans';
 
 $width-site: 960px;
 
-$break-last: 320px;
+$break-xs:  320px;
+$break-sm:  480px;
+$break-md:  768px;
+$break-lg:  960px;
+$break-xl: 1200px;

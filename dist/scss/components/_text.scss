@@ -24,6 +24,19 @@ p {
 	margin: 1em 0;
 }
 
+mark {
+	background: #FFFF00;
+	color: #000000
+}
+
+abbr {
+	cursor: help;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
 .text-left {
 	text-align: left;
 }

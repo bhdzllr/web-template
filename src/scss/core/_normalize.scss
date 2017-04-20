@@ -9,15 +9,19 @@ html {
 
 article,
 aside,
-details,
 figcaption,
 figure,
 footer,
 header,
 main,
-menu,
 nav,
-section,
+section {
+	display: block;
+}
+
+details,
+dialog,
+menu,
 summary {
 	display: block;
 }
@@ -35,22 +39,16 @@ template {
 	text-shadow: none;
 }
 
-html,
-button,
-input,
-select,
-textarea {
-	color: inherit;
-}
-
 fieldset {
 	overflow: hidden; /** Older iOS Placeholder Bug */
 }
 
 button,
 input,
+optgroup,
 select,
 textarea {
+	color: inherit;
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
@@ -115,8 +113,8 @@ audio:not([controls]) {
 	height: 0;
 }
 
-abbr {
-	cursor: help;
+svg:not(:root) {
+	overflow: hidden;
 }
 
 img {

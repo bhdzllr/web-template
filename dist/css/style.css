@@ -1,0 +1,394 @@
+/**
+ * Project title
+ *
+ * @author    bhdzllr
+ * @link      http://github.com/bhdzllr | http://twitter.com/bhdzllr
+ * @copyright (c) 2016 - 2017
+ * @license   -
+ * @todo      -
+ */
+/**
+ * ********** Minimal Normalize ********** 
+ */
+html {
+  -ms-text-size-adjust: 100%;
+  /* IE: Prevent text size adjust after device orientation change */
+  -webkit-text-size-adjust: 100%;
+  /* iOS: Prevent text size adjust after device orientation change */ }
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block; }
+
+details,
+dialog,
+menu,
+summary {
+  display: block; }
+
+[hidden],
+template {
+  display: none; }
+
+::-moz-selection {
+  text-shadow: none; }
+
+::selection {
+  text-shadow: none; }
+
+fieldset {
+  overflow: hidden;
+  /** Older iOS Placeholder Bug */ }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  -webkit-border-radius: 0;
+  cursor: pointer; }
+
+input,
+textarea {
+  /*	
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  */ }
+
+[type="text"],
+[type="search"],
+[type="email"],
+[type="url"],
+[type="tel"],
+[type="number"] {
+  outline: none; }
+
+textarea {
+  vertical-align: top;
+  overflow: auto;
+  outline: none; }
+
+input::-moz-focus-inner {
+  border: 0;
+  /** Button size fix */
+  padding: 0;
+  /** Button size fix */ }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  *display: inline;
+  /** IE hasLayout */
+  *zoom: 1;
+  /** IE hasLayout */ }
+
+embed,
+iframe,
+object,
+video {
+  max-width: 100%; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+img {
+  border: none; }
+
+/**
+ * *********** Variables **********
+ */
+/**
+ * *********** Base **********
+ */
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.625em; }
+
+.no-js body,
+.js-fonts-loaded body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter; }
+
+/**
+ * *********** Theme Name **********
+ */
+/**
+ * *********** Layout **********
+ */
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%; }
+
+.align-left {
+  float: left; }
+
+.align-center {
+  margin: 0 auto; }
+
+.align-right {
+  float: right; }
+
+/**
+ * ********** Responsive **********
+ */
+/** Desktop First */
+/** Mobile First */
+/**
+ * ********** Grid **********
+ */
+.site-width {
+  max-width: 960px;
+  margin: 0 auto; }
+
+/**
+ * ********** Media Object **********
+ */
+.media,
+.media__body {
+  overflow: hidden;
+  zoom: 1; }
+
+.media__meta {
+  float: left;
+  margin-right: 2%; }
+
+.media__meta img {
+  vertical-align: top;
+  background-color: #333333; }
+
+.media h3 {
+  margin-top: 0; }
+
+.media__body p:last-child {
+  margin-bottom: 0; }
+
+.media--flipped .media__meta {
+  float: right;
+  margin-right: 0px;
+  margin-left: 2%; }
+
+/**
+ * ********** Text **********
+ */
+h1 {
+  font-size: 1.75em; }
+
+h2 {
+  font-size: 1.35em; }
+
+h3 {
+  font-size: 1.15em; }
+
+h4,
+h5,
+h6 {
+  font-size: 1.05em; }
+
+p {
+  margin: 1em 0; }
+
+mark {
+  background: #FFFF00;
+  color: #000000; }
+
+abbr {
+  cursor: help; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+/**
+ * ********** Link **********
+ */
+a,
+a:link {
+  color: #00B050;
+  text-decoration: underline; }
+
+a:visited {
+  color: #508446;
+  text-decoration: underline; }
+
+a:focus,
+a:hover,
+a:active {
+  color: #00ca5c;
+  text-decoration: underline; }
+
+/**
+ * ********** Image **********
+ */
+img {
+  /** Responsive Image */
+  width: auto;
+  max-width: 100% !important;
+  height: auto; }
+
+/**
+ * ********** List **********
+ */
+.simple {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/**
+ * ********** Form **********
+ */
+textarea {
+  vertical-align: top;
+  overflow: auto;
+  max-height: 320px;
+  resize: vertical; }
+
+/**
+ * ********** Button **********
+ */
+/**
+ * ********** Page Header **********
+ */
+/**
+ * ********** HTML5BP Clearfix **********
+ */
+.clearfix:before, .row:before,
+.clearfix:after,
+.row:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after, .row:after {
+  clear: both; }
+
+.clearfix, .row {
+  *zoom: 1; }
+
+/**
+ * ********** Helpers **********
+ */
+.browsehappy {
+  padding: 0.25em;
+  background-color: #FFF666;
+  color: #222222;
+  text-align: center; }
+
+.browsehappy a {
+  color: #222222; }
+
+.offscreen {
+  position: absolute;
+  left: -1000em; }
+
+.screen-reader-text {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
+.screen-reader-text:focus,
+.screen-reader-text:active {
+  display: block;
+  overflow: visible;
+  position: static;
+  z-index: 100000;
+  width: auto;
+  height: auto; }
+
+/**
+ * ********** Print styles **********
+ */
+/** HTML5BP */
+@media print {
+  *,
+  *:before,
+  *:after,
+  *:first-letter,
+  *:first-line {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+
+  pre {
+    white-space: pre-wrap !important; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+/** Custom */
+
+/*# sourceMappingURL=style.css.map */

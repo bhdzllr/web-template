@@ -3,11 +3,11 @@
  */
 
 /** Desktop First */
-@media only screen and (max-width: $break-last) {
+@media only screen and (max-width: $break-xs) {
 	//
 }
 
 /** Mobile First */
-@media only screen and (min-width: $break-last) {
+@media only screen and (min-width: $break-xs) {
 	// Show hidden element like dropping navigations (!important)
 }

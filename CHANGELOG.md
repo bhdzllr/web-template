@@ -1,10 +1,10 @@
 # Changelog #
 
 
-## HEAD ##
+## Version 2.1.0 ##
 
 * Remove duplicated FOUC hook.
-* Minimal Normalize update.
+* Minimal Normalize and SCSS update.
 * Fix wrong loop for creating HTML5 elements.
 * Structural changes in SASS files.
 * Remove deprecated CSS clip property.
@@ -18,7 +18,7 @@
 * Move to SASS/SCSS.
 
 
-## Version 1.0.2 ##
+## Version 1.2.0 ##
 
 * HTML Update.
 * JS syntax changes.
@@ -37,7 +37,7 @@
 * Move `<abbr>` styling to from "Minimal Normalize" to "Base".
 
 
-## Version 1.0.1 ##
+## Version 1.1.0 ##
 
 * Add `<mark>` example.
 * Update jQuery from 1.11.3 to 1.12.3.

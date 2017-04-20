@@ -63,12 +63,12 @@ NAMESPACE.Main = (function ($) {
 	 * @see     {@link http://example.com/}
 	 * @todo    todo
 	 *
-	 * @param {Object} name Description
-	 * @param {Array}  name Description
-	 * @param {string} name Description
-	 * @param {number} name Description
+	 * @param {Object} name Description.
+	 * @param {Array}  name Description.
+	 * @param {string} name Description.
+	 * @param {number} name Description.
 	 *
-	 * @returns {boolean} Description
+	 * @returns {boolean} Description.
 	 *
 	 * @deprecated
 	 */
@@ -92,7 +92,7 @@ NAMESPACE.Main = (function ($) {
 })(jQuery);
 
 /**
- * On document ready ...
+ * Startup
  */
 $(function () {
 	NAMESPACE.Main.init();

@@ -10,8 +10,9 @@
 *:first-letter,
 *:first-line {
 	background: transparent !important;
-	color: #000 !important;
 	box-shadow: none !important;
+
+	color: #000 !important;
 	text-shadow: none !important;
 }
 
@@ -31,6 +32,10 @@ abbr[title]:after {
 a[href^="#"]:after,
 a[href^="javascript:"]:after {
 	content: "";
+}
+
+pre {
+	white-space: pre-wrap !important;
 }
 
 pre,
