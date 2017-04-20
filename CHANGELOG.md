@@ -5,6 +5,7 @@
 
 * Drop IE 8 support.
 * Remove Piwik code.
+* Add SCSS "table" component and refactor SCSS.
 
 
 ## Version 2.1.0 ##

@@ -12,9 +12,9 @@
  */
 html {
   -ms-text-size-adjust: 100%;
-  /* IE: Prevent text size adjust after device orientation change */
+  /* IE: Prevent text size adjust after device orientation change. */
   -webkit-text-size-adjust: 100%;
-  /* iOS: Prevent text size adjust after device orientation change */ }
+  /* iOS: Prevent text size adjust after device orientation change. */ }
 
 article,
 aside,
@@ -36,12 +36,6 @@ summary {
 [hidden],
 template {
   display: none; }
-
-::-moz-selection {
-  text-shadow: none; }
-
-::selection {
-  text-shadow: none; }
 
 fieldset {
   overflow: hidden;
@@ -118,10 +112,10 @@ img {
   border: none; }
 
 /**
- * *********** Variables **********
+ * ********** Variables **********
  */
 /**
- * *********** Base **********
+ * ********** Base **********
  */
 html, body {
   margin: 0;
@@ -137,10 +131,10 @@ html, body {
   font-weight: lighter; }
 
 /**
- * *********** Theme Name **********
+ * ********** Theme Name **********
  */
 /**
- * *********** Layout **********
+ * ********** Layout **********
  */
 #wrapper {
   min-height: 100%;
@@ -181,8 +175,7 @@ html, body {
   margin-right: 2%; }
 
 .media__meta img {
-  vertical-align: top;
-  background-color: #333333; }
+  vertical-align: top; }
 
 .media h3 {
   margin-top: 0; }
@@ -281,6 +274,29 @@ textarea {
 /**
  * ********** Button **********
  */
+/**
+ * ********** Table **********
+ */
+table {
+  max-width: 100%;
+  width: 100%;
+  margin: 1em 0;
+  border-collapse: collapse;
+  text-align: left; }
+
+table caption {
+  display: none; }
+
+table th {
+  background-color: #bfbfbf; }
+
+table th,
+table td {
+  padding: 0.35em; }
+
+table tr:nth-child(even) {
+  background-color: #e6e6e6; }
+
 /**
  * ********** Page Header **********
  */

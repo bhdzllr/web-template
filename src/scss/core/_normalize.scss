@@ -3,8 +3,8 @@
  */
 
 html {
-	-ms-text-size-adjust: 100%;     /* IE: Prevent text size adjust after device orientation change */
-	-webkit-text-size-adjust: 100%; /* iOS: Prevent text size adjust after device orientation change */
+	-ms-text-size-adjust: 100%;     /* IE: Prevent text size adjust after device orientation change. */
+	-webkit-text-size-adjust: 100%; /* iOS: Prevent text size adjust after device orientation change. */
 }
 
 article,
@@ -29,14 +29,6 @@ summary {
 [hidden],
 template {
 	display: none;
-}
-
-::-moz-selection {
-	text-shadow: none;
-}
-
-::selection {
-	text-shadow: none;
 }
 
 fieldset {
