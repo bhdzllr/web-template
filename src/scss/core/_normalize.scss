@@ -76,10 +76,8 @@ textarea {
 
 input,
 textarea {
-	/*	
 	-webkit-border-radius: 0;
-	-webkit-appearance: none;
-	*/
+	// -webkit-appearance: none;
 }
 
 input::-moz-focus-inner {
@@ -88,6 +86,7 @@ input::-moz-focus-inner {
 }
 
 [type="text"],
+[type="password"],
 [type="search"],
 [type="email"],
 [type="url"],

@@ -76,10 +76,7 @@ textarea {
 
 input,
 textarea {
-  /*	
-  -webkit-border-radius: 0;
-  -webkit-appearance: none;
-  */ }
+  -webkit-border-radius: 0; }
 
 input::-moz-focus-inner {
   border: 0;
@@ -88,6 +85,7 @@ input::-moz-focus-inner {
   /** Button size fix */ }
 
 [type="text"],
+[type="password"],
 [type="search"],
 [type="email"],
 [type="url"],
@@ -245,8 +243,7 @@ img {
   /** Responsive Image */
   width: auto;
   max-width: 100% !important;
-  height: auto;
-  border: none; }
+  height: auto; }
 
 /**
  * ********** List **********
