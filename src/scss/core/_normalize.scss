@@ -26,13 +26,41 @@ summary {
 	display: block;
 }
 
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+}
+
+embed,
+iframe,
+object,
+video {
+	max-width: 100%;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
 [hidden],
 template {
 	display: none;
 }
 
-fieldset {
-	overflow: hidden; /** Older iOS Placeholder Bug */
+svg:not(:root) {
+	overflow: hidden;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+	-webkit-border-radius: 0;
+	cursor: pointer;
 }
 
 button,
@@ -46,21 +74,17 @@ textarea {
 	line-height: inherit;
 }
 
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-	-webkit-appearance: button;
-	-webkit-border-radius: 0;
-	cursor: pointer;
-}
-
 input,
 textarea {
 	/*	
 	-webkit-border-radius: 0;
 	-webkit-appearance: none;
 	*/
+}
+
+input::-moz-focus-inner {
+	border: 0;  /** Button size fix */
+	padding: 0; /** Button size fix */
 }
 
 [type="text"],
@@ -79,36 +103,6 @@ textarea {
 	outline: none;
 }
 
-input::-moz-focus-inner {
-	border: 0;  /** Button size fix */
-	padding: 0; /** Button size fix */
-}
-
-audio,
-canvas,
-progress,
-video {
-	display: inline-block;
-	*display: inline; /** IE hasLayout */
-	*zoom: 1;         /** IE hasLayout */
-}
-
-embed,
-iframe,
-object,
-video {
-	max-width: 100%;
-}
-
-audio:not([controls]) {
-	display: none;
-	height: 0;
-}
-
-svg:not(:root) {
-	overflow: hidden;
-}
-
-img {
-	border: none;
+fieldset {
+	overflow: hidden; /** Older iOS Placeholder Bug */
 }

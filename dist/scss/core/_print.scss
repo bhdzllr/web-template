@@ -7,12 +7,18 @@
 	*,
 	*:before,
 	*:after,
-	*:first-letter,
-	*:first-line {
+	p:first-letter,
+	div:first-letter,
+	blockquote:first-letter,
+	li:first-letter,
+	p:first-line,
+	div:first-line,
+	blockquote:first-line,
+	li:first-line {
 		background: transparent !important;
 		box-shadow: none !important;
 
-		color: #000 !important;
+		// color: #000 !important;
 		text-shadow: none !important;
 	}
 

@@ -33,13 +33,36 @@ menu,
 summary {
   display: block; }
 
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
+embed,
+iframe,
+object,
+video {
+  max-width: 100%; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
 [hidden],
 template {
   display: none; }
 
-fieldset {
-  overflow: hidden;
-  /** Older iOS Placeholder Bug */ }
+svg:not(:root) {
+  overflow: hidden; }
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  -webkit-border-radius: 0;
+  cursor: pointer; }
 
 button,
 input,
@@ -51,20 +74,18 @@ textarea {
   font-size: inherit;
   line-height: inherit; }
 
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-  -webkit-border-radius: 0;
-  cursor: pointer; }
-
 input,
 textarea {
   /*	
   -webkit-border-radius: 0;
   -webkit-appearance: none;
   */ }
+
+input::-moz-focus-inner {
+  border: 0;
+  /** Button size fix */
+  padding: 0;
+  /** Button size fix */ }
 
 [type="text"],
 [type="search"],
@@ -79,37 +100,9 @@ textarea {
   overflow: auto;
   outline: none; }
 
-input::-moz-focus-inner {
-  border: 0;
-  /** Button size fix */
-  padding: 0;
-  /** Button size fix */ }
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  *display: inline;
-  /** IE hasLayout */
-  *zoom: 1;
-  /** IE hasLayout */ }
-
-embed,
-iframe,
-object,
-video {
-  max-width: 100%; }
-
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-svg:not(:root) {
-  overflow: hidden; }
-
-img {
-  border: none; }
+fieldset {
+  overflow: hidden;
+  /** Older iOS Placeholder Bug */ }
 
 /**
  * ********** Variables **********
@@ -252,7 +245,8 @@ img {
   /** Responsive Image */
   width: auto;
   max-width: 100% !important;
-  height: auto; }
+  height: auto;
+  border: none; }
 
 /**
  * ********** List **********
@@ -357,11 +351,16 @@ table tr:nth-child(even) {
   *,
   *:before,
   *:after,
-  *:first-letter,
-  *:first-line {
+  p:first-letter,
+  div:first-letter,
+  blockquote:first-letter,
+  li:first-letter,
+  p:first-line,
+  div:first-line,
+  blockquote:first-line,
+  li:first-line {
     background: transparent !important;
     box-shadow: none !important;
-    color: #000 !important;
     text-shadow: none !important; }
 
   a,
