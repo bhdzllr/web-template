@@ -4,8 +4,11 @@
 ## Version 3.0.0 ##
 
 * Drop IE 8 support.
+* Use double-colon CSS3 syntax for pseudo-elements. 
+* Remove IE 6 - 7 "zoom" for "hasLayout".
 * Remove Piwik code.
-* Add SCSS "table" component and refactor SCSS.
+* Add SCSS "table" component.
+* Refactor SCSS.
 
 
 ## Version 2.1.0 ##

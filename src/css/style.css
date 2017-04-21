@@ -102,6 +102,10 @@ fieldset {
   overflow: hidden;
   /** Older iOS Placeholder Bug */ }
 
+img {
+  border: none;
+  /** IE < 11: No border for `img` wrapped with `a`. */ }
+
 /**
  * ********** Variables **********
  */
@@ -158,8 +162,7 @@ html, body {
  */
 .media,
 .media__body {
-  overflow: hidden;
-  zoom: 1; }
+  overflow: hidden; }
 
 .media__meta {
   float: left;
@@ -256,6 +259,14 @@ img {
 /**
  * ********** Form **********
  */
+legend {
+  display: none; }
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none; }
+
 textarea {
   vertical-align: top;
   overflow: auto;
@@ -294,17 +305,14 @@ table tr:nth-child(even) {
 /**
  * ********** HTML5BP Clearfix **********
  */
-.clearfix:before, .row:before,
-.clearfix:after,
-.row:after {
+.clearfix::before, .row::before,
+.clearfix::after,
+.row::after {
   content: " ";
   display: table; }
 
-.clearfix:after, .row:after {
+.clearfix::after, .row::after {
   clear: both; }
-
-.clearfix, .row {
-  *zoom: 1; }
 
 /**
  * ********** Helpers **********

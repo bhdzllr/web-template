@@ -2,6 +2,17 @@
  * ********** Form **********
  */
 
+legend {
+	display: none;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+
+	border: none;
+}
+
 textarea {
 	vertical-align: top;
 	overflow: auto;
