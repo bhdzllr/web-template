@@ -9,6 +9,7 @@
 * Remove Piwik code.
 * Add SCSS "table" component.
 * Refactor SCSS.
+* Add SCSS file for animations.
 
 
 ## Version 2.1.0 ##
