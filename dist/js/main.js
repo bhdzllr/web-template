@@ -53,6 +53,30 @@ NAMESPACE.Main = (function ($) {
 		return false;
 	}
 
+	//removeIf(production) 
+	/**
+	 * Title (optional)
+	 *
+	 * Description.
+	 *
+	 * @author  Author (http://example.com/)
+	 * @see     {@link http://example.com/}
+	 * @todo    todo
+	 *
+	 * @param {Object} name Description.
+	 * @param {Array}  name Description.
+	 * @param {string} name Description.
+	 * @param {number} name Description.
+	 *
+	 * @returns {boolean} Description.
+	 *
+	 * @deprecated
+	 */
+	function exampleComments() {
+		// code ...
+	}
+	//EndRemoveIf(production) 
+
 	/** Public */
 	
 	return {
