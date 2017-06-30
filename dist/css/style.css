@@ -131,11 +131,6 @@ html, body {
 /**
  * ********** Layout **********
  */
-#wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%; }
-
 .align-left {
   float: left; }
 

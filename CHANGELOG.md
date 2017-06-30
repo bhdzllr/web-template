@@ -3,7 +3,7 @@
 
 ## Version 3.0.0 ##
 
-* Drop IE 8 support.
+* Drop lte IE 8 support.
 * Update to jQuery 3.
 * Use double-colon CSS3 syntax for pseudo-elements. 
 * Remove IE 6 - 7 "zoom" for "hasLayout".
