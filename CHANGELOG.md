@@ -3,129 +3,126 @@
 
 ## Version 3.0.0 ##
 
-* Drop lte IE 8 support.
-* Update to jQuery 3.
-* Use double-colon CSS3 syntax for pseudo-elements. 
-* Remove IE 6 - 7 "zoom" for "hasLayout".
-* Remove Piwik code.
-* Add SCSS "table" component.
-* Refactor SCSS.
-* Add SCSS file for animations.
+* Drop lte IE 8 support
+* Update to jQuery 3
+* Use double-colon CSS3 syntax for pseudo-elements.
+* Remove IE 6 - 7 "zoom" for "hasLayout"
+* Remove Piwik code
+* Add SCSS "table" component
+* Refactor SCSS
+* Add SCSS file for animations
 
 
 ## Version 2.1.0 ##
 
-* Remove duplicated FOUC hook.
-* Minimal Normalize and SCSS update.
-* Fix wrong loop for creating HTML5 elements.
-* Structural changes in SASS files.
-* Remove deprecated CSS clip property.
-* SASS note in README, add "module" folder.
-* JS syntax changes.
-* Remove outline on input fields and textarea.
+* Remove duplicated FOUC hook
+* Minimal Normalize and SCSS update
+* Fix wrong loop for creating HTML5 elements
+* Structural changes in SASS files
+* Remove deprecated CSS clip property
+* SASS note in README, add "module" folder
+* JS syntax changes
+* Remove outline on input fields and textarea
 
 
 ## Version 2.0.0 ##
 
-* Move to SASS/SCSS.
+* Move to SASS/SCSS
 
 
 ## Version 1.2.0 ##
 
-* HTML Update.
-* JS syntax changes.
-  Remove responsive fallback in JS.
-  Use media query instead.
-* Update styles.
-* Update to jQuery 1.12.4.
-* Remove font comment from CSS.
-  Use fonts via `<link>` instead.
-* Fix print style `<link>`.
-* Browse Happy layout changes.
-* Add "standalone.html".
-* Update "package.json".
-* Add webkit appearance normalize and form input types.
-* Add Bram Stein's Font Face Observer.
-* Move `<abbr>` styling to from "Minimal Normalize" to "Base".
+* HTML Update
+* JS syntax changes. Remove responsive fallback in JS, use media query instead
+* Update styles
+* Update to jQuery 1.12.4
+* Remove font comment from CSS, use fonts via `<link>` instead
+* Fix print style `<link>`
+* Browse Happy layout changes
+* Add "standalone.html"
+* Update "package.json"
+* Add webkit appearance normalize and form input types
+* Add Bram Stein's Font Face Observer
+* Move `<abbr>` styling to from "Minimal Normalize" to "Base"
 
 
 ## Version 1.1.0 ##
 
-* Add `<mark>` example.
-* Update jQuery from 1.11.3 to 1.12.3.
-* Add media object.
-* Use `p` as wrapping element for form input as recommended in HTML5 specification.
-* Remove some meta tags.
-* Outline changes.
-* Remove year from footer.
-* Add "media" attribute for IE conditional comments.
-* Replace spaces with tabs in "style.css".
-* Fix jQuery no conflict in "main.js".
-* README update.
-* Add designer meta tag.
-* Remove duplicate comment in "style.css".
-* Change name in "package.json".
-* Remove "keywords" meta tag, useless nowadays, like "revisit-after".
-* Refactor "style.css".
-* Add link rel for shortcut icon only in src.
-* Syntax changes in "gulpfile.js".
+* Add `<mark>` example
+* Update jQuery from 1.11.3 to 1.12.3
+* Add media object
+* Use `p` as wrapping element for form input as recommended in HTML5 specification
+* Remove some meta tags
+* Outline changes
+* Remove year from footer
+* Add "media" attribute for IE conditional comments
+* Replace spaces with tabs in "style.css"
+* Fix jQuery no conflict in "main.js"
+* README update
+* Add designer meta tag
+* Remove duplicate comment in "style.css"
+* Change name in "package.json"
+* Remove "keywords" meta tag, useless nowadays, like "revisit-after"
+* Refactor "style.css"
+* Add link rel for shortcut icon only in src
+* Syntax changes in "gulpfile.js"
 
 
 ## Version 1.0.0 ##
 
-* Distribute files into "dist" directory with Gulp.
-* Add empty favicon.
+* Distribute files into "dist" directory with Gulp
+* Add empty favicon
 
 
 ## Version 0.0.5 ##
 
-* Add JavaScript example.
-* Prepare for "dist" folder.
+* Add JavaScript example
+* Prepare for "dist" folder
 
 
 ## Version 0.0.4 ##
 
-* Remove "fonts.css", place fonts in "style.css".
-* Remove "print.css" and place code in "style.css" withing media query.
-* Add fallback print CSS for IE <= 8.
-* Add "screen-reader-text"-class.
+* Remove "fonts.css", place fonts in "style.css"
+* Remove "print.css" and place code in "style.css" withing media query
+* Add fallback print CSS for IE <= 8
+* Add "screen-reader-text"-class
 
 
 ## Version 0.0.3 ##
 
-* Prevent FOUC, add class `no-js`. Do not use Modernizr.
-* Add "createHTML5Elements.js".
+* Prevent FOUC, add class `no-js`. Do not use Modernizr
+* Add "createHTML5Elements.js"
 * Add conditional comment for IE (CSS fix), not in `<html>` element,
-  because "X-UA-Compatible" is among.
+  because "X-UA-Compatible" is among
 * Rename "plugins.js" to "plugins.min.js" because minified version 
-  should be used.
-* Add basic CSS.
+  should be used
+* Add basic CSS
 
 
 ## Version 0.0.2 ##
 
-* HTML Markup examples.
-* Meta changes in `<head>`.
-* Add "print.css".
-* Add Piwik tracking code.
+* HTML Markup examples
+* Meta changes in `<head>`
+* Add "print.css"
+* Add Piwik tracking code
 
 
 ## Version 0.0.1 ##
 
-* Add "css" directory with empty "style.css" and "fonts.css".
-* Add empty "fonts" directory.
-* Add empty "img" directory and "icon" directory.
+* Add "css" directory with empty "style.css" and "fonts.css"
+* Add empty "fonts" directory
+* Add empty "img" directory and "icon" directory
 * Add "js" directory with empty "main.js" and "vendor" directory
-  with "jquery" and empty "plugin.js".
-* Embed "style.css", "jquery.min.js" and "main.js" in index file.
-* Add comment for tracking code.
-* Add conditional comment for IE < 8 (browse happy).
-* Change ".htaccess" absolute path example.
+  with "jquery" and empty "plugin.js"
+* Embed "style.css", "jquery.min.js" and "main.js" in index file
+* Add comment for tracking code
+* Add conditional comment for IE < 8 (browse happy)
+* Change ".htaccess" absolute path example
 
 
 ## Initial commit ##
 
 * Basic HTML5 template, with HTML5 doctype, `lang="en"`, `charset="utf-8"`, 
-  compatibility mode `IE=edge` and viewport.
-* Do not use Chrome Frame anymore.
-* Basic htaccess file.
+  compatibility mode `IE=edge` and viewport
+* Do not use Chrome Frame anymore
+* Basic htaccess file
