@@ -1,6 +1,11 @@
 # Changelog #
 
 
+## HEAD ##
+
+* Add SCSS file for local fonts
+
+
 ## Version 3.0.0 ##
 
 * Drop lte IE 8 support
