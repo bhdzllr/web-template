@@ -4,6 +4,7 @@
 ## HEAD ##
 
 * Add SCSS file for local fonts
+* Add HTTPS rewrite rule as example
 
 
 ## Version 3.0.0 ##
