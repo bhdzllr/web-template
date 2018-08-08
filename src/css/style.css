@@ -3,7 +3,7 @@
  *
  * @author    bhdzllr
  * @link      http://github.com/bhdzllr | http://twitter.com/bhdzllr
- * @copyright (c) 2016 - 2017
+ * @copyright (c) 2016 - 2018
  * @license   -
  * @todo      -
  */
@@ -110,19 +110,37 @@ img {
  * ********** Variables **********
  */
 /**
+ * ********** Fonts **********
+ */
+/** WebFontName Local - Font-Style */
+@font-face {
+  font-family: 'WebFontName Local';
+  font-style: normal;
+  font-weight: 400;
+  src: local("WebFontName"), local("WebFontName"); }
+/** WebFontName - Font-Style */
+@font-face {
+  font-family: 'WebFontName';
+  font-style: normal;
+  font-weight: 400;
+  src: url("webfont.eot");
+  /* IE9 Compat Modes */
+  src: local("webfontLocalName1"), local("webfontLocalName2"), url("webfont.eot?#iefix") format("embedded-opentype"), url("webfont.woff2") format("woff2"), url("webfont.woff") format("woff"), url("webfont.ttf") format("truetype"), url("webfont.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
+/**
  * ********** Base **********
  */
 html, body {
   margin: 0;
   padding: 0;
   color: #333333;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "WebFontName Local", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
   line-height: 1.625em; }
 
 .no-js body,
-.js-fonts-loaded body {
-  font-family: "Open Sans", sans-serif;
+.fonts-loaded body {
+  font-family: "WebFontName", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: lighter; }
 
 /**
@@ -235,6 +253,14 @@ a:active {
   text-decoration: underline; }
 
 /**
+ * ********** List **********
+ */
+.simple {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/**
  * ********** Image **********
  */
 img {
@@ -244,13 +270,8 @@ img {
   height: auto; }
 
 /**
- * ********** List **********
+ * ********** Button **********
  */
-.simple {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
 /**
  * ********** Form **********
  */
@@ -266,9 +287,6 @@ textarea {
   max-height: 320px;
   resize: vertical; }
 
-/**
- * ********** Button **********
- */
 /**
  * ********** Table **********
  */

@@ -25,9 +25,12 @@ NAMESPACE.Main = (function ($) {
 	 */
 	function initDOM() {
 		/** FOIT */
-		var observer = new FontFaceObserver('Font Family');
-		observer.load().then(function () {
-			document.documentElement.className += ' js-fonts-loaded';
+		var fontPrimary = new FontFaceObserver('Font Family', {
+			weight: 300,
+			style: 'normal'
+		});
+		fontPrimary.load().then(function () {
+			document.documentElement.className += ' fonts-loaded';
 		});
 	}
 
