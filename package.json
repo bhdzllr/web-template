@@ -12,7 +12,8 @@
 		"glob": "^5.0.0",
 		"gulp": "^3.9.0",
 		"gulp-remove-code": "^1.0.2",
-		"jquery": "3.2.1"
+		"jquery": "3.2.1",
+		"fontfaceobserver": "2.0.13"
 	},
 	"web-template-configs": {
 		"directories": {
