@@ -17,10 +17,10 @@ $color-text:    #333333;
 $color-text--i: #FFFFFF;
 $color-text--lighter: #666666;
 
-$font-primary:   'Helvetica Neue', Helvetica;
-$font-secondary: Arial;
+$font-primary:   'WebFontName';
+$font-secondary: 'Helvetica Neue', Helvetica, Arial;
+$font-fallback:  'WebFontName Local', $font-secondary, sans-serif;
 $font-stack:     $font-primary, $font-secondary, sans-serif;
-$font-web:       'Open Sans';
 
 $width-site: 960px;
 

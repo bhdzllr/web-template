@@ -4,6 +4,8 @@
 ## HEAD ##
 
 * Add SCSS file for local fonts
+* Remove placeholder for lining web fonts
+* Update font usage
 * Add HTTPS rewrite rule as example
 
 

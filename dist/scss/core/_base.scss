@@ -7,13 +7,13 @@ html, body {
 	padding: 0;
 
 	color: $color-text;
-	font-family: $font-stack;
+	font-family: $font-fallback;
 	font-size: 1em;
 	line-height: 1.625em;
 }
 
 .no-js body,
 .js-fonts-loaded body {
-	font-family: $font-web, sans-serif;
+	font-family: $font-stack;
 	font-weight: lighter;
 }

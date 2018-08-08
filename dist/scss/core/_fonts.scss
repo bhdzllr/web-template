@@ -2,10 +2,20 @@
  * ********** Fonts **********
  */
 
-/** webfont - font-style */
+/** WebFontName Local - Font-Style */
+
 @font-face {
-	font-family: 'MyWebFont';
-	font-weight: 000;
+	font-family: 'WebFontName Local';
+	font-style: normal;
+	font-weight: 400;
+	src: local('WebFontName'), local('WebFontName');
+}
+
+/** WebFontName - Font-Style */
+@font-face {
+	font-family: 'WebFontName';
+	font-style: normal;
+	font-weight: 400;
 	src: url('webfont.eot'); /* IE9 Compat Modes */
 	src: local('webfontLocalName1'), local('webfontLocalName2'),
 	     url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
