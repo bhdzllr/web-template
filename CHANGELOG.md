@@ -7,6 +7,7 @@
 * Remove placeholder for lining web fonts
 * Update font usage
 * Add HTTPS rewrite rule as example
+* Add PNG favicon
 
 
 ## Version 3.0.0 ##
