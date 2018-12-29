@@ -8,6 +8,7 @@
 * Update font usage
 * Add HTTPS rewrite rule as example
 * Add PNG favicon
+* Add code for select styling
 
 
 ## Version 3.0.0 ##
