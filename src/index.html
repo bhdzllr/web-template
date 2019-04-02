@@ -7,40 +7,40 @@
 		<title>Page Title | Website Title</title>
 
 		<meta name="description" content="Add page description here" />
-		<meta name="author" content="Author Name" />
 		<meta name="robots" content="index, follow" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<script type="text/javascript">document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');</script>
+		<script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');</script>
 
-		<!--removeIf(production)-->
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-		<link rel="icon" type="image/png" href="/icon.png" />
-		<!--endRemoveIf(production)-->
-		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<link rel="icon" href="/icon.png" type="image/png" />
+		<link rel="apple-touch-icon" href="/icon.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<meta name="theme-color" content="#fafafa">
+
+		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<!--[if lte IE 9]>
+		<!--[if IE]>
 		<div class="browsehappy">
-			<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-			<p>Sie verwenden einen <strong>veralteten</strong> Browser. Bitte <a href="http://browsehappy.com/" title="Browser Upgrade">aktualisieren Sie Ihren Browser</a> um ein besseres Surferlebnis zu erhalten.</p>
+			<p lang="en">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+			<p lang="de">Sie verwenden einen <strong>veralteten</strong> Browser. Bitte <a href="http://browsehappy.com/" title="Browser Upgrade">aktualisieren Sie Ihren Browser</a> um ein besseres Surferlebnis zu erhalten.</p>
 		</div>
 		<![endif]-->
 
 		<!--removeIf(production)-->
 		<header id="site-header"> <!-- Site header -->
-			<h1>
-				<a href="/" title="Home - Webiste Title">Website Title</a>
-			</h1>
+			<a href="/" title="Home - Webiste Title">
+				<em>Website Title</em>
+			</a>
 			<p>Website Tagline</p>
 
 			<a href="#main" title="Skip to content" class="screen-reader-text">Content</a>
 			<a href="#nav" title="Skip to menu" class="screen-reader-text">Menu</a>
 		</header>
 
-		<nav id="nav"> <!-- Site nav, if needed move into header -->
-			<h2>Site navigation</h2>
+		<nav id="nav"> <!-- Site nav, if needed move into header; Heading is missing, theoretically `h1` allowed -->
 			<ul>
 				<li><a href="#" title="Go to page 1">Page 1</a>
 				<li><a href="#" title="Go to page 2">Page 2</a>
@@ -56,57 +56,75 @@
 					<p>Lead</p>
 				</header>
 
-				<div> <!-- if `<section>` is used (e.g. when page has comments) ... -->
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-					sed diam nonumy eirmod tempor invidunt ut labore et dolore
-					magna aliquyam erat, sed diam voluptua.</p>
-
-					<h2>Heading 2</h2> <!-- ... then `<h1>Heading 1</h1>` can be used -->
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-					sed diam nonumy <strong>eirmod tempor</strong> invidunt ut
-					labore et dolore magna aliquyam erat, sed diam voluptua.
-					At vero eos et accusam et justo duo dolores et ea rebum.
-					Stet <a href="#" title="#">clita kasd</a> gubergren, no sea
-					takimata sanctus est Lorem ipsum dolor sit amet.</p>
+				<div>
+					<p>
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+						sed diam nonumy eirmod tempor invidunt ut labore et dolore
+						magna aliquyam erat, sed diam voluptua.
+					</p>
 
 					<h2>Heading 2</h2>
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-					sed diam nonumy eirmod tempor invidunt ut labore et dolore
-					magna aliquyam erat, sed diam voluptua. At vero eos et
-					accusam et <abbr title="attribute">attr</abbr>
-					justo duo dolores et ea rebum. Stet clita kasd gubergren,
-					no sea takimata <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
-					sanctus est Lorem ipsum dolor sit amet.</p>
+
+					<p>
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+						sed diam nonumy <strong>eirmod tempor</strong> invidunt ut
+						labore et dolore magna aliquyam erat, sed diam voluptua.
+						At vero eos et accusam et justo duo dolores et ea rebum.
+						Stet <a href="#" title="#">clita kasd</a> gubergren, no sea
+						takimata sanctus est Lorem ipsum dolor sit amet.
+					</p>
+
+					<h2>Heading 2</h2>
+
+					<p>
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+						sed diam nonumy eirmod tempor invidunt ut labore et dolore
+						magna aliquyam erat, sed diam voluptua. At vero eos et
+						accusam et <abbr title="attribute">attr</abbr>
+						justo duo dolores et ea rebum. Stet clita kasd gubergren,
+						no sea takimata <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+						sanctus est Lorem ipsum dolor sit amet.
+					</p>
 
 					<h3>Heading 3</h3>
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-					sed diam nonumy <small>eirmod tempor invidunt</small>
-					ut labore et dolore	magna aliquyam erat, sed diam voluptua.
-					At vero eos et accusam et justo duo dolores et ea rebum.
-					Stet clita kasd	gubergren, no sea <em>takimata sanctus</em>
-					est Lorem H<sub>2</sub>O ipsum dolor
-					sit amet. <sup>[1]</sup></p>
+
+					<p>
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+						sed diam nonumy <small>eirmod tempor invidunt</small>
+						ut labore et dolore	magna aliquyam erat, sed diam voluptua.
+						At vero eos et accusam et justo duo dolores et ea rebum.
+						Stet clita kasd	gubergren, no sea <em>takimata sanctus</em>
+						est Lorem H<sub>2</sub>O ipsum dolor
+						sit amet. <sup>[1]</sup>
+					</p>
 
 					<h2>Blockquote</h2>
 
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-					sed diam nonumy eirmod tempor invidunt ut labore et dolore
-					magna <del datetime="0000-00-00">aliquyam erat</del>
-					<ins datetime="0000-00-00">sed diam voluptua</ins>.</p>
+					<p>
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+						sed diam nonumy eirmod tempor invidunt ut labore et dolore
+						magna <del datetime="1900-01-01">aliquyam erat</del>
+						<ins datetime="1900-01-01">sed diam voluptua</ins>.
+					</p>
 
 					<blockquote>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-						Integer posuere erat a ante.</p>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Integer posuere erat a ante.
+						</p>
 						<cite title="Source Title">Source Title or Author</cite>
 					</blockquote>
 
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-					sed diam nonumy eirmod <mark>tempor invidunt</mark> ut labore et dolore
-					magna aliquyam erat, sed diam voluptua.</p>
+					<p>
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+						sed diam nonumy eirmod <mark>tempor invidunt</mark> ut labore et dolore
+						magna aliquyam erat, sed diam voluptua.
+					</p>
 
 					<h2>Lists</h2>
 
 					<h3>Unordered List</h3>
+
 					<ul>
 						<li>Point 1</li>
 						<li>Point 2
@@ -118,6 +136,7 @@
 					</ul>
 
 					<h3>Ordered List</h3>
+
 					<ol>
 						<li>Point 1</li>
 						<li>Point 2</li>
@@ -125,8 +144,12 @@
 					</ol>
 
 					<h3>Description List</h3>
-					<p>Good to use in <code>&lt;aside&gt;</code> element
-					as glossary.</p>
+
+					<p>
+						Good to use in <code>&lt;aside&gt;</code> element
+						as glossary.
+					</p>
+
 					<dl>
 						<dt>Term</dt>
 						<dd>Description of the term</dd>
@@ -134,17 +157,15 @@
 
 					<h2>Preformatted Text and Code</h2>
 
-					<pre>
-						Sample text ...
-					</pre>
+					<pre>Sample text ...</pre>
 
 					<pre>
 						<code>
-						&lt;p&gt;Sample html ...&lt;/p&gt;
+							&lt;p&gt;Sample html ...&lt;/p&gt;
 
-						if (new == old) {
-							make nothing;
-						}
+							if (new == old) {
+								make nothing;
+							}
 						</code>
 					</pre>
 
@@ -159,13 +180,6 @@
 								<th>Überschrift 3</th>
 							</tr>
 						</thead>
-						<tfoot>
-							<tr>
-								<td>Footer 1</td>
-								<td>Footer 2</td>
-								<td>Footer 3</td>
-							</tr>
-						</tfoot>
 						<tbody>
 							<tr>
 								<td>Inhalt</td>
@@ -183,18 +197,27 @@
 								<td>Inhalt</td>
 							</tr>
 						</tbody>
+						<tfoot>
+							<tr>
+								<td>Footer 1</td>
+								<td>Footer 2</td>
+								<td>Footer 3</td>
+							</tr>
+						</tfoot>
 					</table>
 
 					<h2>Forms</h2>
 
 					<form id="contact" method="post" action="/">
-						<fieldset>
-						<legend>Message Data</legend> <!-- name for data to server, id for label -->
+						<fieldset> <!-- name for data to server, id for label -->
+							<legend>Message Data</legend>
+
 							<p>
 								<label for="sender">Your Name: </label>
 								<input type="text" name="sender" id="sender" placeholder="Placeholder"/>
 								<span>Supporting Text</span>
 							</p>
+
 							<p>
 								<input type="checkbox" name="check" id="check" checked="checked" />
 								<label for="check">Check</label>
@@ -248,15 +271,14 @@
 								<input type="text" />
 								<input type="password" />
 								<input type="search" />
-								<input type="url" />
 								<input type="email" />
+								<input type="url" />
 								<input type="tel" />
 								<input type="number" />
 								<input type="date" />
 								<input type="month" />
 								<input type="week" /> <!-- avoid, no fallback on iOS -->
 								<input type="time" />
-								<input type="datetime" />
 								<input type="datetime-local" />
 								<input type="color" />
 							</p>
@@ -277,7 +299,7 @@
 						</a>
 
 						<div class="media__body">
-							<h3>Headline</h3>
+							<strong class="media__title">Headline</strong>
 							
 							<p>
 								Body Text.
@@ -291,16 +313,67 @@
 						</a>
 
 						<div class="media__body">
-							<h3>Headline</h3>
+							<strong class="media__title">Headline</strong>
 							
 							<p>
 								Body Text.
 							</p>
 						</div>
 					</div>
+
+					<h2>Grid</h2>
+
+					<h3>Auto Grid</h3>
+
+					<div class="grid">
+						<div>1</div>
+						<div>2</div>
+						<div>3</div>
+						<div>4</div>
+						<div>5</div>
+						<div>6</div>
+						<div>7</div>
+						<div>8</div>
+						<div>9</div>
+						<div>10</div>
+						<div>11</div>
+						<div>12</div>
+					</div>
+
+					<div class="grid grid--2 grid--md-4">
+						<div>1</div>
+						<div>2</div>
+						<div>3</div>
+						<div>4</div>
+						<div>5</div>
+						<div>6</div>
+						<div>7</div>
+						<div>8</div>
+						<div>9</div>
+						<div>10</div>
+						<div>11</div>
+						<div>12</div>
+					</div>
+
+					<h3>Row Based</h3>
+
+					<div class="row">
+						<div class="col-6">1</div>
+						<div class="col-6">1</div>
+					</div>
+
+					<div class="row">
+						<div class="col-6 col-md-4">1</div>
+						<div class="col-6 col-md-4">1</div>
+					</div>
+
+					<div class="row">
+						<div class="col-2 col-offset-2">1</div>
+						<div class="col-8">1</div>
+					</div>
 				</div>
 
-				<aside> <!-- Untitled -->
+				<aside> <!-- Untitled, theoretically `h1` as title and `h2` for notes -->
 					<section>
 						<h2>Sidenote 1</h2>
 						<p>Note</p>
@@ -313,19 +386,19 @@
 				</aside>
 
 				<section>
-					<h1>Comments</h1>
+					<h2>Comments</h2> <!-- Sections need headings, `h1` is theoretically allowed -->
 
-					<article>
+					<article> <!-- Warning, article should have heading -->
 						<footer>
-							<p>Posted by Name on 00.00.0000 / 00:00 (GMT)</p>
+							<p>Posted by Name on 01.01.1900 / 00:00 (GMT)</p>
 						</footer>
 
 						<p>Comment text.</p>
 					</article>
 
-					<article>
+					<article> <!-- Warning, article should have heading -->
 						<footer>
-							<p>Posted by Name on 00.00.0000 / 00:00 (GMT)</p>
+							<p>Posted by Name on 01.01.1900 / 00:00 (GMT)</p>
 						</footer>
 
 						<p>Comment text.</p>
@@ -333,12 +406,14 @@
 				</section>
 
 				<footer>
-					<p>Published on TT.MM.JJJJ, 00:00 (GMT)</p>
+					<p>Published on 01.01.1900, 00:00 (GMT)</p>
+
 					<address>
 						Author: <a href="mailto:mail@example.com" title="Mail the author">Author</a>
 					</address>
 
 					<h2>Footnotes</h2>
+
 					<dl>
 						<dt>[1]</dt>
 						<dd>Description</dd>
@@ -346,6 +421,7 @@
 
 
 					<h2>Share and Like</h2>
+
 					<ul>
 						<li><a href="#" title="Share on Twitter">Twitter</a></li>
 						<li><a href="#" title="Star on GitHub">GitHub</a></li>
@@ -355,28 +431,42 @@
 		</main>
 
 		<div>
-			<h2>Sidebar</h2>
+			<h2>Sidebar</h2> <!-- Theoretically `h1` allowed, depends on title (SEO) -->
 		</div>
 
 		<footer>
-			<h2>Site footer</h2>
+			<h2>Site footer</h2> <!-- Theoretically `h1` allowed, depends on title (SEO) -->
 			<p>
 				<small>&copy; bhdzllr</small>
 				<a href="#site-header" title="Scroll to top" class="js-scroll-top">Top</a>
 			</p>
 
 			<address>
-				<strong>Company Name</strong><br />
-				Street 00<br />
-				0000 Zip<br />
-				<abbr title="Telephone">T:</abbr> +43(0) 1 234 567-8
+				<p>
+					<strong>Company Name</strong><br />
+					Street 00<br />
+					0000 Zip<br />
+				</p>
+
+				<p>
+					<abbr title="Telephone">T:</abbr> +43(0) 1 234 567-8
+				</p>
 			</address>
 		</footer>
 		<!--endRemoveIf(production)-->
 
-		<script type="text/javascript" src="js/vendor/jquery.min.js"></script>
-		<script type="text/javascript" src="js/vendor/plugins.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script src="/js/vendor/plugins.min.js"></script>
+		<script src="/js/main.js"></script>
 		<!-- Analytics Code -->
+		<script>
+			var doNotTrack = (navigator.doNotTrack && (navigator.doNotTrack == '1' || navigator.doNotTrack == 'yes')) || (window.doNotTrack && (window.doNotTrack == '1')) || (navigator.msDoNotTrack && (navigator.msDoNotTrack == '1'));
+			var disableStr = 'disable-analytics';
+			if (doNotTrack || document.cookie.indexOf(disableStr + '=true') > -1 || document.cookie.indexOf(disableStr + '=true') > -1) {
+				window[disableStr] = true;
+			} else {
+				// Code
+			}
+		</script>
+		<!-- End Analytics Code -->
 	</body>
 </html>

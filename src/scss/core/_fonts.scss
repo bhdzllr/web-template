@@ -3,11 +3,11 @@
  */
 
 /** WebFontName Local - Font-Style */
-
 @font-face {
 	font-family: 'WebFontName Local';
 	font-style: normal;
 	font-weight: 400;
+	// font-display: swap;
 	src: local('WebFontName'), local('WebFontName');
 }
 
@@ -16,11 +16,8 @@
 	font-family: 'WebFontName';
 	font-style: normal;
 	font-weight: 400;
-	src: url('webfont.eot'); /* IE9 Compat Modes */
+	// font-display: swap;
 	src: local('webfontLocalName1'), local('webfontLocalName2'),
-	     url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-	     url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
-	     url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
-	     url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-	     url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+	     url('webfont.woff2') format('woff2'),
+	     url('webfont.woff') format('woff');
 }

@@ -5,14 +5,14 @@
 .browsehappy {
 	padding: 0.25em;
 
-	background-color: #FFF666;
+	background-color: #fff666;
 	
 	color: #222222;
 	text-align: center;
-}
 
-.browsehappy a {
-	color: #222222;
+	a {
+		color: #222222;
+	}
 }
 
 .offscreen {
@@ -21,24 +21,75 @@
 }
 
 .screen-reader-text {
-	overflow: hidden;
 	position: absolute;
 
 	width: 1px;
 	height: 1px;
 	margin: -1px;
 	padding: 0;
+	overflow: hidden;
 
 	border: 0;
+	clip-path: inset(50%);
+	white-space: nowrap;
+
+	&:active,
+	&:focus {
+		position: static;
+
+		width: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+
+		clip-path: none;
+		white-space: inherit;
+	}
 }
 
-.screen-reader-text:focus,
-.screen-reader-text:active {
-	display: block;
-	overflow: visible;
-	position: static;
-	z-index: 100000;
+.sm-visible,
+.md-visible,
+.lg-visible,
+.xl-visible {
+	display: none;
+}
 
-	width: auto;
-	height: auto;
+@media only screen and (min-width: $break-sm) {
+	.sm-visible {
+		display: block;
+	}
+
+	.sm-hidden {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: $break-md) {
+	.md-visible {
+		display: block;
+	}
+
+	.md-hidden {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: $break-lg) {
+	.lg-visible {
+		display: block;
+	}
+
+	.lg-hidden {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: $break-xl) {
+	.xl-visible {
+		display: block;
+	}
+
+	.xl-hidden {
+		display: none;
+	}
 }

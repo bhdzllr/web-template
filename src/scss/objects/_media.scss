@@ -3,34 +3,34 @@
  */
 
 .media {
-}
-
-.media,
-.media__body {
 	overflow: hidden;
-}
 
-.media__meta {
-	float: left;
+	&__body {
+		overflow: hidden;
 
-	margin-right: 2%;
-}
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
 
-.media__meta img {
-	vertical-align: top;
-}
+	&__meta {
+		float: left;
 
-.media h3 {
-	margin-top: 0;
-}
+		margin-right: 30px;
+	
+		img {
+			vertical-align: top;
+		}
 
-.media__body p:last-child {
-	margin-bottom: 0;
-}
+		.media--flipped & {
+			float: right;
 
-.media--flipped .media__meta {
-	float: right;
+			margin-right: 0px;
+			margin-left: 30px;
+		}
+	}
 
-	margin-right: 0px;
-	margin-left: 2%;
+	&__title {
+		margin-top: 0;
+	}
 }

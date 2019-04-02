@@ -2,17 +2,9 @@
  * Main module
  *
  * Basic interface functions.
- *
- * @author       bhdzllr
- * @link         http://github.com/bhdzllr
- * @copyright    (c) 2016 - 2017
- * @license	     -
- * @dependencies jQuery
- * @version      1.0.0
- * @todo         -
  */
 var NAMESPACE = NAMESPACE || {};
-NAMESPACE.Main = (function ($) {
+NAMESPACE.Main = (function () {
 	'use strict';
 
 	/** Private */
@@ -38,22 +30,18 @@ NAMESPACE.Main = (function ($) {
 	 * Setup up event listeners.
 	 */
 	function initListeners() {
-		$('.js-scroll-top').click(scrollToTop);
+		document.querySelector('.js-scroll-top').addEventListener('click', scrollToTop, false);
 	}
 
 	/**
 	 * Scroll page to top.
 	 *
-	 * @returns {Boolean} False (prevent default event)
+	 * @param {Object} Event object
 	 */
-	function scrollToTop() {
-		var body = $('html, body');
+	function scrollToTop(e) {
+		e.preventDefault();
 
-		body.animate({
-			scrollTop: 0
-		}, '500', 'swing');
-
-		return false;
+		window.scrollTo(0, 0);
 	}
 
 	//removeIf(production) 
@@ -92,11 +80,11 @@ NAMESPACE.Main = (function ($) {
 			initListeners();
 		}
 	}
-})(jQuery);
+})();
 
 /**
  * Startup
  */
-$(function () {
+document.addEventListener('DOMContentLoaded', function (e) {
 	NAMESPACE.Main.init();
 });

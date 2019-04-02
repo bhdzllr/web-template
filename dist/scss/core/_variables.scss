@@ -2,27 +2,32 @@
  * ********** Variables **********
  */
 
-$color-white: #FFFFFF;
+$color-white: #ffffff;
 $color-black: #000000;
 
-$color-primary:    #00B050;
+$color-primary:    #00b050;
 $color-secondary:  #508446;
-$color-background: #FFFFFF;
+$color-background: #ffffff;
 
 $color-info:     blue;
 $color-positive: green;
 $color-negative: red;
 
 $color-text:    #333333;
-$color-text--i: #FFFFFF;
+$color-text--i: #ffffff;
 $color-text--lighter: #666666;
+$color-mark: #ffff00;
 
 $font-primary:   'WebFontName';
 $font-secondary: 'Helvetica Neue', Helvetica, Arial;
 $font-fallback:  'WebFontName Local', $font-secondary, sans-serif;
 $font-stack:     $font-primary, $font-secondary, sans-serif;
 
-$width-site: 960px;
+$width-site: 1280px;
+$grid-columns: 5;
+$grid-gutter: 0.5em;
+$row-columns: 12;
+$row-gutter: 0.75em;
 
 $break-xs:  320px;
 $break-sm:  480px;

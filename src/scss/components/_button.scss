@@ -4,14 +4,26 @@
 
 button,
 .btn,
-a.btn {}
+a.btn {
+	//
+}
 
 [type="submit"],
 .btn--primary,
-a.btn--primary {}
+a.btn--primary {
+	//
+}
 
 .btn--secondary,
-a.btn--secondary {}
+a.btn--secondary {
+	//
+}
 
 .btn--small,
-a.btn--small {}
+a.btn--small {
+	//
+}
+
+[disabled] {
+	//
+}

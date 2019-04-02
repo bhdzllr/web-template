@@ -6,19 +6,11 @@
 @media print {
 	*,
 	*:before,
-	*:after,
-	p:first-letter,
-	div:first-letter,
-	blockquote:first-letter,
-	li:first-letter,
-	p:first-line,
-	div:first-line,
-	blockquote:first-line,
-	li:first-line {
+	*:after {
 		background: transparent !important;
+		color: #000 !important;
+		-webkit-box-shadow: none !important;
 		box-shadow: none !important;
-
-		// color: #000 !important;
 		text-shadow: none !important;
 	}
 
@@ -57,10 +49,6 @@
 	tr,
 	img {
 		page-break-inside: avoid;
-	}
-
-	img {
-		max-width: 100% !important;
 	}
 
 	p,

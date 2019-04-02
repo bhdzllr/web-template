@@ -1,7 +1,7 @@
 # Changelog #
 
 
-## HEAD ##
+## Version 3.1.0 ##
 
 * Add SCSS file for local fonts
 * Remove placeholder for lining web fonts
@@ -9,11 +9,18 @@
 * Add HTTPS rewrite rule as example
 * Add PNG favicon
 * Add code for select styling
+* Drop IE10 support
+* Drop author meta tag, nobody uses it
+* Drop jQuery
+* Update Font Face Observer
+* Update analytics
+* Remove .htaccess
+* Add Grid and update SCSS
 
 
 ## Version 3.0.0 ##
 
-* Drop lte IE 8 support
+* Drop lte IE8 support
 * Update to jQuery 3
 * Use double-colon CSS3 syntax for pseudo-elements.
 * Remove IE 6 - 7 "zoom" for "hasLayout"

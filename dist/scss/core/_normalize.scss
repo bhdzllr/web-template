@@ -3,46 +3,16 @@
  */
 
 html {
-	-ms-text-size-adjust: 100%;     /* IE: Prevent text size adjust after device orientation change. */
 	-webkit-text-size-adjust: 100%; /* iOS: Prevent text size adjust after device orientation change. */
 }
 
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
 main,
-nav,
-section {
+details {
 	display: block;
 }
 
-details,
-dialog,
-menu,
 summary {
-	display: block;
-}
-
-audio,
-canvas,
-progress,
-video {
-	display: inline-block;
-}
-
-embed,
-iframe,
-object,
-video {
-	max-width: 100%;
-}
-
-audio:not([controls]) {
-	display: none;
-	height: 0;
+	display: list-item;
 }
 
 [hidden],
@@ -50,16 +20,11 @@ template {
 	display: none;
 }
 
-svg:not(:root) {
-	overflow: hidden;
-}
-
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
 	-webkit-appearance: button;
-	-webkit-border-radius: 0;
 	cursor: pointer;
 }
 
@@ -78,11 +43,11 @@ button,
 input,
 textarea,
 select {
-	-webkit-border-radius: 0;
-	// -webkit-appearance: none;
-	// background-color: #ffffff;
+	-webkit-appearance: none;
+	background-color: #ffffff;
 }
 
+button::-moz-focus-inner,
 input::-moz-focus-inner {
 	border: 0;  /** Button size fix */
 	padding: 0; /** Button size fix */
@@ -95,13 +60,14 @@ input::-moz-focus-inner {
 [type="url"],
 [type="tel"],
 [type="number"],
-[type="date"] {
+[type="date"],
+[type="month"],
+[type="week"],
+[type="time"],
+[type="datetime-local"],
+[type="color"] {
 	outline: none;
 }
-
-// [type="date"] {
-// 	-webkit-appearance: none;
-// }
 
 textarea {
 	vertical-align: top;
@@ -110,22 +76,24 @@ textarea {
 	outline: none;
 }
 
-// select {
-// 	background-image: url('data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%229px%22%20height%3D%226px%22%20viewBox%3D%220%200%209%206%22%3E%3Cpolygon%20fill%3D%22%231A1A1A%22%20points%3D%228.995%2C0%204.488%2C6%20-0.018%2C0%20%22%2F%3E%3C%2Fsvg%3E');
-// 	background-position: calc(100% - 10px) center;
-// 	background-repeat: no-repeat;
-// 	background-attachment: scroll;
-// 	background-size: 8px;
-// }
-
-// select::-ms-expand {
-// 	display: none;
-// }
-
-fieldset {
-	overflow: hidden; /** Older iOS Placeholder Bug */
+img {
+	border: none; /* IE < 11: No border for `img` wrapped with `a` */
 }
 
-img {
-	border: none; /** IE < 11: No border for `img` wrapped with `a`. */
+iframe {
+	display: block;
+	margin: 0 auto;
+
+	border: 0;
+}
+
+/* Keep this separate form `::selection` */
+::-moz-selection { 
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
