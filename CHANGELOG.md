@@ -1,6 +1,6 @@
 # Changelog #
 
-## HEAD ##
+## Version 3.1.1 ##
 
 * Remove folder structure from README
 
