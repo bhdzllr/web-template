@@ -1,5 +1,12 @@
 # Changelog #
 
+## Version 4.0.0 ##
+
+* New build pipeline
+* Bundling with webpack
+* ES6 with Babel
+
+
 ## Version 3.1.1 ##
 
 * Remove folder structure from README

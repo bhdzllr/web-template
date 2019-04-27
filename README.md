@@ -1,10 +1,11 @@
 # Web Template #
 
 This is a personal template to start a new front-end project and also for learning purpose.
-The "src" folder holds some examples, the "dist" folder can be used as starting point.
 
-To convert SASS use: `sass --watch scss/main.scss:css/style.css` to watch for
-changes and convert automatically.
+A development version (without a server) that watches changes can be started
+with `npm start`. To build the project into the "dist" folder run `npm run build`.
+The project can be deployed with `npm run deploy` but first needs SSH configuration
+in "gulpfile.js".
 
 
 ## Links ##

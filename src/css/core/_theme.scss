@@ -1,0 +1,31 @@
+/**
+ * ********** Default theme **********
+ *
+ */
+
+html,
+body {
+	color: $color-text;
+	font-family: $font-fallback;
+	font-size: 1em;
+	line-height: 1.625em;
+}
+
+.no-js body,
+.fonts-loaded body {
+	font-family: $font-stack;
+	font-weight: lighter;
+}
+
+/* Keep this separate form `::selection` */
+::-moz-selection { 
+	background: $color-selection;
+	text-shadow: none;
+}
+
+::selection {
+	background: $color-selection;
+	text-shadow: none;
+}
+
+// Theme for Layout and Mixins for Components

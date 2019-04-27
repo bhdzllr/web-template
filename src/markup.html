@@ -1,0 +1,423 @@
+<header id="site-header"> <!-- Site header -->
+	<a href="/" title="Home - Webiste Title">
+		<em>Website Title</em>
+	</a>
+	<p>Website Tagline</p>
+
+	<a href="#main" title="Skip to content" class="screen-reader-text">Content</a>
+	<a href="#nav" title="Skip to menu" class="screen-reader-text">Menu</a>
+</header>
+
+<nav id="nav"> <!-- Site nav, if needed move into header; Heading is missing, theoretically `h1` allowed -->
+	<ul>
+		<li><a href="#" title="Go to page 1">Page 1</a>
+		<li><a href="#" title="Go to page 2">Page 2</a>
+		<li><a href="#" title="Go to page 3">Page 3</a>
+	</ul>
+</nav>
+
+<main id="main" role="main"> <!-- Main content, only unique and central content -->
+	<article>
+		<header>
+			<h1>Heading 1: Page Title (or article title)</h1>
+			<p>Subtitle</p>
+			<p>Lead</p>
+		</header>
+
+		<div>
+			<p>
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+				sed diam nonumy eirmod tempor invidunt ut labore et dolore
+				magna aliquyam erat, sed diam voluptua.
+			</p>
+
+			<h2>Heading 2</h2>
+
+			<p>
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+				sed diam nonumy <strong>eirmod tempor</strong> invidunt ut
+				labore et dolore magna aliquyam erat, sed diam voluptua.
+				At vero eos et accusam et justo duo dolores et ea rebum.
+				Stet <a href="#" title="#">clita kasd</a> gubergren, no sea
+				takimata sanctus est Lorem ipsum dolor sit amet.
+			</p>
+
+			<h2>Heading 2</h2>
+
+			<p>
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+				sed diam nonumy eirmod tempor invidunt ut labore et dolore
+				magna aliquyam erat, sed diam voluptua. At vero eos et
+				accusam et <abbr title="attribute">attr</abbr>
+				justo duo dolores et ea rebum. Stet clita kasd gubergren,
+				no sea takimata <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+				sanctus est Lorem ipsum dolor sit amet.
+			</p>
+
+			<h3>Heading 3</h3>
+
+			<p>
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+				sed diam nonumy <small>eirmod tempor invidunt</small>
+				ut labore et dolore	magna aliquyam erat, sed diam voluptua.
+				At vero eos et accusam et justo duo dolores et ea rebum.
+				Stet clita kasd	gubergren, no sea <em>takimata sanctus</em>
+				est Lorem H<sub>2</sub>O ipsum dolor
+				sit amet. <sup>[1]</sup>
+			</p>
+
+			<h2>Blockquote</h2>
+
+			<p>
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+				sed diam nonumy eirmod tempor invidunt ut labore et dolore
+				magna <del datetime="1900-01-01">aliquyam erat</del>
+				<ins datetime="1900-01-01">sed diam voluptua</ins>.
+			</p>
+
+			<blockquote>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+					Integer posuere erat a ante.
+				</p>
+				<cite title="Source Title">Source Title or Author</cite>
+			</blockquote>
+
+			<p>
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+				sed diam nonumy eirmod <mark>tempor invidunt</mark> ut labore et dolore
+				magna aliquyam erat, sed diam voluptua.
+			</p>
+
+			<h2>Lists</h2>
+
+			<h3>Unordered List</h3>
+
+			<ul>
+				<li>Point 1</li>
+				<li>Point 2
+					<ul>
+						<li>Point 2.1</li>
+					</ul>
+				</li>
+				<li>Point 3</li>
+			</ul>
+
+			<h3>Ordered List</h3>
+
+			<ol>
+				<li>Point 1</li>
+				<li>Point 2</li>
+				<li>Point 3</li>
+			</ol>
+
+			<h3>Description List</h3>
+
+			<p>
+				Good to use in <code>&lt;aside&gt;</code> element
+				as glossary.
+			</p>
+
+			<dl>
+				<dt>Term</dt>
+				<dd>Description of the term</dd>
+			</dl>
+
+			<h2>Preformatted Text and Code</h2>
+
+			<pre>Sample text ...</pre>
+
+			<pre>
+				<code>
+					&lt;p&gt;Sample html ...&lt;/p&gt;
+
+					if (new == old) {
+						make nothing;
+					}
+				</code>
+			</pre>
+
+			<h2>Tables</h2>
+
+			<table>
+				<caption>Caption or summary</caption>
+				<thead>
+					<tr>
+						<th>Überschrift 1</th>
+						<th>Überschrift 2</th>
+						<th>Überschrift 3</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Inhalt</td>
+						<td>Inhalt</td>
+						<td>Inhalt</td>
+					</tr>
+					<tr>
+						<td>Inhalt</td>
+						<td>Inhalt</td>
+						<td>Inhalt</td>
+					</tr>
+					<tr>
+						<td>Inhalt</td>
+						<td>Inhalt</td>
+						<td>Inhalt</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Footer 1</td>
+						<td>Footer 2</td>
+						<td>Footer 3</td>
+					</tr>
+				</tfoot>
+			</table>
+
+			<h2>Forms</h2>
+
+			<form id="contact" method="post" action="/">
+				<fieldset> <!-- name for data to server, id for label -->
+					<legend>Message Data</legend>
+
+					<p>
+						<label for="sender">Your Name: </label>
+						<input type="text" name="sender" id="sender" placeholder="Placeholder"/>
+						<span>Supporting Text</span>
+					</p>
+
+					<p>
+						<input type="checkbox" name="check" id="check" checked="checked" />
+						<label for="check">Check</label>
+					</p>
+
+					<p>
+						<input type="radio" name="opt" id="opt1" value="Opt 1" checked="checked" />
+						<label for="opt1">Option one is this and that—be sure to include why it's great</label>
+					</p>
+
+					<p>
+						<input type="radio" name="opt" id="opt2" value="Opt 2" />
+						<label for="opt2">Option two can be something else and selecting it will deselect option one</label>
+					</p>
+
+					<p>
+						<label for="range">Range</label>
+						<input name="range" id="range" type="range" min="0" max="100" value="0" /> 
+					</p>
+
+					<p>
+						<output for="range" name="range">0</output> from 100
+					</p>
+
+					<p>
+						<select>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</p>
+
+					<p>
+						<select multiple="multiple">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</p>
+
+					<p>
+						<label for="message">Message</label>
+						<textarea name="message" id="message" rows="3" cols="30"></textarea>
+					</p>
+
+					<p>
+						<input type="text" />
+						<input type="password" />
+						<input type="search" />
+						<input type="email" />
+						<input type="url" />
+						<input type="tel" />
+						<input type="number" />
+						<input type="date" />
+						<input type="month" />
+						<input type="week" /> <!-- avoid, no fallback on iOS -->
+						<input type="time" />
+						<input type="datetime-local" />
+						<input type="color" />
+					</p>
+
+					<p>
+						<input type="submit" name="send" id="send" value="Send" class="btn" />
+						<button class="btn">Button</button>
+						<a href="#" title="Cancel" class="btn">Cancel</a>
+					</p>
+				</fieldset>
+			</form>
+
+			<h2>Media Object</h2>
+
+			<div class="media">
+				<a href="#" title="#" class="media__meta">
+					<img src="#" alt="#" />
+				</a>
+
+				<div class="media__body">
+					<strong class="media__title">Headline</strong>
+					
+					<p>
+						Body Text.
+					</p>
+				</div>
+			</div>
+
+			<div class="media media--flipped">
+				<a href="#" title="#" class="media__meta">
+					<img src="#" alt="#" />
+				</a>
+
+				<div class="media__body">
+					<strong class="media__title">Headline</strong>
+					
+					<p>
+						Body Text.
+					</p>
+				</div>
+			</div>
+
+			<h2>Grid</h2>
+
+			<h3>Auto Grid</h3>
+
+			<div class="grid grid--no-gutter">
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+				<div>4</div>
+				<div>5</div>
+				<div>6</div>
+				<div>7</div>
+				<div>8</div>
+				<div>9</div>
+				<div>10</div>
+				<div>11</div>
+				<div>12</div>
+			</div>
+
+			<div class="grid gird--no-gutter grid--2 grid--md-4">
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+				<div>4</div>
+				<div>5</div>
+				<div>6</div>
+				<div>7</div>
+				<div>8</div>
+				<div>9</div>
+				<div>10</div>
+				<div>11</div>
+				<div>12</div>
+			</div>
+
+			<h3>Row Based</h3>
+
+			<div class="row row--no-gutter">
+				<div class="col-6">1</div>
+				<div class="col-6">1</div>
+			</div>
+
+			<div class="row row--no-gutter">
+				<div class="col-6 col-md-4">1</div>
+				<div class="col-6 col-md-4">1</div>
+			</div>
+
+			<div class="row row--no-gutter">
+				<div class="col-2 col-offset-2">1</div>
+				<div class="col-8">1</div>
+			</div>
+		</div>
+
+		<aside> <!-- Untitled, theoretically `h1` as title and `h2` for notes -->
+			<section>
+				<h2>Sidenote 1</h2>
+				<p>Note</p>
+			</section>
+
+			<section>
+				<h2>Sidenote 2</h2>
+				<p>Note</p>
+			</section>
+		</aside>
+
+		<section>
+			<h2>Comments</h2> <!-- Sections need headings, `h1` is theoretically allowed -->
+
+			<article> <!-- Warning, article should have heading -->
+				<footer>
+					<p>Posted by Name on 01.01.1900 / 00:00 (GMT)</p>
+				</footer>
+
+				<p>Comment text.</p>
+			</article>
+
+			<article> <!-- Warning, article should have heading -->
+				<footer>
+					<p>Posted by Name on 01.01.1900 / 00:00 (GMT)</p>
+				</footer>
+
+				<p>Comment text.</p>
+			</article>
+		</section>
+
+		<footer>
+			<p>Published on 01.01.1900, 00:00 (GMT)</p>
+
+			<address>
+				Author: <a href="mailto:mail@example.com" title="Mail the author">Author</a>
+			</address>
+
+			<h2>Footnotes</h2>
+
+			<dl>
+				<dt>[1]</dt>
+				<dd>Description</dd>
+			</dl>
+
+
+			<h2>Share and Like</h2>
+
+			<ul>
+				<li><a href="#" title="Share on Twitter">Twitter</a></li>
+				<li><a href="#" title="Star on GitHub">GitHub</a></li>
+			</ul>
+		</footer>
+	</article>
+</main>
+
+<div>
+	<h2>Sidebar</h2> <!-- Theoretically `h1` allowed, depends on title (SEO) -->
+</div>
+
+<footer>
+	<h2>Site footer</h2> <!-- Theoretically `h1` allowed, depends on title (SEO) -->
+	<p>
+		<small>&copy; bhdzllr</small>
+		<a href="#site-header" title="Scroll to top" class="js-scroll-top">Top</a>
+	</p>
+
+	<address>
+		<p>
+			<strong>Company Name</strong><br />
+			Street 00<br />
+			0000 Zip<br />
+		</p>
+
+		<p>
+			<abbr title="Telephone">T:</abbr> +43(0) 1 234 567-8
+		</p>
+	</address>
+</footer>

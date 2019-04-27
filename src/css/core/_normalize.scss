@@ -86,14 +86,3 @@ iframe {
 
 	border: 0;
 }
-
-/* Keep this separate form `::selection` */
-::-moz-selection { 
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}

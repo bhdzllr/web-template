@@ -1,90 +1,37 @@
-/**
- * Main module
- *
- * Basic interface functions.
- */
-var NAMESPACE = NAMESPACE || {};
-NAMESPACE.Main = (function () {
-	'use strict';
+import I18n from './I18n';
+import { default as de } from './lang/de.json';
+import Elevator from './Elevator';
+import AnalyticsOptOut from './AnalyticsOptOut';
 
-	/** Private */
+// import 'es6-promise';
+// import FontFaceObserver from 'fontfaceobserver-es'; // Also import ES6 promise
 
-	
-
-	/**
-	 * Prepare DOM.
-	 * Hide and show different containers at startup.
-	 */
-	function initDOM() {
-		/** FOIT */
-		var fontPrimary = new FontFaceObserver('Font Family', {
-			weight: 300,
-			style: 'normal'
-		});
-		fontPrimary.load().then(function () {
-			document.documentElement.className += ' fonts-loaded';
-		});
-	}
-
-	/**
-	 * Setup up event listeners.
-	 */
-	function initListeners() {
-		document.querySelector('.js-scroll-top').addEventListener('click', scrollToTop, false);
-	}
-
-	/**
-	 * Scroll page to top.
-	 *
-	 * @param {Object} Event object
-	 */
-	function scrollToTop(e) {
-		e.preventDefault();
-
-		window.scrollTo(0, 0);
-	}
-
-	//removeIf(production) 
-	/**
-	 * Title (optional)
-	 *
-	 * Description.
-	 *
-	 * @author  Author (http://example.com/)
-	 * @see     {@link http://example.com/}
-	 * @todo    todo
-	 *
-	 * @param {Object} name Description.
-	 * @param {Array}  name Description.
-	 * @param {string} name Description.
-	 * @param {number} name Description.
-	 *
-	 * @returns {boolean} Description.
-	 *
-	 * @deprecated
-	 */
-	function exampleComments() {
-		// code ...
-	}
-	//EndRemoveIf(production) 
-
-	/** Public */
-	
-	return {
-		/**
-		 * Initialize.
-		 * Call DOM preparation and call event listener setup.
-		 */
-		init: function () {
-			initDOM();
-			initListeners();
-		}
-	}
-})();
-
-/**
- * Startup
- */
 document.addEventListener('DOMContentLoaded', function (e) {
-	NAMESPACE.Main.init();
+
+	// loadFonts();
+
+	const currentLang = document.documentElement.getAttribute('lang') ? document.documentElement.getAttribute('lang') : 'en';
+	const i18n = new I18n(currentLang, {
+		'de': de
+	});
+
+	if (document.querySelector('.js-scroll-top')) {
+		new Elevator(document.querySelector('.js-scroll-top'));
+	}
+
+	if (document.querySelector('.js-analytics-opt-out')) {
+		new AnalyticsOptOut(document.querySelector('.js-analytics-opt-out'), i18n);	
+	}
+
 });
+
+function loadFonts() {
+	const fontPrimary = new FontFaceObserver('WebFontName', {
+		weight: 300,
+		style: 'normal'
+	});
+
+	fontPrimary.load().then(function () {
+		document.documentElement.className += ' fonts-loaded';
+	});
+}
