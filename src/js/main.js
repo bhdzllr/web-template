@@ -2,6 +2,7 @@ import I18n from './I18n';
 import { default as de } from './lang/de.json';
 import Elevator from './Elevator';
 import AnalyticsOptOut from './AnalyticsOptOut';
+import addAnalyticsCode from './utils';
 
 // import 'es6-promise';
 // import FontFaceObserver from 'fontfaceobserver-es'; // Also import ES6 promise
@@ -22,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function (e) {
 	if (document.querySelector('.js-analytics-opt-out')) {
 		new AnalyticsOptOut(document.querySelector('.js-analytics-opt-out'), i18n);	
 	}
+
+	addAnalyticsCode(function () {
+		// Analytics Code to inject
+	});
 
 });
 

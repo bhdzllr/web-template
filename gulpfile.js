@@ -54,6 +54,9 @@ function styles() {
 }
 
 function scripts() {
+	src('src/js/js-check.js')
+		.pipe(dest('dist/js/'));
+
 	return src('src/js/main.js')
 		.pipe(webpack(require('./webpack.config.js')))
 		.pipe(dest('dist/'));

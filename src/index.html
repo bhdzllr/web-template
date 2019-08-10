@@ -11,7 +11,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');</script>
+		<script src="js/js-check.js"></script>
 
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="icon" href="icon.png" type="image/png" />
@@ -32,16 +32,6 @@
 		<!-- Content -->
 
 		<script src="js/main.min.js"></script>
-		<!-- Analytics Code -->
-		<script>
-			var doNotTrack = (navigator.doNotTrack && (navigator.doNotTrack == '1' || navigator.doNotTrack == 'yes')) || (window.doNotTrack && (window.doNotTrack == '1')) || (navigator.msDoNotTrack && (navigator.msDoNotTrack == '1'));
-			var disableStr = 'disable-analytics';
-			if (doNotTrack || document.cookie.indexOf(disableStr + '=true') > -1 || document.cookie.indexOf(disableStr + '=true') > -1) {
-				window[disableStr] = true;
-			} else {
-				// Code
-			}
-		</script>
-		<!-- End Analytics Code -->
+		<!-- Analytics `noscript` -->
 	</body>
 </html>
