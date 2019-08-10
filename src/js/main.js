@@ -2,7 +2,7 @@ import I18n from './I18n';
 import { default as de } from './lang/de.json';
 import Elevator from './Elevator';
 import AnalyticsOptOut from './AnalyticsOptOut';
-import addAnalyticsCode from './utils';
+import { lazyLoadImages, addAnalyticsCode } from './utils';
 
 // import 'es6-promise';
 // import FontFaceObserver from 'fontfaceobserver-es'; // Also import ES6 promise
@@ -10,6 +10,7 @@ import addAnalyticsCode from './utils';
 document.addEventListener('DOMContentLoaded', function (e) {
 
 	// loadFonts();
+	lazyLoadImages();
 
 	const currentLang = document.documentElement.getAttribute('lang') ? document.documentElement.getAttribute('lang') : 'en';
 	const i18n = new I18n(currentLang, {
