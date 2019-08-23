@@ -7,7 +7,7 @@
 	font-family: 'WebFontName Local';
 	font-style: normal;
 	font-weight: 400;
-	// font-display: swap;
+	font-display: swap;
 	src: local('WebFontName'), local('WebFontName');
 }
 
@@ -16,7 +16,7 @@
 	font-family: 'WebFontName';
 	font-style: normal;
 	font-weight: 400;
-	// font-display: swap;
+	font-display: swap;
 	src: local('webfontLocalName1'), local('webfontLocalName2'),
 	     url('webfont.woff2') format('woff2'),
 	     url('webfont.woff') format('woff');

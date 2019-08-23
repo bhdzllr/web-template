@@ -176,53 +176,27 @@
 
 			<h2>Forms</h2>
 
-			<form id="contact" method="post" action="/">
-				<fieldset> <!-- name for data to server, id for label -->
-					<legend>Message Data</legend>
+			<form id="data" method="post" action="/" class="form form--controls-expanded" enctype="multipart/form-data" novalidate> <!-- JS Validation! -->
+				<fieldset class="fieldset-invisible">
+					<legend class="screen-reader-text">Contact</legend>
 
 					<p>
-						<label for="sender">Your Name: </label>
-						<input type="text" name="sender" id="sender" placeholder="Placeholder"/>
-						<span>Supporting Text</span>
+						<label for="email">
+							E-Mail
+							<span class="form__assistive">Required</span>
+						</label>
+						<input type="email" name="email" id="email" required /> <!-- Avoid placeholders for usability -->
+						<span class="form__assistive form__assistive--invalid">Please enter a valid e-mail address.</span>
 					</p>
 
 					<p>
-						<input type="checkbox" name="check" id="check" checked="checked" />
-						<label for="check">Check</label>
-					</p>
-
-					<p>
-						<label for="range">Range</label>
-						<input name="range" id="range" type="range" min="0" max="100" value="0" /> 
-					</p>
-
-					<p>
-						<output for="range" name="range">0</output> from 100
-					</p>
-
-					<p>
-						<select>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-						</select>
-					</p>
-
-					<p>
-						<select multiple="multiple">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-						</select>
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" />
 					</p>
 
 					<p>
 						<label for="message">Message</label>
-						<textarea name="message" id="message" rows="3" cols="30"></textarea>
+						<textarea name="message" id="message"></textarea>
 					</p>
 
 					<p>
@@ -240,25 +214,80 @@
 						<input type="datetime-local" />
 						<input type="color" />
 					</p>
+				</fieldset>
+
+				<fieldset>
+					<legend>Radios?</legend>
 
 					<p>
-						<input type="submit" name="send" id="send" value="Send" class="btn" />
-						<button class="btn">Button</button>
-						<a href="#" title="Cancel" class="btn">Cancel</a>
+						<input type="radio" name="radio" id="radio1"/>
+						<label for="radio1">Radio 1</label>
+					</p>
+
+					<p>
+						<input type="radio" name="radio" id="radio2" />
+						<label for="radio2">Radio 2</label>
 					</p>
 				</fieldset>
 
 				<fieldset>
+					<legend>Checkboxes?</legend>
+
 					<p>
-						<input type="radio" name="opt" id="opt1" value="Opt 1" checked="checked" />
-						<label for="opt1">Option one is this and that—be sure to include why it's great</label>
+						<input type="checkbox" name="check1" id="check1" />
+						<label for="check1">Check 1</label>
 					</p>
 
 					<p>
-						<input type="radio" name="opt" id="opt2" value="Opt 2" />
-						<label for="opt2">Option two can be something else and selecting it will deselect option one</label>
+						<input type="checkbox" name="check2" id="check2" />
+						<label for="check2">Check 2</label>
 					</p>
 				</fieldset>
+
+				<fieldset>
+					<legend>Others</legend>
+
+					<p>
+						<label for="range">Range</label>
+						<input name="range" id="range" type="range" min="0" max="100" value="0" disabled /> 
+						<output for="range" name="range">0</output> from 100
+					</p>
+
+					<p>
+						<label for="select">Select</label>
+						<select id="select">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</p>
+
+					<p>
+						<label for="multi-select">Multi-Select</label>
+						<select id="multi-select" multiple>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</p>
+
+					<p>
+						<label for="file">File</label>
+						<input type="file" id="file" name="file" accept="image/png, image/jpeg, text/*" disabled />
+					</p>
+
+					<p>
+						<label for="files">Files</label>
+						<input type="file" id="files" name="files[]" accept="image/png, image/jpeg, text/*" multiple />
+					</p>
+				</fieldset>
+
+				<input type="submit" value="Los" />
+				<!-- Avoid cancel button for usability -->
 			</form>
 
 			<h2>Media Object</h2>

@@ -5,6 +5,9 @@
 * New build pipeline
 * Bundling with webpack
 * ES6 with Babel
+* No inline scripts
+* JS Utils
+* Basic form styling
 
 
 ## Version 3.1.1 ##
@@ -20,7 +23,7 @@
 * Add HTTPS rewrite rule as example
 * Add PNG favicon
 * Add code for select styling
-* Drop IE10 support
+* Drop IE 10 support
 * Drop author meta tag, nobody uses it
 * Drop jQuery
 * Update Font Face Observer
@@ -31,7 +34,7 @@
 
 ## Version 3.0.0 ##
 
-* Drop lte IE8 support
+* Drop lte IE 8 support
 * Update to jQuery 3
 * Use double-colon CSS3 syntax for pseudo-elements.
 * Remove IE 6 - 7 "zoom" for "hasLayout"

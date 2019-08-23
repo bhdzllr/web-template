@@ -5,17 +5,17 @@
 $color-white: #ffffff;
 $color-black: #000000;
 
-$color-primary:    #00b050;
-$color-secondary:  #508446;
+$color-primary:    #006FE6;
+$color-secondary:  #6c757d;
 $color-background: #ffffff;
 
-$color-info:     blue;
-$color-positive: green;
-$color-negative: red;
+$color-info:     #2573A7;
+$color-positive: #1C7D44;
+$color-negative: #C0392B;
 
 $color-text:    #333333;
 $color-text--i: #ffffff;
-$color-text--lighter: #666666;
+$color-text--lighter: #595959;
 $color-mark: #ffff00;
 $color-selection: #b3d4fc;
 
@@ -35,3 +35,9 @@ $break-sm:  480px;
 $break-md:  768px;
 $break-lg:  960px;
 $break-xl: 1200px;
+
+$min-screen-xs: 'only screen and (min-width: #{$break-xs})';
+$min-screen-sm: 'only screen and (min-width: #{$break-sm})';
+$min-screen-md: 'only screen and (min-width: #{$break-md})';
+$min-screen-lg: 'only screen and (min-width: #{$break-lg})';
+$min-screen-xl: 'only screen and (min-width: #{$break-xl})';

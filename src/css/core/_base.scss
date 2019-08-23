@@ -1,0 +1,47 @@
+/**
+ * ********** Base **********
+ */
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+
+	background-color: $color-background;
+
+	color: $color-text;
+	font-family: $font-fallback;
+	font-size: 1em;
+	line-height: 1.625em;
+
+	.no-js &,
+	.fonts-loaded & {
+		font-family: $font-stack;
+		font-weight: normal;
+	}
+}
+
+/* Keep this separate form `::selection` */
+::-moz-selection { 
+	background: $color-selection;
+	text-shadow: none;
+}
+
+::selection {
+	background: $color-selection;
+	text-shadow: none;
+}
+
+/* Outline mixin */
+@mixin outline {
+	outline: 1px dotted $color-text;
+	outline-offset: 2px;
+}
+
+/* Base outline */
+.is-tabbing,
+.no-js {
+	:focus {
+		@include outline;	
+	}
+}

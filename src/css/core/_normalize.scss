@@ -15,17 +15,13 @@ summary {
 	display: list-item;
 }
 
+progress {
+	vertical-align: baseline;
+}
+
 [hidden],
 template {
 	display: none;
-}
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-	-webkit-appearance: button;
-	cursor: pointer;
 }
 
 button,
@@ -36,15 +32,6 @@ textarea {
 	color: inherit;
 	font-family: inherit;
 	font-size: inherit;
-	line-height: inherit;
-}
-
-button,
-input,
-textarea,
-select {
-	-webkit-appearance: none;
-	background-color: #ffffff;
 }
 
 button::-moz-focus-inner,
@@ -53,31 +40,30 @@ input::-moz-focus-inner {
 	padding: 0; /** Button size fix */
 }
 
-[type="text"],
-[type="password"],
-[type="search"],
-[type="email"],
-[type="url"],
-[type="tel"],
-[type="number"],
-[type="date"],
-[type="month"],
-[type="week"],
-[type="time"],
-[type="datetime-local"],
-[type="color"] {
-	outline: none;
-}
-
 textarea {
 	vertical-align: top;
 	overflow: auto;
-
-	outline: none;
 }
 
-img {
-	border: none; /* IE < 11: No border for `img` wrapped with `a` */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button; // Without styling, buttons have just a thin rounded border
+}
+
+[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
 }
 
 iframe {
