@@ -1,5 +1,19 @@
+// import 'es6-promise';
+// import FontFaceObserver from 'fontfaceobserver-es'; // Also import ES6 promise
+
 export function checkJS() {
 	document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+}
+
+export function loadFonts(fonts) {
+	fonts.forEach(function (font, i) {
+		const family = Object.keys(font)[0];
+		const fontObserver = new FontFaceObserver(family, font[family]);
+
+		fontObserver.load().then(function () {
+			if (i == (fonts.length - 1)) document.documentElement.className += ` fonts-loaded`;
+		});
+	});
 }
 
 export function lazyLoadImages(className = 'js-lazy-image', rootMargin = '300px') {

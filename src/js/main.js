@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', function (e) {
 		'de': de
 	});
 
-	// loadFonts();
+	// loadFonts([
+	// 	{ 'WebFontName': { weight: 400, style: 'normal' } },
+	// ]);
 	lazyLoadImages();
 	addOutlineHandler();
 	addRoleButtonListener();
@@ -33,14 +35,3 @@ document.addEventListener('DOMContentLoaded', function (e) {
 	});
 
 });
-
-function loadFonts() {
-	const fontPrimary = new FontFaceObserver('WebFontName', {
-		weight: 300,
-		style: 'normal'
-	});
-
-	fontPrimary.load().then(function () {
-		document.documentElement.className += ' fonts-loaded';
-	});
-}
