@@ -12,23 +12,23 @@
   "author": "bhdzllr",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/polyfill": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "babel-loader": "^8.0.5",
-    "del": "^4.1.0",
-    "gulp": "^4.0.1",
+    "@babel/core": "^7.7.7",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-ssh": "^0.7.0",
     "gulp-tar": "^2.1.0",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "es6-promise": "^4.2.6",
+    "es6-promise": "^4.2.8",
     "fontfaceobserver-es": "^3.3.1"
   }
 }
