@@ -86,7 +86,7 @@ export function beautifyFileInputs(i18n) {
 		const caption = document.createElement('span');
 		const label = document.createElement('label');
 
-		caption.textContent = fileInputs[i].hasAttribute('multiple') ? i18n.get('files.choose', 'Choose files ...') : i18n.get('file.choose', 'Choose file ...');  // @todo i18n / multiple
+		caption.textContent = fileInputs[i].hasAttribute('multiple') ? i18n.get('files.choose', 'Choose files ...') : i18n.get('file.choose', 'Choose file ...'); 
 		caption.style.cssText = `
 			vertical-align: middle;
 
