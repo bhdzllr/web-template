@@ -15,6 +15,14 @@
 	}
 }
 
+.hidden {
+	display: none;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
 .offscreen {
 	position: absolute;
 	left: -1000em;
@@ -31,10 +39,11 @@
 
 	border: 0;
 	clip-path: inset(50%);
+
 	white-space: nowrap;
 
-	&:active,
-	&:focus {
+	&--focusable:active,
+	&--focusable:focus {
 		position: static;
 
 		width: auto;
@@ -43,6 +52,7 @@
 		overflow: visible;
 
 		clip-path: none;
+
 		white-space: inherit;
 	}
 }
