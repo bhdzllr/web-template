@@ -83,6 +83,7 @@ function res(cb) {
 			'src/favicon.ico',
 			'src/icon.png',
 			'src/site.webmanifest',
+			'src/browserconfig.xml',
 		])
 		.pipe(dest(distFolder + '/'));
 
