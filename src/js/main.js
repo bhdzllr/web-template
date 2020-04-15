@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 		'de': de
 	});
 
+	// addServiceWorker('/sw.js');
 	// loadFonts([
 	// 	{ 'WebFontName': { weight: 400, style: 'normal' } },
 	// ]);

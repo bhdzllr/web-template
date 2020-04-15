@@ -5,6 +5,14 @@ export function checkJS() {
 	document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
 }
 
+export function addServiceWorker(file) {
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function () {
+			navigator.serviceWorker.register(file);
+		});
+	}
+}
+
 export function loadFonts(fonts) {
 	fonts.forEach(function (font, i) {
 		const family = Object.keys(font)[0];
