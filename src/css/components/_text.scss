@@ -42,6 +42,17 @@ p,
 	margin: 1em 0;
 }
 
+small {
+	display: inline-block;
+
+	font-size: 0.85em;
+	line-height: 1.35em;
+
+	p & {
+		display: inline;
+	}
+}
+
 mark {
 	background: $color-mark;
 	color: #000000
