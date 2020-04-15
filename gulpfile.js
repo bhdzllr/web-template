@@ -10,6 +10,8 @@ const sourcemaps = require('gulp-sourcemaps');
 const tar = require('gulp-tar');
 const GulpSSH = require('gulp-ssh');
 
+const distFolder = 'dist'
+
 const sshConfig = {
 	host: '0.0.0.0',
 	port: 22,
@@ -23,7 +25,7 @@ const ssh = new GulpSSH({
 
 function clean() {
 	return del([
-		'dist'
+		distFolder
 	]);
 }
 
@@ -33,7 +35,7 @@ function templates() {
 			'!src/markup.html',
 			'!src/standalone.html'
 		])
-		.pipe(dest('dist/'));
+		.pipe(dest(distFolder + '/'));
 }
 
 function styles() {
@@ -50,34 +52,39 @@ function styles() {
 			extname: '.css'
 		}))
 		.pipe(sourcemaps.write('./'))
-		.pipe(dest('dist/css/'));
+		.pipe(dest(distFolder + '/css/'));
 }
 
 function scripts() {
+	if (fs.existsSync('src/sw.js')) {
+		src('src/sw.js')
+			.pipe(dest(distFolder));
+	}	
+
 	src('src/js/js-check.js')
-		.pipe(dest('dist/js/'));
+		.pipe(dest(distFolder + '/js/'));
 
 	return src('src/js/main.js')
 		.pipe(webpack(require('./webpack.config.js')))
-		.pipe(dest('dist/'));
+		.pipe(dest(distFolder + '/'));
 }
 
 function res(cb) {
 	src('src/img/**/*')
-		.pipe(dest('dist/img/'));
+		.pipe(dest(distFolder + '/img/'));
 
 	src('src/fonts/**/*')
-		.pipe(dest('dist/fonts/'));
+		.pipe(dest(distFolder + '/fonts/'));
 
 	src('src/docs/**/*')
-		.pipe(dest('dist/docs/'));
+		.pipe(dest(distFolder + '/docs/'));
 
 	src([
 			'src/favicon.ico',
 			'src/icon.png',
 			'src/site.webmanifest',
 		])
-		.pipe(dest('dist/'));
+		.pipe(dest(distFolder + '/'));
 
 	cb();
 }
@@ -102,9 +109,9 @@ function deployUp() {
 	if (sshConfig.host === '0.0.0.0')
 		return console.error('Unable to deploy, SSH config needed.');
 
-	return src('dist/**/*', { base: '.' }) // base '.' to use whole 'dist' folder
+	return src(distFolder + '/**/*', { base: '.' }) // base '.' to use whole dist folder
 		.pipe(tar('package.tar'))
-		.pipe(dest('dist'))
+		.pipe(dest(distFolder))
 		.pipe(ssh.dest('/home/user/dist'));
 }
 
@@ -118,7 +125,7 @@ function deployRemote() {
 }
 
 function deployDown() {
-	return del(['dist/package.tar']);
+	return del([distFolder + '/package.tar']);
 }
 
 exports.default = series(clean, parallel(templates, styles, scripts, res), dev);
