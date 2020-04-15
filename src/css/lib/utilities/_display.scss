@@ -1,0 +1,54 @@
+/**
+ * ********** Display **********
+ */
+
+.hidden {
+	display: none;
+}
+
+@media only screen and (min-width: $break-sm) {
+	.sm-show {
+		display: block;
+	}
+
+	.sm-hidden {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: $break-md) {
+	.md-show {
+		display: block;
+	}
+
+	.md-hidden {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: $break-lg) {
+	.lg-show {
+		display: block;
+	}
+
+	.lg-hidden {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: $break-xl) {
+	.xl-show {
+		display: block;
+	}
+
+	.xl-hidden {
+		display: none;
+	}
+}
+
+.sm-show,
+.md-show,
+.lg-show,
+.xl-show {
+	display: none;
+}
