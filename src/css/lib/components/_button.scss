@@ -26,7 +26,6 @@
 	color: lighten($color-text, 35%);
 }
 
-button,
 .btn,
 a.btn {
 	@include button-defaults;
