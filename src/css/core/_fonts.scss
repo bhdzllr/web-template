@@ -2,22 +2,33 @@
  * ********** Fonts **********
  */
 
-/** WebFontName Local */
+/** Web Font Local */
 @font-face {
-	font-family: 'WebFontName Local';
+	font-family: 'Web Font Local';
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: local('webfontLocalName1'), local('webfontLocalName2');
+	src: local('Web Font Regular'), local('WebFont-Regular');
 }
 
-/** WebFontName */
+/** Web Font Normal */
 @font-face {
-	font-family: 'WebFontName';
+	font-family: 'Web Font';
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: local('webfontLocalName1'), local('webfontLocalName2'),
-	     url('webfont.woff2') format('woff2'),
-	     url('webfont.woff') format('woff');
+	src: local('Web Font Regular'), local('WebFont-Regular'),
+	     url('web-font-regular.woff2') format('woff2'),
+	     url('web-font-regular.woff') format('woff');
+}
+
+/** Web Font Bold */
+@font-face {
+	font-family: 'Web Font';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: local('Web Font Bold'), local('WebFont-Bold'),
+	     url('web-font-bold.woff2') format('woff2'),
+	     url('web-font-bold.woff') format('woff');
 }

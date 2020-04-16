@@ -61,8 +61,8 @@ function scripts() {
 			.pipe(dest(distFolder));
 	}	
 
-	src('src/js/js-check.js')
-		.pipe(dest(distFolder + '/js/'));
+	src('src/js/lib/js-check.js')
+		.pipe(dest(distFolder + '/js/lib/'));
 
 	return src('src/js/main.js')
 		.pipe(webpack(require('./webpack.config.js')))
@@ -83,6 +83,8 @@ function res(cb) {
 			'src/favicon.ico',
 			'src/icon.png',
 			'src/site.webmanifest',
+			'src/tile.png',
+			'src/tile-wide.png',
 			'src/browserconfig.xml',
 		])
 		.pipe(dest(distFolder + '/'));

@@ -8,3 +8,9 @@ img {
 	max-width: 100% !important;
 	height: auto;
 }
+
+.js-lazy-image {
+	.no-js & {
+		display: none;
+	}
+}

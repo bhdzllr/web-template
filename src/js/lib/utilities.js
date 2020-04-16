@@ -1,5 +1,3 @@
-// import 'es6-promise';
-// import FontFaceObserver from 'fontfaceobserver-es'; // Also import ES6 promise
 
 export function checkJS() {
 	document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
@@ -13,7 +11,7 @@ export function addServiceWorker(file) {
 	}
 }
 
-export function loadFonts(fonts) {
+export function loadFonts(FontFaceObserver, fonts) {
 	fonts.forEach(function (font, i) {
 		const family = Object.keys(font)[0];
 		const fontObserver = new FontFaceObserver(family, font[family]);
@@ -24,9 +22,36 @@ export function loadFonts(fonts) {
 	});
 }
 
-export function lazyLoadImages(className = 'js-lazy-image', rootMargin = '300px') {
+export function lazyLoadImages(className = 'js-lazy-image', rootMargin = '-50px') {
 	const images = document.querySelectorAll('.' + className);
 
+	// Fallback for loading all images
+	const fallback = function (images) {
+		for (let i = 0; i < images.length; i++) {
+			const image = images[i];
+
+			if (image.dataset.src) image.src = image.dataset.src;
+			if (image.dataset.srcset) image.srcset = image.dataset.srcset;
+		}
+	};
+
+	// Loading if printing
+	let isPrinting = false;
+	const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+	if (!isSafari) {
+		window.onbeforeprint = function() {
+			isPrinting = true;
+			fallback(images);
+		};
+	} else {
+		window.matchMedia('print').addListener(() => {
+			isPrinting = true;
+			fallback(images);
+		});
+	}
+	if (isPrinting) return;
+
+	// Lazy Loading
 	if (
 		'IntersectionObserver' in window
 		&& 'IntersectionObserverEntry' in window
@@ -53,12 +78,7 @@ export function lazyLoadImages(className = 'js-lazy-image', rootMargin = '300px'
 		}
 	} else {
 		// Fallback, just load all images
-		for (let i = 0; i < images.length; i++) {
-			const image = images[i];
-
-			if (image.dataset.src) image.src = image.dataset.src;
-			if (image.dataset.srcset) image.srcset = image.dataset.srcset;
-		}
+		fallback(images);
 	}
 }
 

@@ -1,8 +1,16 @@
-import I18n from './I18n';
 import { default as de } from './lang/de.json';
-import Elevator from './Elevator';
-import AnalyticsOptOut from './AnalyticsOptOut';
-import { lazyLoadImages, addOutlineHandler, addRoleButtonListener, beautifyFileInputs, addAnalyticsCode, isFormValid } from './utils';
+
+import I18n from './lib/I18n';
+import Elevator from './lib/Elevator';
+import AnalyticsOptOut from './lib/AnalyticsOptOut';
+import {
+	lazyLoadImages,
+	addOutlineHandler,
+	addRoleButtonListener,
+	beautifyFileInputs,
+	addAnalyticsCode,
+	isFormValid
+} from './lib/utilities';
 
 // import 'es6-promise';
 // import FontFaceObserver from 'fontfaceobserver-es'; // Also import ES6 promise
@@ -15,8 +23,9 @@ document.addEventListener('DOMContentLoaded', function (e) {
 	});
 
 	// addServiceWorker('/sw.js');
-	// loadFonts([
-	// 	{ 'WebFontName': { weight: 400, style: 'normal' } },
+	// loadFonts(FontFaceObserver, [
+	// 	{ 'Font Name': { weight: 400 } },
+	// 	{ 'Font Name': { weight: 700 } },
 	// ]);
 	lazyLoadImages();
 	addOutlineHandler();

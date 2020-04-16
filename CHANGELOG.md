@@ -2,12 +2,16 @@
 
 ## Version 4.0.0 ##
 
-* New build pipeline
-* Bundling with webpack
-* ES6 with Babel
-* No inline scripts
-* JS Utils
-* Basic form styling
+* Add new build pipeline
+* Build and bundling with webpack
+* Build ES6 with Babel
+* Remove inline scripts
+* Add JS utilities
+* Update basic styling inside "lib" folder
+* Add browserconfig.xml
+* Add service worker example
+* Add image lazy loading example
+* Add font loading example
 
 
 ## Version 3.1.1 ##
