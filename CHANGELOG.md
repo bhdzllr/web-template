@@ -15,6 +15,7 @@
 * Add JS class "LocalStorage"
 * Add JS class "VisibilityObserver"
 * Add JS class "Form"
+* Add JS "DialogModal"
 
 
 ## Version 3.1.1 ##
