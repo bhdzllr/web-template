@@ -14,6 +14,7 @@
 * Add font loading example
 * Add JS class "LocalStorage"
 * Add JS class "VisibilityObserver"
+* Add JS class "Form"
 
 
 ## Version 3.1.1 ##

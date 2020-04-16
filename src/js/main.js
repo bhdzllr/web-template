@@ -9,7 +9,6 @@ import {
 	addRoleButtonListener,
 	beautifyFileInputs,
 	addAnalyticsCode,
-	isFormValid
 } from './lib/utilities';
 
 // import 'es6-promise';

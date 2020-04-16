@@ -148,19 +148,6 @@ export function beautifyFileInputs(i18n) {
 	}
 }
 
-// Don't forget using "novalidate" attribute on form that is validated manually
-export function isFormValid(form, classNameValidated = 'form--validated') {
-	if (typeof document.createElement('input').checkValidity == 'function') {
-		if (form.checkValidity() === true) return true;
-
-		form.classList.add(classNameValidated);
-
-		return false;
-	}
-
-	return true; // Return true if browser doesn't support `checkValidty()`, we need to check on server anyway. 
-}
-
 export function addAnalyticsCode(codeCallback) {
 	var doNotTrack = (navigator.doNotTrack && (navigator.doNotTrack == '1' || navigator.doNotTrack == 'yes')) || (window.doNotTrack && (window.doNotTrack == '1')) || (navigator.msDoNotTrack && (navigator.msDoNotTrack == '1'));
 	var disableStr = 'disable-analytics';
