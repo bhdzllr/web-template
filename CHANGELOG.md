@@ -12,6 +12,8 @@
 * Add service worker example
 * Add image lazy loading example
 * Add font loading example
+* Add JS class "LocalStorage"
+* Add JS class "VisibilityObserver"
 
 
 ## Version 3.1.1 ##
