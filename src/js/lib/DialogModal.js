@@ -5,8 +5,8 @@ export class DialogModal {
 	constructor({
 		contentAsHtml,
 		showOnCreation = false,
-		showCallback,
-		hideCallback,
+		showCallback = null,
+		hideCallback = null,
 		ariaLabelledBy = '',
 	}) {
 		this.contentAsHtml = contentAsHtml;

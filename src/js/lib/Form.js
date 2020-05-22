@@ -50,9 +50,9 @@ export default class Form {
 						values.push({ name: encodeURIComponent(control.name), value: encodeURIComponent(control.value) });
 					}
 			}
-   		}
+		}
 
-   		return values;
+		return values;
 	}
 
 	serialize() {
@@ -71,8 +71,9 @@ export default class Form {
 		return isFormValid(this.formElement);
 	}
 
-	reset() {
+	reset(classesToRemove = []) {
 		this.formElement.reset();
+		this.formElement.classList.remove(...classesToRemove);
 	}
 
 }
