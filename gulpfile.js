@@ -26,7 +26,7 @@ const ssh = new GulpSSH({
 function clean() {
 	return del([
 		distFolder
-	]);
+	], { force: true });
 }
 
 function templates() {
