@@ -413,6 +413,7 @@ fieldset > :last-child {
 	&__assistive--invalid {
 		display: none;
 		margin: 0;
+		padding-top: 0.25em;
 
 		color: $color-negative;
 		font-size: 1em;
@@ -459,9 +460,13 @@ fieldset > :last-child {
 		}
 	}
 
-	[type="submit"]:focus {
-		@extend .btn !optional;
-		@extend .btn--primary !optional;
-		@include form-outline;
+	[type="submit"] {
+		margin: 0.5em 0;
+
+		&:focus {
+			@extend .btn !optional;
+			@extend .btn--primary !optional;
+			@include form-outline;
+		}
 	}
 }
