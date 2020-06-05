@@ -7,6 +7,7 @@ module.exports = {
 	mode: 'production',
 	output: {
 		filename: 'js/[name].min.js',
+		chunkFilename: 'js/[name].min.js',
 		path: path.resolve(__dirname, 'dist'),
 	},
 	stats: 'minimal',
