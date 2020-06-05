@@ -11,7 +11,7 @@ import {
 	addAnalyticsCode,
 } from './lib/utilities';
 
-// import 'es6-promise';
+// import 'es6-promise/auto';
 // import FontFaceObserver from 'fontfaceobserver-es'; // Also import ES6 promise
 
 document.addEventListener('DOMContentLoaded', function (e) {
