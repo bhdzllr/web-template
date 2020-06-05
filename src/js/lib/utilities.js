@@ -10,6 +10,16 @@ export function addServiceWorker(file) {
 	}
 }
 
+export function loadStyle(href, media = 'all') {
+	const style = document.createElement('link');
+
+	style.rel = 'stylesheet';
+	style.href = href;
+	style.media = media;
+
+	document.getElementByTagNAme('head')[0].appendChild(style);
+}
+
 export function loadFonts(FontFaceObserver, fonts) {
 	fonts.forEach(function (font, i) {
 		const family = Object.keys(font)[0];
