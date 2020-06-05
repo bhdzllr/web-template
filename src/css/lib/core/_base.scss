@@ -45,13 +45,9 @@ body {
 }
 
 a,
-a:link {
-	color: $color-primary;
-	text-decoration: underline;
-}
-
+a:link,
 a:visited {
-	color: $color-secondary;
+	color: $color-primary;
 	text-decoration: underline;
 }
 
