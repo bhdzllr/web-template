@@ -4,6 +4,7 @@
 
 @mixin button-defaults {
 	display: inline-block;
+	margin: 0.25em 0;
 	padding: 0.5em 1em;
 
 	background: lighten($color-black, 95%);
@@ -126,6 +127,7 @@ a.btn--strong {
 a.btn--small {
 	padding: 0.35em 0.75em;
 
+	line-height: 1.25em;
 	font-size: 0.9em;
 }
 
@@ -145,8 +147,21 @@ a.btn--expanded {
 	width: 100%;
 }
 
+.btn--arrow,
+a.btn--arrow {
+	&::after {
+		content: ' \203A';
+	}
+}
+
 button[disabled],
 .btn[disabled],
 .btn--disabled {
 	@include button-disabled;
+}
+
+button[hidden],
+.btn[hidden],
+.btn--hidden {
+	display: none;
 }
