@@ -16,16 +16,32 @@ h5 {
 h1,
 .h1 {
 	font-size: 1.75em;
+
+	@media only screen and (min-width: $break-md) {
+		font-size: 2.5em;
+	}
 }
 
 h2,
 .h2 {
+	margin-top: 1.35em;
+
 	font-size: 1.35em;
+
+	@media only screen and (min-width: $break-md) {
+		font-size: 1.85em;
+	}
 }
 
 h3,
 .h3 {
+	margin-top: 1.15em;
+
 	font-size: 1.15em;
+
+	@media only screen and (min-width: $break-md) {
+		font-size: 1.45em;
+	}
 }
 
 h4,
@@ -34,8 +50,32 @@ h6,
 .h4,
 .h5,
 .h6 {
+	margin-top: 1.05em;
+
 	font-size: 1.05em;
+
+	@media only screen and (min-width: $break-md) {
+		font-size: 1.15em;
+	}
 }
+
+* > h1,
+* > h2,
+* > h3,
+* > h4,
+* > h5,
+* > h6,
+* > .h1,
+* > .h2,
+* > .h3,
+* > .h4,
+* > .h5,
+* > .h6 {
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
 
 p,
 .p {
@@ -56,7 +96,6 @@ small {
 
 mark {
 	background: $color-mark;
-	color: #000000
 }
 
 abbr {
