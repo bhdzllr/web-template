@@ -21,14 +21,6 @@ export class DialogModal {
 		this.lastElement;
 		this.isOpen = false;
 
-		this.blurOnLastFocusableElement = function (e) {
-			if (e.keyCode == 9 && !(e.shiftKey && e.keyCode == 9)) {
-				e.preventDefault();
-				this.focusFirstFocusableElement();
-			}
-		}
-		this.handleBlurOnLastFocusableElement = this.blurOnLastFocusableElement.bind(this);
-	
 		this.initDom();
 		this.initAriaAttributes();
 		this.initListeners();
@@ -94,6 +86,7 @@ export class DialogModal {
 		this.isOpen = true;
 
 		this.focusFirstFocusableElement();
+		this.addListenerOnFirstFocusableElement();
 		this.addListenerOnLastFocusableElement();
 
 		if (this.showCallback) this.showCallback();
@@ -120,12 +113,38 @@ export class DialogModal {
 	}
 
 	getFocusableChildNodes() {
-		const childNodesOverlay = Array.prototype.slice.call(this.overlay.childNodes);
-		const childNodesDialog = Array.prototype.slice.call(this.dialog.childNodes);
+		const focusableSelector = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+		const childNodesOverlay = Array.prototype.slice.call(this.overlay.querySelectorAll(focusableSelector));
+		const childNodesDialog = Array.prototype.slice.call(this.dialog.querySelectorAll(focusableSelector));
 
 		return childNodesOverlay.concat(childNodesDialog).filter(function (node) {
 			return isFocusable(node);
 		})
+	}
+
+	getFirstFocusableElement() {
+		const childNodes = this.getFocusableChildNodes();
+
+		if (Boolean(childNodes.length)) return childNodes[0];
+	}
+
+	getLastFocusableElement() {
+		const childNodes = this.getFocusableChildNodes();
+
+		if (Boolean(childNodes.length)) return childNodes[childNodes.length - 1];
+	}
+
+	addListenerOnFirstFocusableElement() {
+		const firstFocusableElement = this.getFirstFocusableElement();
+
+		if (firstFocusableElement) {
+			firstFocusableElement.addEventListener('keydown', (e) => {
+				if (e.shiftKey && e.keyCode == 9) {
+					e.preventDefault();
+					this.focusLastFocusableElement();
+				}
+			});
+		}
 	}
 
 	addListenerOnLastFocusableElement() {
@@ -141,16 +160,12 @@ export class DialogModal {
 		}
 	}
 
-	getLastFocusableElement() {
-		const childNodes = this.getFocusableChildNodes();
-
-		if (Boolean(childNodes.length)) return childNodes[childNodes.length - 1];
+	focusFirstFocusableElement() {
+		this.getFirstFocusableElement().focus();
 	}
 
-	focusFirstFocusableElement() {
-		const childNodes = this.getFocusableChildNodes();
-
-		if (Boolean(childNodes.length)) childNodes[0].focus();
+	focusLastFocusableElement() {
+		this.getLastFocusableElement().focus();
 	}
 
 	focusLastDocumentElement() {
