@@ -3,6 +3,7 @@ export default class Form {
 	constructor(formElement, submittedCallback) {
 		this.formElement = formElement;
 		this.submittedCallback = submittedCallback;
+		this.initialClassList = formElement.classList;
 
 		this.initListeners();
 	}
