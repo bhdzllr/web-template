@@ -6,7 +6,7 @@
 	display: none;
 }
 
-@media only screen and (min-width: $break-sm) {
+@media #{$screen-min-sm} {
 	.sm-show {
 		display: block;
 	}
@@ -16,7 +16,7 @@
 	}
 }
 
-@media only screen and (min-width: $break-md) {
+@media #{$screen-min-md} {
 	.md-show {
 		display: block;
 	}
@@ -26,7 +26,7 @@
 	}
 }
 
-@media only screen and (min-width: $break-lg) {
+@media #{$screen-min-lg} {
 	.lg-show {
 		display: block;
 	}
@@ -36,7 +36,7 @@
 	}
 }
 
-@media only screen and (min-width: $break-xl) {
+@media #{$screen-min-xl} {
 	.xl-show {
 		display: block;
 	}

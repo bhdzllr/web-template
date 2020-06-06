@@ -12,7 +12,7 @@
 	padding-right: 1rem;
 	padding-left: 1rem;
 
-	@media only screen and (min-width: $break-md) {
+	@media #{$screen-min-md} {
 		padding-right: 2.5rem;
 		padding-left: 2.5rem;
 	}
@@ -74,7 +74,7 @@
 	}
 }
 
-@media only screen and (min-width: $break-sm) {
+@media #{$screen-min-sm} {
 	@for $i from 1 through $grid-columns {
 		.grid--sm-#{$i} > *,
 		.grid--sm-#{$i} .grid__element {
@@ -93,7 +93,7 @@
 	}
 }
 
-@media only screen and (min-width: $break-md) {
+@media #{$screen-min-md} {
 	@for $i from 1 through $grid-columns {
 		.grid--md-#{$i} > *,
 		.grid--md-#{$i} .grid__element {
@@ -112,7 +112,7 @@
 	}
 }
 
-@media only screen and (min-width: $break-lg) {
+@media #{$screen-min-lg} {
 	@for $i from 1 through $grid-columns {
 		.grid--lg-#{$i} > *,
 		.grid--lg-#{$i} .grid__element {
@@ -131,7 +131,7 @@
 	}
 }
 
-@media only screen and (min-width: $break-xl) {
+@media #{$screen-min-xl} {
 	@for $i from 1 through $grid-columns {
 		.grid--xl-#{$i} > *,
 		.grid--xl-#{$i} .grid__element {
@@ -194,7 +194,7 @@
 	}
 }
 
-@media only screen and (min-width: $break-sm) {
+@media #{$screen-min-sm} {
 	@for $i from 1 through $row-columns {
 		.col-sm-#{$i} {
 			flex: 0 0 ((100% * $i) / $row-columns);
@@ -209,7 +209,7 @@
 	}
 }
 
-@media only screen and (min-width: $break-md) {
+@media #{$screen-min-md} {
 	@for $i from 1 through $row-columns {
 		.col-md-#{$i} {
 			flex: 0 0 ((100% * $i) / $row-columns);
@@ -224,7 +224,7 @@
 	}
 }
 
-@media only screen and (min-width: $break-lg) {
+@media #{$screen-min-lg} {
 	@for $i from 1 through $row-columns {
 		.col-lg-#{$i} {
 			flex: 0 0 ((100% * $i) / $row-columns);
@@ -239,7 +239,7 @@
 	}
 }
 
-@media only screen and (min-width: $break-xl) {
+@media #{$screen-min-xl} {
 	@for $i from 1 through $row-columns {
 		.col-xl-#{$i} {
 			flex: 0 0 ((100% * $i) / $row-columns);

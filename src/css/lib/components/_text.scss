@@ -17,7 +17,7 @@ h1,
 .h1 {
 	font-size: 1.75em;
 
-	@media only screen and (min-width: $break-md) {
+	@media #{$screen-min-md} {
 		font-size: 2.5em;
 	}
 }
@@ -28,7 +28,7 @@ h2,
 
 	font-size: 1.35em;
 
-	@media only screen and (min-width: $break-md) {
+	@media #{$screen-min-md} {
 		font-size: 1.85em;
 	}
 }
@@ -39,7 +39,7 @@ h3,
 
 	font-size: 1.15em;
 
-	@media only screen and (min-width: $break-md) {
+	@media #{$screen-min-md} {
 		font-size: 1.45em;
 	}
 }
@@ -54,7 +54,7 @@ h6,
 
 	font-size: 1.05em;
 
-	@media only screen and (min-width: $break-md) {
+	@media #{$screen-min-md} {
 		font-size: 1.15em;
 	}
 }

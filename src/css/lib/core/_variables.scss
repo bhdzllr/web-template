@@ -35,8 +35,8 @@ $break-md:  768px;
 $break-lg:  960px;
 $break-xl: 1200px;
 
-$min-screen-xs: 'only screen and (min-width: #{$break-xs})';
-$min-screen-sm: 'only screen and (min-width: #{$break-sm})';
-$min-screen-md: 'only screen and (min-width: #{$break-md})';
-$min-screen-lg: 'only screen and (min-width: #{$break-lg})';
-$min-screen-xl: 'only screen and (min-width: #{$break-xl})';
+$screen-min-xs: 'only screen and (min-width: #{$break-xs})';
+$screen-min-sm: 'only screen and (min-width: #{$break-sm})';
+$screen-min-md: 'only screen and (min-width: #{$break-md})';
+$screen-min-lg: 'only screen and (min-width: #{$break-lg})';
+$screen-min-xl: 'only screen and (min-width: #{$break-xl})';
