@@ -464,9 +464,7 @@ fieldset > :last-child {
 		margin: 0.5em 0;
 
 		&:focus {
-			@extend .btn !optional;
-			@extend .btn--primary !optional;
 			@include form-outline;
-		}
+		}	
 	}
 }
