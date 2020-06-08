@@ -2,13 +2,12 @@ import { default as de } from './lang/de.json';
 
 import I18n from './lib/I18n';
 import Elevator from './lib/Elevator';
-import AnalyticsOptOut from './lib/AnalyticsOptOut';
+import { AnalyticsOptOut, addAnalyticsCode } from './lib/Analytics';
 import {
 	lazyLoadImages,
 	addOutlineHandler,
 	addRoleButtonListener,
 	beautifyFileInputs,
-	addAnalyticsCode,
 } from './lib/utilities';
 
 // import 'es6-promise/auto';
@@ -41,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
 	addAnalyticsCode(function () {
 		// Analytics Code to inject
+		// Don't forget to make global variables available because of uglify, e. g. with:
+		// window['_paq'] = _paq;
 	});
 
 });
