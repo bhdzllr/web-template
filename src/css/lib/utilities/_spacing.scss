@@ -4,7 +4,7 @@
 
 @for $i from 0 through 3 {
 	.m-#{$i} {
-		@if $i > 1 {
+		@if $i > 0 {
 			margin: #{$i}em;
 		} @else {
 			margin: 0;
@@ -12,7 +12,7 @@
 	}
 
 	.mt-#{$i} {
-		@if $i > 1 {
+		@if $i > 0 {
 			margin-top: #{$i}em;
 		} @else {
 			margin-top: 0;
@@ -20,7 +20,7 @@
 	}
 
 	.mr-#{$i} {
-		@if $i > 1 {
+		@if $i > 0 {
 			margin-right: #{$i}em;
 		} @else {
 			margin-right: 0;
@@ -28,7 +28,7 @@
 	}
 
 	.mb-#{$i} {
-		@if $i > 1 {
+		@if $i > 0 {
 			margin-bottom: #{$i}em;
 		} @else {
 			margin-bottom: 0;
@@ -36,7 +36,7 @@
 	}
 
 	.ml-#{$i} {
-		@if $i > 1 {
+		@if $i > 0 {
 			margin-left: #{$i}em;
 		} @else {
 			margin-left: 0;
@@ -46,7 +46,7 @@
 
 @for $i from 0 through 3 {
 	.p-#{$i} {
-		@if $i > 1 {
+		@if $i > 0 {
 			padding: #{$i}em;
 		} @else {
 			padding: 0;
@@ -54,7 +54,7 @@
 	}
 
 	.pt-#{$i} {
-		@if $i > 1 {
+		@if $i > 0 {
 			padding-top: #{$i}em;
 		} @else {
 			padding-top: 0;
@@ -62,7 +62,7 @@
 	}
 
 	.pr-#{$i} {
-		@if $i > 1 {
+		@if $i > 0 {
 			padding-right: #{$i}em;
 		} @else {
 			padding-right: 0;
@@ -70,7 +70,7 @@
 	}
 
 	.pb-#{$i} {
-		@if $i > 1 {
+		@if $i > 0 {
 			padding-bottom: #{$i}em;
 		} @else {
 			padding-bottom: 0;
@@ -78,7 +78,7 @@
 	}
 
 	.pl-#{$i} {
-		@if $i > 1 {
+		@if $i > 0 {
 			padding-left: #{$i}em;
 		} @else {
 			padding-left: 0;
