@@ -1,7 +1,6 @@
 import { default as de } from './lang/de.json';
 
 import I18n from './lib/I18n';
-import Elevator from './lib/Elevator';
 import { AnalyticsOptOut, addAnalyticsCode } from './lib/Analytics';
 import {
 	lazyLoadImages,
@@ -29,10 +28,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
 	addOutlineHandler();
 	addRoleButtonListener();
 	beautifyFileInputs(i18n);
-
-	if (document.querySelector('.js-scroll-top')) {
-		new Elevator(document.querySelector('.js-scroll-top'));
-	}
 
 	if (document.querySelector('.js-analytics-opt-out')) {
 		new AnalyticsOptOut(document.querySelector('.js-analytics-opt-out'), i18n);	
