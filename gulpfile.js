@@ -61,7 +61,7 @@ function scripts() {
 			.pipe(dest(distFolder));
 	}	
 
-	src('src/js/lib/js-check.js')
+	src('src/js/lib/check.js')
 		.pipe(dest(distFolder + '/js/lib/'));
 
 	return src('src/js/main.js')
