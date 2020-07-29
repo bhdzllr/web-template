@@ -16,6 +16,7 @@
 * Add JS class "VisibilityObserver"
 * Add JS class "Form"
 * Add JS "DialogModal"
+* Add CSS "stack"
 
 
 ## Version 3.1.1 ##
