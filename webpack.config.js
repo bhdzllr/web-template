@@ -4,7 +4,7 @@ module.exports = {
 	entry: {
 		main: './src/js/main.js',
 	},
-	mode: 'production',
+	mode: 'production', // 'development'
 	output: {
 		filename: 'js/[name].min.js',
 		chunkFilename: 'js/[name].min.js',
@@ -22,8 +22,10 @@ module.exports = {
 				options: {
 					presets: [
 						['@babel/env', {
-							'targets': '> 0.25%, IE 10',
-							// 'useBuiltIns': 'usage'
+							'targets': '> 0.25%, IE 11',
+							// 'useBuiltIns': 'usage', // Neede to add polyfills
+							// 'corejs': 3,            // Neede to add polyfills
+							// 'debug': true,
 						}]
 					]
 				}
