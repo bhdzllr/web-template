@@ -80,12 +80,12 @@ function res(cb) {
 		.pipe(dest(distFolder + '/docs/'));
 
 	src([
+			'src/browserconfig.xml',
 			'src/favicon.ico',
 			'src/icon.png',
 			'src/site.webmanifest',
 			'src/tile.png',
 			'src/tile-wide.png',
-			'src/browserconfig.xml',
 		])
 		.pipe(dest(distFolder + '/'));
 
@@ -135,4 +135,3 @@ exports.default = series(clean, parallel(templates, styles, scripts, res), dev);
 exports.dev = exports.default;
 exports.dist = series(clean, parallel(templates, styles, scripts, res));
 exports.deploy = series(deployUp, deployRemote, deployDown);
-
