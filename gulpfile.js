@@ -10,17 +10,16 @@ const sourcemaps = require('gulp-sourcemaps');
 const tar = require('gulp-tar');
 const GulpSSH = require('gulp-ssh');
 
-const distFolder = 'dist'
-
-const sshConfig = {
-	host: '0.0.0.0',
-	port: 22,
-	username: 'username',
-	// privateKey: fs.readFileSync('/Users/user/.ssh/id_rsa')
-};
+const distFolder = 'dist';
+const sshConfig = require('./ssh.json');
 const ssh = new GulpSSH({
 	ignoreErrors: false,
-	sshConfig: sshConfig
+	sshConfig: {
+		host: sshConfig.host
+		port: sshConfig.port
+		username: sshConfig.username
+		// privateKey: fs.readFileSync(sshConfig.privateKey)
+	}
 });
 
 function clean() {
@@ -29,13 +28,20 @@ function clean() {
 	], { force: true });
 }
 
-function templates() {
-	return src([
+function pages(cb) {
+	src([
 			'src/**/*.html',
 			'!src/markup.html',
 			'!src/standalone.html'
 		])
-		.pipe(dest(distFolder + '/'));
+		.pipe(dest(distFolder));
+
+	src([
+		'src/pages/**/*',
+		'!src/pages/**/*.html'
+	]).pipe(dest(distFolder));
+
+	cb();
 }
 
 function styles() {
@@ -66,7 +72,7 @@ function scripts() {
 
 	return src('src/js/main.js')
 		.pipe(webpack(require('./webpack.config.js')))
-		.pipe(dest(distFolder + '/'));
+		.pipe(dest(distFolder));
 }
 
 function res(cb) {
@@ -87,7 +93,7 @@ function res(cb) {
 			'src/tile.png',
 			'src/tile-wide.png',
 		])
-		.pipe(dest(distFolder + '/'));
+		.pipe(dest(distFolder));
 
 	cb();
 }
@@ -97,7 +103,7 @@ function dev() {
 		'src/index.html',
 		'src/pages/**/*.html',
 		'src/templates/**/*.html'
-	], series(templates));
+	], series(pages));
 
 	watch([,
 		'src/css/**/*.scss'
@@ -110,7 +116,7 @@ function dev() {
 
 function deployUp() {
 	if (sshConfig.host === '0.0.0.0')
-		return console.error('Unable to deploy, SSH config needed.');
+		return console.error('Unable to deploy, SSH config in file "ssh.json" needed, see "ssh.exmaple.json".');
 
 	return src(distFolder + '/**/*', { base: '.' }) // base '.' to use whole dist folder
 		.pipe(tar('package.tar'))
@@ -131,7 +137,7 @@ function deployDown() {
 	return del([distFolder + '/package.tar']);
 }
 
-exports.default = series(clean, parallel(templates, styles, scripts, res), dev);
+exports.default = series(clean, parallel(pages, styles, scripts, res), dev);
 exports.dev = exports.default;
-exports.dist = series(clean, parallel(templates, styles, scripts, res));
+exports.dist = series(clean, parallel(pages, styles, scripts, res));
 exports.deploy = series(deployUp, deployRemote, deployDown);
