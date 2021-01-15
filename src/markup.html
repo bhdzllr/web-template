@@ -66,6 +66,38 @@
 				sit amet. <sup>[1]</sup>
 			</p>
 
+			<p>
+				Inline Quotation: When Dave asks HAL to open the pod bay door, HAL answers:
+				<q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">
+					I'm sorry, Dave. I'm afraid I can't do that.
+				</q>
+			</p>
+
+			<p>
+				Definition: A <dfn id="def-validator">validator</dfn>
+				is a program that checks for syntax errors in code or documents.
+				The <code>&lt;p&gt;</code> element, the <code>&lt;dt&gt;</code>/<code>&lt;dd&gt;</code> pairing,
+				or the <code>&lt;section&gt;</code> element which is the nearest ancestor of the
+				<code>&lt;dfn&gt;</code> is considered to be the definition of the term.
+			</p>
+
+			<p>
+				A simple equation: <var>x</var> = <var>y</var> + 2
+			</p>
+
+			<p>
+				The Cure will be celebrating their 40th anniversary on
+				<time datetime="2018-07-07">July 7</time>
+				in London's Hyde Park.
+			</p>
+
+			<p>
+				The concert starts at
+				<time datetime="20:00">20:00</time>
+				and you'll be able to enjoy the band for at least
+				<time datetime="PT2H30M">2h 30m</time>.
+			</p>
+
 			<h2>Blockquote</h2>
 
 			<p>
@@ -125,17 +157,20 @@
 
 			<h2>Preformatted Text and Code</h2>
 
+			<p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
+
+			<p>I was trying to boot my computer, but I got this hilarious message:</p>
+
+			<p><samp>Keyboard not found <br>Press F1 to continue</samp></p>
+
 			<pre>Sample text ...</pre>
 
-			<pre>
-				<code>
-					&lt;p&gt;Sample html ...&lt;/p&gt;
+			<pre><code>&lt;p&gt;Sample html ...&lt;/p&gt;
 
-					if (new == old) {
-						make nothing;
-					}
-				</code>
-			</pre>
+if (new == old) {
+	make nothing;
+}
+</code></pre>
 
 			<h2>Tables</h2>
 
@@ -148,6 +183,13 @@
 						<th>Überschrift 3</th>
 					</tr>
 				</thead>
+				<tfoot>
+					<tr>
+						<td>Footer 1</td>
+						<td>Footer 2</td>
+						<td>Footer 3</td>
+					</tr>
+				</tfoot>
 				<tbody>
 					<tr>
 						<td>Inhalt</td>
@@ -165,13 +207,6 @@
 						<td>Inhalt</td>
 					</tr>
 				</tbody>
-				<tfoot>
-					<tr>
-						<td>Footer 1</td>
-						<td>Footer 2</td>
-						<td>Footer 3</td>
-					</tr>
-				</tfoot>
 			</table>
 
 			<h2>Buttons</h2>
@@ -264,7 +299,7 @@
 					<legend>Checkboxes?</legend>
 
 					<p>
-						<input type="checkbox" name="check1" id="check1" />
+						<input type="checkbox" name="check1" id="check1" checked />
 						<label for="check1">Check 1</label>
 					</p>
 
@@ -320,11 +355,87 @@
 				<!-- Avoid cancel button for usability -->
 			</form>
 
+			<h2>Image</h2>
+
+			<img src="#" alt="Description of the image" />
+
+			<figure>
+				<a href="#">
+					<img src="#" alt="Description" />
+				</a>
+				<figcaption>Caption for the image.</figcaption>
+			</figure>
+
+			<h2>Audio</h2>
+
+			<audio controls>
+				<source src="file.mp3" />
+			</audio>
+
+			<h2>Video</h2>
+
+			<video controls>
+				<source src="file.mp4?raw=true" type="video/mp4" />
+				<source src="file.ogv?raw=true" type="video/ogg" />
+			</video>
+
+			<h2>Canvas</h2>
+
+			<canvas>Canvas</canvas>
+
+			<h2>Meter</h2>
+
+			<p>
+				<label for="fuel">Fuel level:</label>
+				<meter id="fuel"
+					min="0" max="100"
+					low="33" high="66" optimum="80"
+					value="50"
+				>
+					at 50/100
+				</meter>
+			</p>
+
+			<h2>Progress</h2>
+
+			<p>
+				<label for="progress">File progress:</label>
+				<progress id="progress" max="100" value="70">70%</progress>
+			</p>
+
+			<h2>SVG</h2>
+
+			<h3>Inline SVG</h3>
+
+			<svg viewBox="0 0 100 100" width="30px" height="30px">
+				<circle cx="50" cy="50" r="50" fill="#000000" />
+			</svg>
+
+			<h3>SVG Icons in HTML</h3>
+
+			<svg style="position: absolute; width: 0; height: 0; overflow: hidden;">
+				<defs>
+					<symbol id="icon-name" viewBox="0 0 20 20">
+						<title>Icon Title</title>
+						<circle cx="10" cy="10" r="10" fill="#000000" />
+					</symbol>
+				</defs>
+			</svg>
+
+			<svg style="display: inline-block; width: 15px; height: 15px;">
+				<use xlink:href="#icon-name" />
+			</svg>
+
+			<h3>SVG Icons in Sprite</h3>
+
+			<span style="display: inline-block; width: 20px; height: 20px; background: url('img/sprite.svg') 0 0 no-repeat scroll" aria-hidden="true"></span>
+			<span style="display: inline-block; width: 20px; height: 20px; background: url('img/sprite.svg') -30px 0 no-repeat scroll" aria-hidden="true"></span>
+
 			<h2>Media Object</h2>
 
 			<div class="media">
 				<a href="#" title="#" class="media__meta">
-					<img src="#" alt="#" />
+					<img src="#" alt="Description" />
 				</a>
 
 				<div class="media__body">
@@ -338,7 +449,7 @@
 
 			<div class="media media--flipped">
 				<a href="#" title="#" class="media__meta">
-					<img src="#" alt="#" />
+					<img src="#" alt="Description" />
 				</a>
 
 				<div class="media__body">
