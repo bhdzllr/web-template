@@ -11,14 +11,14 @@ const tar = require('gulp-tar');
 const GulpSSH = require('gulp-ssh');
 
 const distFolder = 'dist';
-const sshConfig = require('./ssh.json');
+const sshConfig = require('./ssh.example.json');
 const ssh = new GulpSSH({
 	ignoreErrors: false,
 	sshConfig: {
-		host: sshConfig.host
-		port: sshConfig.port
-		username: sshConfig.username
-		// privateKey: fs.readFileSync(sshConfig.privateKey)
+		host: sshConfig.host,
+		port: sshConfig.port,
+		username: sshConfig.username,
+		// privateKey: fs.readFileSync(sshConfig.privateKey),
 	}
 });
 
