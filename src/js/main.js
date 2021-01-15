@@ -8,7 +8,7 @@ import {
 	addOutlineHandler,
 	addRoleButtonListener,
 	beautifyFileInputs,
-} from './lib/utilities';
+} from './lib/utils';
 
 document.addEventListener('DOMContentLoaded', function (e) {
 

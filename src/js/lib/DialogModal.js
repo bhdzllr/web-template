@@ -1,4 +1,4 @@
-import { isFocusable } from './utilities';
+import { isFocusable } from './utils';
 
 export class DialogModal {
 
