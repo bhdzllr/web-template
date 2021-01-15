@@ -1,8 +1,21 @@
+import 'core-js/es/object/assign';
+
 export default class I18n {
 	
 	constructor(currentLang = 'en', langStrings) {
 		this.currentLang = currentLang;
-		this.langStrings = langStrings;
+		this.langStrings = {};
+		this.langStrings[currentLang] = langStrings;
+	}
+
+	setLang(lang) {
+		this.currentLang = lang;
+	}
+
+	add(lang, langStrings) {
+		if (!this.langStrings[lang]) this.langStrings[lang] = {};
+
+		Object.assign(this.langStrings[lang], langStrings);
 	}
 
 	get(langString, fallbackString = null) {

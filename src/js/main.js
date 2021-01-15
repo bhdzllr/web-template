@@ -2,6 +2,7 @@ import { default as de } from './lang/de.json';
 
 import I18n from './lib/I18n';
 import { AnalyticsOptOut, addAnalyticsCode } from './lib/Analytics';
+// import { loadFonts } from './lib/font-loading';
 import {
 	lazyLoadImages,
 	addOutlineHandler,
@@ -9,18 +10,13 @@ import {
 	beautifyFileInputs,
 } from './lib/utilities';
 
-// import 'es6-promise/auto';
-// import FontFaceObserver from 'fontfaceobserver-es'; // Also import ES6 promise
-
 document.addEventListener('DOMContentLoaded', function (e) {
 
 	const currentLang = document.documentElement.getAttribute('lang') ? document.documentElement.getAttribute('lang') : 'en';
-	const i18n = new I18n(currentLang, {
-		'de': de
-	});
+	const i18n = new I18n(currentLang, de);
 
 	// addServiceWorker('/sw.js');
-	// loadFonts(FontFaceObserver, [
+	// loadFonts([
 	// 	{ 'Font Name': { weight: 400 } },
 	// 	{ 'Font Name': { weight: 700 } },
 	// ]);

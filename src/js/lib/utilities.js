@@ -20,16 +20,7 @@ export function loadStyle(href, media = 'all') {
 	document.getElementByTagNAme('head')[0].appendChild(style);
 }
 
-export function loadFonts(FontFaceObserver, fonts) {
-	fonts.forEach(function (font, i) {
-		const family = Object.keys(font)[0];
-		const fontObserver = new FontFaceObserver(family, font[family]);
-
-		fontObserver.load().then(function () {
-			if (i == (fonts.length - 1)) document.documentElement.className += ` fonts-loaded`;
-		});
-	});
-}
+export function loadScript() {}
 
 export function lazyLoadImages(className = 'js-lazy-image', rootMargin = '-50px') {
 	const images = document.querySelectorAll('.' + className);
