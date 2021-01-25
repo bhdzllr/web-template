@@ -17,7 +17,7 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: local('Web Font Regular'), local('WebFont-Regular'),
+	src: local('Web Font Regular'), local('WebFont-Regular'), /** Same values as in "Local" definition above to prevent flash */
 	     url('web-font-regular.woff2') format('woff2'),
 	     url('web-font-regular.woff') format('woff');
 }
