@@ -105,3 +105,34 @@ abbr {
 abbr[title] {
 	border-bottom: 1px dotted;
 }
+
+.text-sm {
+	font-size: 0.85em;
+	line-height: 1.35em;
+}
+
+.text-md {
+	font-size: 1.25rem;
+	line-height: 1.75rem
+}
+
+.text-lg {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-justify {
+	text-align: justify;
+}

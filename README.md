@@ -18,7 +18,7 @@ in "gulpfile.js".
 ```
 
 ```JavaScript
-import { lazyLoadImages } from from './lib/utils';
+import { lazyLoadImages } from from './lib/utils/loading-images';
 
 lazyLoadImages();
 ````
@@ -27,11 +27,11 @@ lazyLoadImages();
 ## Web Font Loading ##
 
 ```CSS
-/** See `_fonts.scss` and `_variables.scss` for embedding. Also `lib/core/_base.scss` for loading strategy with classes. */
+/** See `settings/_fonts.scss` and `settings/_variables.scss` for embedding and also `lib/utils/_body.scss` for loading strategy with classes. */
 ```
 
 ```JavaScript
-import { loadFonts } from from './lib/utils';
+import { loadFonts } from from './lib/utils/loading-fonts';
 
 loadFonts([
 	{ 'Web Font': { weight: 400, style: 'normal' } },

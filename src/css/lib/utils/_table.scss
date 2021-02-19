@@ -2,7 +2,7 @@
  * ********** Table **********
  */
 
-table {
+.table {
 	max-width: 100%;
 	width: 100%;
 	margin: 1em 0;
@@ -12,19 +12,19 @@ table {
 	text-align: left;
 }
 
-table caption {
+.table caption {
 	display: none;
 }
 
-table th {
+.table th {
 	background-color: darken($color-background, 25%);
 }
 
-table th,
-table td {
+.table th,
+.table td {
 	padding: 0.35em;
 }
 
-table tr:nth-child(even) {
+.table tr:nth-child(even) {
 	background-color: darken($color-background, 10%);
 }

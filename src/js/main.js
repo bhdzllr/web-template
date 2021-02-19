@@ -1,14 +1,11 @@
 import { default as de } from './lang/de.json';
 
-import I18n from './lib/I18n';
-import { AnalyticsOptOut, addAnalyticsCode } from './lib/Analytics';
-// import { loadFonts } from './lib/font-loading';
-import {
-	lazyLoadImages,
-	addOutlineHandler,
-	addRoleButtonListener,
-	beautifyFileInputs,
-} from './lib/utils';
+import I18n from './lib/modules/I18n';
+import { AnalyticsOptOut, addAnalyticsCode } from './lib/modules/Analytics';
+// import { loadFonts } from './lib/utils/loading-fonts';
+import { lazyLoadImages } from './lib/utils/loading-images';
+import { addOutlineHandler, addRoleButtonListener } from './lib/utils/accessibility';
+import { beautifyFileInputs } from './lib/utils/beautification';
 
 document.addEventListener('DOMContentLoaded', function (e) {
 

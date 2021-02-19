@@ -1,39 +1,34 @@
-@import 'lib/core/normalize';
-@import 'lib/core/variables';
+@import 'lib/utils/normalize';
 
-@import 'core/variables';
-// @import 'core/fonts';
+@import 'lib/settings/variables';
 
-@import 'lib/core/base';
+@import 'settings/variables';
+// @import 'settings/fonts';
+
+@import 'lib/utils/body';
+@import 'lib/utils/selection';
+@import 'lib/utils/link';
+@import 'lib/utils/stretched-link';
+@import 'lib/utils/text';
+@import 'lib/utils/image';
+@import 'lib/utils/list';
+@import 'lib/utils/button';
+@import 'lib/utils/form';
+@import 'lib/utils/table';
+@import 'lib/utils/display';
+@import 'lib/utils/visibility';
+@import 'lib/utils/box-alignment';
+@import 'lib/utils/spacing';
+@import 'lib/utils/accessibility';
+@import 'lib/utils/clearfix';
+@import 'lib/utils/browsehappy';
+@import 'lib/utils/message';
 
 @import 'lib/objects/grid';
 @import 'lib/objects/media';
 @import 'lib/objects/module';
 @import 'lib/objects/stack';
 
-@import 'lib/components/browsehappy';
-@import 'lib/components/button';
-@import 'lib/components/form';
-@import 'lib/components/image';
-@import 'lib/components/message';
-@import 'lib/components/table';
-@import 'lib/components/text';
+@import 'styles/layout';
 
-@import 'lib/utils/accessibility';
-@import 'lib/utils/alignment';
-@import 'lib/utils/clearfix';
-@import 'lib/utils/display';
-@import 'lib/utils/list';
-@import 'lib/utils/spacing';
-@import 'lib/utils/stretched-link';
-@import 'lib/utils/visibility';
-
-@import 'core/layout';
-
-// @import 'components/component-name';
-
-// @import 'modules/module-name';
-
-// @import 'pages/custom-page-style';
-
-@import 'lib/core/print';
+@import 'lib/utils/print';

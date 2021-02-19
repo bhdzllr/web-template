@@ -12,10 +12,10 @@
 * Add service worker example
 * Add image lazy loading example
 * Add font loading example
-* Add JS class "LocalStorage"
-* Add JS class "VisibilityObserver"
-* Add JS class "Form"
-* Add JS "DialogModal"
+* Add JS module "LocalStorage"
+* Add JS module "VisibilityObserver"
+* Add JS module "Form"
+* Add JS module "DialogModal"
 * Add CSS "stack"
 
 

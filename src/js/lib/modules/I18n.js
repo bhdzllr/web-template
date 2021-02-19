@@ -1,6 +1,6 @@
 import 'core-js/es/object/assign';
 
-import { loadClosestPolyfill } from './utils.js';
+import { addClosestPolyfill } from '../utils/polyfills.js';
 
 export default class I18n {
 	
@@ -35,7 +35,7 @@ export default class I18n {
 }
 
 export function findLocale(element) {
-	loadClosestPolyfill();
+	addClosestPolyfill();
 
 	const closestElement = element.closest('[lang]');
 	return closestElement ? closestElement.lang : 'de';
