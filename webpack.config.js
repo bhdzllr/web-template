@@ -9,6 +9,7 @@ module.exports = {
 		filename: 'js/[name].min.js',
 		chunkFilename: 'js/[name].min.js',
 		path: path.resolve(__dirname, 'dist'),
+		publicPath: '/',
 	},
 	stats: 'minimal',
 	devtool: 'sourcemap',
@@ -23,8 +24,8 @@ module.exports = {
 					presets: [
 						['@babel/env', {
 							'targets': '> 0.25%, IE 11',
-							// 'useBuiltIns': 'usage', // Neede to add polyfills
-							// 'corejs': 3,            // Neede to add polyfills
+							// 'useBuiltIns': 'usage', // Needed to add polyfills automatically
+							// 'corejs': 3,            // Needed to add polyfills automatically
 							// 'debug': true,
 						}]
 					]
