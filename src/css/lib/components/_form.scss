@@ -29,7 +29,7 @@ fieldset > :last-child {
 		box-shadow: inset 0 1px 3px lighten($color-black, 90%);
 		border-radius: 0.15em;
 
-		line-height: 1.3em;
+		line-height: 1.3;
 	}
 
 	@mixin text-input-disabled {
@@ -61,10 +61,10 @@ fieldset > :last-child {
 		display: block;
 		padding-bottom: 0.15em;
 
-		line-height: 1.35em;
+		line-height: 1.35;
 	}
 
-	input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]):not([type="range"]),
+	input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]):not([type="range"]),
 	textarea,
 	select {
 		@include text-input;
@@ -130,7 +130,7 @@ fieldset > :last-child {
 		height: 0.1px;
 
 		appearance: none;
-		opacity: 0;
+		opacity: 0.00001;
 
 		& + label {
 			position: relative;
@@ -155,7 +155,7 @@ fieldset > :last-child {
 			box-shadow: inset 1px 1px 1px lighten($color-black, 90%);
 			transform: translateY(-50%);
 
-			line-height: 1.1em;
+			line-height: 1.1;
 			text-align: center;
 		}
 
@@ -168,8 +168,7 @@ fieldset > :last-child {
 			box-shadow: none;
 		}
 
-		&:focus + label::before,
-		&:active + label::before {
+		&:focus + label::before {
 			@include form-outline;
 		}
 
@@ -191,67 +190,31 @@ fieldset > :last-child {
 	}
 
 	[type="file"] {
-		position: absolute;
-
-		display: inline-block;
-		width: 0.1px;
-		height: 0.1px;
-
-		opacity: 0;
-
 		& + label {
 			@include text-input;
-
-			position: relative;
-
-			width: 300px;
-
-			cursor: pointer;
 
 			&::after {
 				@extend .btn !optional;
 
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-
-				content: attr(data-caption-button) '';
 				display: inline-block;
-				width: auto;
-				max-width: 100px;
 				margin: 0;
 				padding-top: 0.75em;
 				padding-bottom: 0.75em;
 
 				border-radius: 0;
-
-				text-align: center;
-			}
-
-			.no-js & {
-				display: none;
 			}
 		}
 
-		&:focus,
-		&:active {
-			& + label {
-				@include form-outline;
-			}
+		&:focus + label {
+			@include form-outline;
 		}
 
 		&:disabled + label {
 			@include text-input-disabled;
 		}
 
-		.no-js & {
-			position: static;
-
-			width: auto;
-			height: auto;
-
-			opacity: 1;
+		&:disabled + label::after {
+			@extend .btn:disabled;
 		}
 	}
 
@@ -409,7 +372,7 @@ fieldset > :last-child {
 
 		font-size: 0.8em;
 		color: $color-text--lighter;
-		line-height: 1.25em;
+		line-height: 1.25;
 	}
 
 	&__assistive--invalid {

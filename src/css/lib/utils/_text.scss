@@ -10,7 +10,7 @@ h5,
 h5 {
 	margin-top: 0;
 
-	line-height: 1.35em;
+	line-height: 1.35;
 }
 
 h1,
@@ -87,7 +87,7 @@ small {
 
 	color: lighten($color-text, 15%);
 	font-size: 0.85em;
-	line-height: 1.35em;
+	line-height: 1.35;
 
 	p & {
 		display: inline;
@@ -108,17 +108,17 @@ abbr[title] {
 
 .text-sm {
 	font-size: 0.85em;
-	line-height: 1.35em;
+	line-height: 1.35;
 }
 
 .text-md {
 	font-size: 1.25rem;
-	line-height: 1.75rem
+	line-height: 1.75;
 }
 
 .text-lg {
 	font-size: 1.5rem;
-	line-height: 2rem;
+	line-height: 2;
 }
 
 .text-left {
