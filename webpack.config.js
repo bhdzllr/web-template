@@ -23,7 +23,6 @@ module.exports = {
 				options: {
 					presets: [
 						['@babel/env', {
-							'targets': '> 0.25%, IE 11',
 							// 'useBuiltIns': 'usage', // Needed to add polyfills automatically
 							// 'corejs': 3,            // Needed to add polyfills automatically
 							// 'debug': true,

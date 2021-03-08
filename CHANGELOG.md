@@ -5,6 +5,7 @@
 * Add new build pipeline
 * Build and bundling with webpack
 * Build ES6 with Babel
+* Build CSS with SASS and PostCSS
 * Remove inline scripts
 * Add JS utilities
 * Update basic styling inside "lib" folder

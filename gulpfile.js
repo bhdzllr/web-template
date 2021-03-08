@@ -5,6 +5,7 @@ const fs = require('fs');
 
 const webpack = require('webpack-stream');
 const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const tar = require('gulp-tar');
@@ -51,6 +52,14 @@ function styles() {
 			errorLogToConsole: true,
 			outputStyle: 'compressed'
 		}))
+		.pipe(postcss([
+			require('postcss-preset-env')({
+				autoprefixer: {
+					grid: true,
+				},
+			}),
+			require('postcss-encode-background-svgs')(),
+		]))
 		.on('error', (error) => { console.error(error.toString()); })
 		.pipe(rename({
 			basename: 'style',
