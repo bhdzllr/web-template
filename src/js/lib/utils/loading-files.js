@@ -14,23 +14,6 @@ export function loadStyle(href, media = 'all', id) {
 }
 
 /**
- * Script loading global object with "LazyScripts" namespace.
- */
-window.LazyScripts = {
-	/**
-	 * Script loading callback Stack.
-	 * Object with "id" and "callback".
-	 */
-	scriptCallbackStack: [],
-	/**
-	 * Switch to know if callback stack has been executed.
-	 * If the script is already on the page and a class need it later
-	 * the callback should be executed therefore we need to know if the
-	 * callbacks from the stack have been executed.
-	 */
-	hasScriptCallbackStackBeenExecuted: false,
-};
-/**
  * Load a JavaScript file
  *
  * The callback stack is used to collect all callback functions
@@ -45,13 +28,41 @@ window.LazyScripts = {
  * @param {Function} onLoadCallback (Optional) Required "id" parameter. Callack when script is loaded.
  */
 export function loadScript(src, id, onLoadCallback) {
+	if (!window.LazyScripts) {
+		/**
+		 * Script loading global object with "LazyScripts" namespace.
+		 */
+		window.LazyScripts = {
+			/**
+			 * Script loading callback Stack.
+			 * Object with "id" and "callback".
+			 *
+			 * @type {{ id: string, callback: Function }[]}
+			 */
+			scriptCallbackStack: [],
+			/**
+			 * List to know which callback stack has been executed.
+			 * If the script is already on the page and a class needs it later
+			 * the callback should be executed therefore we need to know if the
+			 * callbacks from the stack have been executed.
+			 *
+			 * @type {string[]}
+			 */
+			executedCallbacksById: [],
+		};
+	}
+
+	const lazyScripts = window.lazyScripts;
+
 	if (id && document.querySelector(`#${id}`)) {
-		if (onLoadCallback && !window.LazyScripts.hasScriptCallbackStackBeenExecuted) {
-			window.LazyScripts.scriptCallbackStack.push({
+		if (onLoadCallback && !lazyScripts.executedCallbacksById.indexOf(id) == -1) {
+			lazyScripts.scriptCallbackStack.push({
 				id: id,
 				callback: onLoadCallback
 			});
 		} else if (onLoadCallback) {
+            if (lazyScripts.executedCallbacksById.indexOf(id) == -1) lazyScripts.executedCallbacksById.push(id);
+
 			onLoadCallback();
 		}
 
@@ -64,23 +75,22 @@ export function loadScript(src, id, onLoadCallback) {
 	script.async = true;
 	script.defer = true;
 	if (id) script.id = id;
+	if (id && onLoadCallback) {
+		lazyScripts.scriptCallbackStack.push({
+			id: id,
+			callback: onLoadCallback
+		});
+	}
 
 	script.addEventListener('load', function () {
-		if (id && onLoadCallback) {
-			window.LazyScripts.scriptCallbackStack.push({
-				id: id,
-				callback: onLoadCallback
-			});
-		}
-
-		if (window.LazyScripts.scriptCallbackStack.length) {
-			for (const callbackObject of window.LazyScripts.scriptCallbackStack) {
+		if (lazyScripts.scriptCallbackStack.length) {
+			for (const callbackObject of lazyScripts.scriptCallbackStack) {
 				if (callbackObject.id == this.id) {
 					callbackObject.callback();
 				}
 			}
 
-			window.LazyScripts.hasScriptCallbackStackBeenExecuted = true;
+            if (lazyScripts.executedCallbacksById.indexOf(id) == -1) lazyScripts.executedCallbacksById.push(id);
 		} else {
 			if (onLoadCallback) onLoadCallback();
 		}
