@@ -18,6 +18,7 @@
 * Add JS module "Form"
 * Add JS module "DialogModal"
 * Add CSS "stack"
+* Remove Browse Happy banner
 
 
 ## Version 3.1.1 ##
