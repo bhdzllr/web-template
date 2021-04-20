@@ -4,7 +4,7 @@ import I18n from './lib/modules/I18n';
 import { AnalyticsOptOut, addAnalyticsCode } from './lib/modules/Analytics';
 // import { loadFonts } from './lib/utils/loading-fonts';
 import { lazyLoadImages } from './lib/utils/loading-images';
-import { addOutlineHandler, addRoleButtonListener } from './lib/utils/accessibility';
+import { addOutlineHandler } from './lib/utils/accessibility';
 import { beautifyFileInputs } from './lib/utils/beautification';
 
 document.addEventListener('DOMContentLoaded', function (e) {
@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
 	// ]);
 	lazyLoadImages();
 	addOutlineHandler();
-	addRoleButtonListener();
 	beautifyFileInputs(i18n);
 
 	if (document.querySelector('.js-analytics-opt-out')) {
