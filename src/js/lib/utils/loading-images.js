@@ -1,4 +1,8 @@
-export function lazyLoadImages(className = 'js-lazy-image', rootMargin = '-50px') {
+export function lazyLoadImages({
+	className = 'js-lazy-image',
+	rootMargin = '100px',
+	threshold = [0.0],
+} = {}) {
 	const images = document.querySelectorAll('.' + className);
 
 	// Fallback for loading all images
@@ -47,7 +51,10 @@ export function lazyLoadImages(className = 'js-lazy-image', rootMargin = '-50px'
 					image.classList.remove(className);
 				}
 			});
-		}, { rootMargin: rootMargin });
+		}, {
+			rootMargin: rootMargin,
+			threshold: threshold,
+		});
 
 		for (let i = 0; i < images.length; i++) {
 			intersectionObserver.observe(images[i]);
