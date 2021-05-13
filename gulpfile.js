@@ -11,6 +11,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const tar = require('gulp-tar');
 const GulpSSH = require('gulp-ssh');
 
+const srcFolder = 'src';
 const distFolder = 'dist';
 const sshConfig = require('./ssh.example.json');
 const ssh = new GulpSSH({
@@ -31,22 +32,22 @@ function clean() {
 
 function pages(cb) {
 	src([
-			'src/**/*.html',
-			'!src/markup.html',
-			'!src/standalone.html'
+			srcFolder + '/**/*.html',
+			'!' + srcFolder + '/markup.html',
+			'!' + srcFolder + '/standalone.html'
 		])
 		.pipe(dest(distFolder));
 
 	src([
-		'src/pages/**/*',
-		'!src/pages/**/*.html'
+		srcFolder + '/pages/**/*',
+		'!' + srcFolder + '/pages/**/*.html'
 	]).pipe(dest(distFolder));
 
 	cb();
 }
 
 function styles() {
-	return src('src/css/main.scss')
+	return src(srcFolder + '/css/main.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass({
 			errorLogToConsole: true,
@@ -71,36 +72,36 @@ function styles() {
 }
 
 function scripts() {
-	if (fs.existsSync('src/sw.js')) {
-		src('src/sw.js')
+	if (fs.existsSync(srcFolder + '/sw.js')) {
+		src(srcFolder + '/sw.js')
 			.pipe(dest(distFolder));
 	}	
 
-	src('src/js/lib/files/check.js')
+	src(srcFolder + '/js/lib/files/check.js')
 		.pipe(dest(distFolder + '/js/lib/files/'));
 
-	return src('src/js/main.js')
+	return src(srcFolder + '/js/main.js')
 		.pipe(webpack(require('./webpack.config.js')))
 		.pipe(dest(distFolder));
 }
 
 function res(cb) {
-	src('src/img/**/*')
+	src(srcFolder + '/img/**/*')
 		.pipe(dest(distFolder + '/img/'));
 
-	src('src/fonts/**/*')
+	src(srcFolder + '/fonts/**/*')
 		.pipe(dest(distFolder + '/fonts/'));
 
-	src('src/docs/**/*')
+	src(srcFolder + '/docs/**/*')
 		.pipe(dest(distFolder + '/docs/'));
 
 	src([
-			'src/browserconfig.xml',
-			'src/favicon.ico',
-			'src/icon.png',
-			'src/site.webmanifest',
-			'src/tile.png',
-			'src/tile-wide.png',
+			srcFolder + '/browserconfig.xml',
+			srcFolder + '/favicon.ico',
+			srcFolder + '/icon.png',
+			srcFolder + '/site.webmanifest',
+			srcFolder + '/tile.png',
+			srcFolder + '/tile-wide.png',
 		])
 		.pipe(dest(distFolder));
 
@@ -109,17 +110,17 @@ function res(cb) {
 
 function dev() {
 	watch([
-		'src/index.html',
-		'src/pages/**/*.html',
-		'src/templates/**/*.html'
+		srcFolder + '/index.html',
+		srcFolder + '/pages/**/*.html',
+		srcFolder + '/templates/**/*.html'
 	], series(pages));
 
 	watch([,
-		'src/css/**/*.scss'
+		srcFolder + '/css/**/*.scss'
 	], series(styles));
 
 	watch([,
-		'src/js/**/*.js'
+		srcFolder + '/js/**/*.js'
 	], series(scripts));
 }
 
