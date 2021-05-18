@@ -2,6 +2,7 @@ export function lazyLoadImages({
 	className = 'js-lazy-image',
 	rootMargin = '100px',
 	threshold = [0.0],
+	loadCallback = null,
 } = {}) {
 	const images = document.querySelectorAll('.' + className);
 
@@ -49,6 +50,8 @@ export function lazyLoadImages({
 					if (image.dataset.srcset) image.srcset = image.dataset.srcset;
 
 					image.classList.remove(className);
+
+					if (loadCallback) loadCallback(image);
 				}
 			});
 		}, {
