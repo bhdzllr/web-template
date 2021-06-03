@@ -34,6 +34,13 @@ textarea {
 	font-size: inherit;
 }
 
+input:not([type="submit"]),
+select,
+textarea {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
 	border: 0;  /** Button size fix */
