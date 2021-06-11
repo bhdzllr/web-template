@@ -2,6 +2,5 @@
  * ********** Variables **********
  */
 
-$font-web:       'Web Font';
-$font-fallback:  'Web Font Local', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-stack:     $font-web, $font-fallback;
+$font-web:   'Web Font';
+$font-stack: $font-web, 'Web Font Local', 'Helvetica Neue', Helvetica, Arial, sans-serif;

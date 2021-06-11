@@ -27,7 +27,7 @@ lazyLoadImages();
 ## Web Font Loading ##
 
 ```CSS
-/** See `settings/_fonts.scss` and `settings/_variables.scss` for embedding and also `lib/utils/_body.scss` for loading strategy with classes. */
+/** See `settings/_fonts.scss` and `settings/_variables.scss` for embedding. */
 ```
 
 ```JavaScript
