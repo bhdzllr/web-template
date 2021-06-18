@@ -413,17 +413,15 @@ if (new == old) {
 
 			<h3>SVG Icons in HTML</h3>
 
-			<svg style="position: absolute; width: 0; height: 0; overflow: hidden;">
-				<defs>
-					<symbol id="icon-name" viewBox="0 0 20 20">
-						<title>Icon Title</title>
-						<circle cx="10" cy="10" r="10" fill="#000000" />
-					</symbol>
-				</defs>
+			<svg style="display: none;">
+				<symbol id="icon-name" viewBox="0 0 20 20">
+					<title>Icon Title</title>
+					<circle cx="10" cy="10" r="10" fill="#000000" />
+				</symbol>
 			</svg>
 
-			<svg style="display: inline-block; width: 15px; height: 15px;">
-				<use xlink:href="#icon-name" />
+			<svg style="display: inline-block; width: 15px; height: 15px;" aria-hidden="true">
+				<use href="#icon-name" />
 			</svg>
 
 			<h3>SVG Icons in Sprite</h3>
