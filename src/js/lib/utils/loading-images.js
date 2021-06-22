@@ -60,6 +60,7 @@ export function lazyLoadImages({
 		});
 
 		for (let i = 0; i < images.length; i++) {
+			images[i].hidden = false;
 			intersectionObserver.observe(images[i]);
 		}
 	} else {
