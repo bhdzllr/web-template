@@ -1,5 +1,9 @@
 import { isFocusable } from '../utils/accessibility';
 
+/**
+ * Dialog Modal
+ * Maybe this would work well as a web component too.
+ */
 export class DialogModal {
 
 	constructor({
