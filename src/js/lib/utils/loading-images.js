@@ -13,6 +13,10 @@ export function lazyLoadImages({
 
 			if (image.dataset.src) image.src = image.dataset.src;
 			if (image.dataset.srcset) image.srcset = image.dataset.srcset;
+
+			image.classList.remove(options.className);
+
+			if (options.loadCallback) options.loadCallback(image);
 		}
 	};
 
@@ -25,7 +29,7 @@ export function lazyLoadImages({
 			fallback(images);
 		};
 	} else {
-		window.matchMedia('print').addListener(() => {
+		window.matchMedia('print').addListener(function () {
 			isPrinting = true;
 			fallback(images);
 		});
