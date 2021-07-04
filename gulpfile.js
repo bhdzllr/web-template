@@ -4,7 +4,7 @@ const del = require('del');
 const fs = require('fs');
 
 const webpack = require('webpack-stream');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
