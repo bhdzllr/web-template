@@ -19,6 +19,8 @@
 * Add JS module "DialogModal"
 * Add CSS "stack"
 * Remove Browse Happy banner
+* Drop IE 11 support and full JS support for legacy browsers,
+  use No-JS fallback instead.
 
 
 ## Version 3.1.1 ##
