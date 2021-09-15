@@ -27,17 +27,8 @@ lazyLoadImages();
 ## Web Font Loading ##
 
 ```CSS
-/** See `settings/_fonts.scss` and `settings/_variables.scss` for embedding. */
+/** See `index.html`, `css/settings/_fonts.scss` and `css/settings/_variables.scss` for embedding. */
 ```
-
-```JavaScript
-import { loadFonts } from from './lib/utils/loading-fonts';
-
-loadFonts([
-	{ 'Web Font': { weight: 400, style: 'normal' } },
-	{ 'Web Font': { weight: 700, style: 'normal' } },
-]);
-````
 
 
 ## Links ##
