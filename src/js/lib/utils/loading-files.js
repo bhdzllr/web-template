@@ -1,7 +1,7 @@
 /**
  * Style loading
  */
-export function loadStyle(href, media = 'all', id) {
+export function loadStyle(href, media = 'all', id, onLoadCallback) {
 	if (id && document.querySelector(`#${id}`)) return;
 
 	const style = document.createElement('link');
@@ -11,6 +11,12 @@ export function loadStyle(href, media = 'all', id) {
 	style.media = media;
 
 	document.getElementByTagNAme('head')[0].appendChild(style);
+
+	if (onLoadCallback) {
+		style.addEventListener('load', function () {
+			onLoadCallback();
+		});
+	}
 }
 
 /**
