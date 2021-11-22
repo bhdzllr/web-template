@@ -8,10 +8,10 @@ export class DialogModal {
 
 	constructor({
 		contentAsHtml,
+		ariaLabelledBy = '',
 		showOnCreation = false,
 		showCallback = null,
 		hideCallback = null,
-		ariaLabelledBy = '',
 		hideRootScrollbars = true,
 	}) {
 		this.contentAsHtml = contentAsHtml;
@@ -212,6 +212,7 @@ export function initDialogsModalWithTemplate() {
 
 		for (let i = 0; i < dialogModalTriggers.length; i++) {
 			const target = dialogModalTriggers[i].dataset.dm;
+			const ariaLabelledBy = dialogModalTriggers[i].dataset.ariaLabelledBy ?? '';
 
 			if (document.querySelector(target)) {
 				const template = document.querySelector(target);
@@ -219,7 +220,10 @@ export function initDialogsModalWithTemplate() {
 				const tempDiv = document.createElement('div');
 				tempDiv.appendChild(templateClone);
 
-				const dialogModal = new DialogModal({ contentAsHtml: tempDiv.innerHTML });
+				const dialogModal = new DialogModal({
+					contentAsHtml: tempDiv.innerHTML,
+					ariaLabelledBy: ariaLabelledBy,
+				});
 
 				dialogModalTriggers[i].addEventListener('click', function (e) {
 					e.preventDefault();
