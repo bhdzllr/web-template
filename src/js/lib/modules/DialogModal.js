@@ -32,6 +32,8 @@ export class DialogModal {
 		this.initDom();
 		this.initListeners();
 
+		this.setContentAsHtml(this.contentAsHtml);
+
 		if (this.showOnCreation) this.show();
 	}
 
@@ -49,8 +51,6 @@ export class DialogModal {
 		this.dialog.setAttribute('aria-modal', 'true'); // Tell screenreaders that content behind the modal is not interactive
 		this.dialog.setAttribute('aria-labelledby', this.ariaLabelledBy); // Tell screenreaders the ID of the title element
 	
-		this.setContentAsHtml(this.contentAsHtml);
-
 		this.btnClose = document.createElement('button');
 		this.btnClose.classList.add('dm-btn-close');
 		this.btnClose.classList.add('js-dm-btn-close');
