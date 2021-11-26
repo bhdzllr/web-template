@@ -4,7 +4,9 @@ export function addOutlineHandler(className = 'is-tabbing') {
 	});
 
 	document.addEventListener('keydown', function (e) {
-		if (e.keyCode !== 9) return;
+		const keyCode = e.which || e.keyCode;
+
+		if (keyCode !== 9) return;
 
 		document.documentElement.classList.add(className);
 	});
@@ -17,7 +19,9 @@ export function addRoleButtonListener(exceptions = []) {
 		if (exceptions.indexOf(buttons[i].nodeName.toLowerCase()) > -1) continue;
 
 		buttons[i].addEventListener('keydown', function (e) {
-			if (e.keyCode === 13 || e.keyCode === 32) {
+			const keyCode = e.which || e.keyCode;
+
+			if (keyCode === 13 || keyCode === 32) {
 				e.preventDefault();
 				buttons[i].click();
 			}

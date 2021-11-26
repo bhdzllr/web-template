@@ -80,7 +80,9 @@ export class DialogModal {
 		});
 
 		document.addEventListener('keyup', (e) => {
-			if (e.keyCode != 27) return;
+			const keyCode = e.which || e.keyCode;
+
+			if (keyCode != 27) return;
 
 			let overlay = document.querySelector('.js-dm-overlay');
 			if (overlay) this.hide();
@@ -118,14 +120,18 @@ export class DialogModal {
 	}
 
 	handleFirstFocusableElement(e) {
-		if (e.shiftKey && e.keyCode == 9) {
+		const keyCode = e.which || e.keyCode;
+
+		if (e.shiftKey && keyCode == 9) {
 			e.preventDefault();
 			this.focusLastFocusableElement();
 		}
 	}
 
 	handleLastFocusableElement(e) {
-		if (e.keyCode == 9 && !(e.shiftKey && e.keyCode == 9)) {
+		const keyCode = e.which || e.keyCode;
+
+		if (keyCode == 9 && !(e.shiftKey && keyCode == 9)) {
 			e.preventDefault();
 			this.focusFirstFocusableElement();
 		}
