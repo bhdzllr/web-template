@@ -1,6 +1,6 @@
 import { default as de } from './lang/de.json';
 
-import I18n from './lib/modules/I18n';
+import { I18n } from './lib/modules/I18n';
 import { AnalyticsOptOut, addAnalyticsCode } from './lib/modules/Analytics';
 import { lazyLoadImages } from './lib/utils/loading-images';
 import { addOutlineHandler } from './lib/utils/accessibility';
