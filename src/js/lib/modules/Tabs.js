@@ -120,9 +120,6 @@ class Tabs extends HTMLElement {
 
 		if (e.altKey) return;
 		if (keyCode == KEYCODE.TAB) return;
-
-		e.preventDefault();
-
 		if (e.target.getAttribute('role') !== 'tab') return;
 
 		const tabs = this.getTabs();
