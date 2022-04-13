@@ -8,7 +8,7 @@ export class DialogModal {
 
 	constructor({
 		contentAsHtml,
-		ariaLabelledBy = '',
+		ariaLabelledBy = null,
 		showOnCreation = false,
 		showCallback = null,
 		hideCallback = null,
@@ -30,10 +30,11 @@ export class DialogModal {
 		this.isOpen = false;
 
 		this.initDom();
-		this.setContentAsHtml(this.contentAsHtml);
 		this.initListeners();
 
-		if (this.showOnCreation) this.show();
+		this.setContentAsHtml(this.contentAsHtml);
+
+		if (this.showOnCreation) setTimeout(() => this.show());
 	}
 
 	initDom() {
@@ -48,7 +49,7 @@ export class DialogModal {
 		this.dialog.classList.add('js-dm-dialog');
 		this.dialog.setAttribute('role', 'dialog');
 		this.dialog.setAttribute('aria-modal', 'true'); // Tell screenreaders that content behind the modal is not interactive
-		this.dialog.setAttribute('aria-labelledby', this.ariaLabelledBy); // Tell screenreaders the ID of the title element
+		if (this.ariaLabelledBy) this.dialog.setAttribute('aria-labelledby', this.ariaLabelledBy); // Tell screenreaders the ID of the title element
 	
 		this.btnClose = document.createElement('button');
 		this.btnClose.classList.add('dm-btn-close');
@@ -86,9 +87,6 @@ export class DialogModal {
 			let overlay = document.querySelector('.js-dm-overlay');
 			if (overlay) this.hide();
 		});
-
-		this.handleFirstFocusableElementHandler = this.handleFirstFocusableElement.bind(this);
-		this.handleLastFocusableElementHandler = this.handleLastFocusableElement.bind(this);
 	}
 
 	setContentAsHtml(contentAsHtml) {
@@ -101,6 +99,9 @@ export class DialogModal {
 
 		this.firstFocusableElement = childNodes[0];
 		this.lastFocusableElement = childNodes[childNodes.length - 1];
+
+		this.handleFirstFocusableElementHandler = this.handleFirstFocusableElement.bind(this);
+		this.handleLastFocusableElementHandler = this.handleLastFocusableElement.bind(this);
 
 		this.setFirstFocusableElement(this.firstFocusableElement);
 		this.setLastFocusableElement(this.lastFocusableElement);
@@ -212,16 +213,18 @@ export class DialogModal {
 }
 
 export function initDialogsModalWithTemplate() {
+	const dialogsModal = [];
+
 	if (document.querySelector('[data-dm]')) {
 		const dialogModalTriggers = document.querySelectorAll('[data-dm]');
 
 		for (let i = 0; i < dialogModalTriggers.length; i++) {
 			const target = dialogModalTriggers[i].dataset.dm;
-			const ariaLabelledBy = dialogModalTriggers[i].dataset.ariaLabelledBy ?? '';
 
 			if (document.querySelector(target)) {
 				const template = document.querySelector(target);
-				const templateClone = document.importNode(template.content, true);
+				const templateClone = template.content.cloneNode(true);
+				const ariaLabelledBy = template.dataset.ariaLabelledby
 				const tempDiv = document.createElement('div');
 				tempDiv.appendChild(templateClone);
 
@@ -230,6 +233,8 @@ export function initDialogsModalWithTemplate() {
 					ariaLabelledBy: ariaLabelledBy,
 				});
 
+				dialogsModal.push(dialogModal);
+
 				dialogModalTriggers[i].addEventListener('click', function (e) {
 					e.preventDefault();
 					dialogModal.show();
@@ -237,6 +242,8 @@ export function initDialogsModalWithTemplate() {
 			}
 		}
 	}
+
+	return dialogsModal;
 }
 
 export function addDialogModalDefaultStyles() {
