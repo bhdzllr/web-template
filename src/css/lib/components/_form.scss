@@ -113,8 +113,8 @@ fieldset > :last-child {
 		padding-right: 1.75em;
 
 		-webkit-appearance: none; // Remove shadow, without styling select looks like regular input (no arrow)
-		// background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><path d="M0 0l4 4 4-4h-8z" transform="translate(0 2)" /></svg>');
-		background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><path d="M1.5 0l-1.5 1.5 4 4 4-4-1.5-1.5-2.5 2.5-2.5-2.5z" transform="translate(0 1)" /></svg>');
+		// background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><path d="M0 0l4 4 4-4h-8z" transform="translate(0 2)" fill="#333333" /></svg>');
+		background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><path d="M1.5 0l-1.5 1.5 4 4 4-4-1.5-1.5-2.5 2.5-2.5-2.5z" transform="translate(0 1)" fill="#333333" /></svg>');
 		background-position: calc(100% - 10px) center;
 		background-repeat: no-repeat;
 		background-attachment: scroll;
@@ -182,7 +182,7 @@ fieldset > :last-child {
 		}
 
 		&:checked + label::after {
-			background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><path d="M6.41 0l-.69.72-2.78 2.78-.81-.78-.72-.72-1.41 1.41.72.72 1.5 1.5.69.72.72-.72 3.5-3.5.72-.72-1.44-1.41z" transform="translate(0 1)" fill="#{$color-primary}" /></svg>');
+			background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><path d="M6.41 0l-.69.72-2.78 2.78-.81-.78-.72-.72-1.41 1.41.72.72 1.5 1.5.69.72.72-.72 3.5-3.5.72-.72-1.44-1.41z" transform="translate(0 1)" fill="#333333" /></svg>');
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: 75%;
@@ -206,7 +206,7 @@ fieldset > :last-child {
 		}
 
 		&:checked + label::after {
-			background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 8 8"><circle r="3" fill="#{$color-primary}" /></svg>');
+			background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 8 8"><circle r="3" fill="#333333" /></svg>');
 			background-size: 50%;
 		}
 	}
