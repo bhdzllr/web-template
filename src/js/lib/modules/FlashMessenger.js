@@ -46,7 +46,7 @@ export class FlashMessenger {
 		messageElement.classList.add('message');
 		messageElement.classList.add(`message--${level}`);
 		messageElement.classList.add('js-message');
-		messageElement.setAttribute('id', 'message-' + Math.random().toString(36).substring(5));
+		messageElement.setAttribute('id', 'message-' + Math.random().toString(36).substring(2, 9));
 
 		const messageBody = document.createElement('p');
 		messageBody.textContent = message;
