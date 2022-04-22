@@ -1,7 +1,11 @@
-export function addClosestPolyfill() {
+export function addMatchesPolyfill() {
 	if (!Element.prototype.matches) {
 		Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
 	}
+}
+
+export function addClosestPolyfill() {
+	addMatchesPolyfill();
 
 	if (!Element.prototype.closest) {
 		Element.prototype.closest = function(s) {
