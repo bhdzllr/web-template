@@ -77,8 +77,8 @@ function scripts() {
 			.pipe(dest(distFolder));
 	}	
 
-	src(srcFolder + '/js/lib/files/check.js')
-		.pipe(dest(distFolder + '/js/lib/files/'));
+	src(srcFolder + '/js/lib/global/check.js')
+		.pipe(dest(distFolder + '/js/lib/global/'));
 
 	return src(srcFolder + '/js/main.js')
 		.pipe(webpack(require('./webpack.config.js')))
