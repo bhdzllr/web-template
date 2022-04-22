@@ -4,10 +4,23 @@ export class I18n {
 		this.currentLang = currentLang;
 		this.langStrings = {};
 		this.langStrings[currentLang] = langStrings;
+		this.prefix;
 	}
 
 	setLang(lang) {
 		this.currentLang = lang;
+	}
+
+	getLang() {
+		return this.currentLang;
+	}
+
+	setPrefix(prefix) {
+		this.prefix = prefix;
+	}
+
+	getPrefix() {
+		return this.prefix;
 	}
 
 	add(lang, langStrings) {
@@ -16,11 +29,29 @@ export class I18n {
 		Object.assign(this.langStrings[lang], langStrings);
 	}
 
-	get(langString, fallbackString = null) {
-		if (!this.langStrings[this.currentLang]) return this.getFallbackString(langString, fallbackString);
-		if (!this.langStrings[this.currentLang][langString]) return this.getFallbackString(langString, fallbackString);
+	get(langString, fallbackString = null, ...values) {
+		const langStringPrefixed = this.prefix ? this.prefix + langString : langString;
+		let output;
 
-		return this.langStrings[this.currentLang][langString];
+		if (!this.langStrings[this.currentLang]) {
+			output = this.getFallbackString(langStringPrefixed, fallbackString);
+		} else if (!this.langStrings[this.currentLang][langStringPrefixed]) {
+			output = this.getFallbackString(langStringPrefixed, fallbackString);
+		} else {
+			output = this.langStrings[this.currentLang][langStringPrefixed];
+		}
+
+		if (values && values.length) {
+			values.forEach((value, i) => {
+				output = output.replace(`{}`, value);
+			});
+		}
+
+		return output;
+	}
+
+	getStrings() {
+		return this.langStrings;
 	}
 
 	getFallbackString(langString, fallbackString) {
