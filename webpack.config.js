@@ -12,7 +12,7 @@ module.exports = {
 		publicPath: '/',
 	},
 	stats: 'minimal',
-	devtool: 'sourcemap',
+	devtool: 'source-map',
 	// watch: true,
 	module: {
 		rules: [{
