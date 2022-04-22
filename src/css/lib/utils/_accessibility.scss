@@ -8,6 +8,10 @@
 	z-index: 1;
 }
 
+.js :focus {
+	outline: none;
+}
+
 .is-tabbing,
 .no-js {
 	:focus {
