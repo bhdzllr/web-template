@@ -1,6 +1,6 @@
 const fs = require('fs');
+
 const tar = require('tar');
-const { readFileSync } = require('fs');
 const { Client } = require('ssh2');
 
 const sshConfig = require('./ssh.example.json');
