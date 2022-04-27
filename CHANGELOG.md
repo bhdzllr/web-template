@@ -1,5 +1,18 @@
 # Changelog #
 
+## Version 5.0.0 ##
+
+* Remove Gulp and use NPM scripts instead
+* Remove SASS, use PostCSS instead
+* Remove webpack, use esbuild instead
+* Add CSS and JS Linting
+* Add test server
+
+@todo
+* Convert SASS/SCSS to regular CSS
+* Sublime Text native CSS nesting code highlighting
+
+
 ## Version 4.0.0 ##
 
 * Add new build pipeline

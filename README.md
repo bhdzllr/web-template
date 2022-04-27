@@ -5,7 +5,7 @@ This is a personal template to start a new front-end project and also for learni
 A development version (without a server) that watches changes can be started
 with `npm start`. To build the project into the "dist" folder run `npm run build`.
 The project can be deployed with `npm run deploy` but first needs SSH configuration
-in "gulpfile.js".
+and path adjustments, see deploy folder.
 
 
 ## Image Lazy Loading ##
