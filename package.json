@@ -19,7 +19,7 @@
     "dev:css": "AUTOPREFIXER_GRID=autoplace postcss src/css/main.css --map --use postcss-import autoprefixer postcss-nested -o dist/css/style.css",
     "dev:js": "esbuild src/js/main.js --bundle --outfile=dist/js/main.js",
     "dev": "npm-run-all clean copy dev:* --parallel serve watch",
-    "serve": "reload --dir dist --port 3000",
+    "serve": "eleventy-dev-server --input=dist --port=3000",
     "lint:css": "stylelint src/css/**/*.css",
     "lint:js": "eslint src/js/",
     "lint": "npm-run-all --parallel lint:*",
@@ -34,6 +34,7 @@
     "build": "npm-run-all clean copy build:*"
   },
   "devDependencies": {
+    "@11ty/eleventy-dev-server": "^1.0.0-canary.10",
     "autoprefixer": "^10.4.4",
     "cpy-cli": "^4.1.0",
     "del": "^6.0.0",
