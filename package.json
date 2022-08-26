@@ -3,6 +3,9 @@
   "version": "5.0.0",
   "description": "Front-end web template",
   "private": true,
+  "engines": {
+    "node": "16.0.0"
+  },
   "author": "bhdzllr",
   "license": "MIT",
   "scripts": {
