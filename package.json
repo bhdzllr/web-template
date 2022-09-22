@@ -4,7 +4,8 @@
   "description": "Front-end web template",
   "private": true,
   "engines": {
-    "node": "16.0.0"
+    "node": "16",
+    "npm": "8"
   },
   "author": "bhdzllr",
   "license": "MIT",
