@@ -1,0 +1,13 @@
+/**
+ * ********** Stack **********
+ */
+
+.stack {
+	& > * {
+		margin: 0 0 1em;
+	}
+
+	& > :last-child {
+		margin: 0;
+	}
+}

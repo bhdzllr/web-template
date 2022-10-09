@@ -1,0 +1,44 @@
+/**
+ * ********** Module **********
+ */
+
+.module {
+	background-color: var(--color-neutral);
+
+	& > div {
+		max-width: var(--width-site);
+		margin: 0 auto;
+		padding: 1.5rem 1rem;
+
+		@media (--min-md) {
+			padding-right: calc(var(--spacing-default) * 2.5);
+			padding-left: calc(var(--spacing-default) * 2.5);
+		}
+
+		& > :last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.module--transparent {
+	background-color: transparent;
+}
+
+.module--limited {
+	& > div {
+		max-width: 800px;
+	}
+}
+
+.module--decreased-padding {
+	& > div {
+		padding: 1rem;
+	}
+}
+
+.module--edged {
+	& > div {
+		padding: 0;
+	}
+}

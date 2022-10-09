@@ -1,0 +1,30 @@
+/**
+ * ********** Table **********
+ */
+
+.table {
+	max-width: 100%;
+	width: 100%;
+	margin: 1em 0;
+
+	border-collapse: collapse;
+
+	text-align: left;
+
+	& caption {
+		display: none;
+	}
+
+	& th {
+		background-color: var(--color-mono-30);
+	}
+
+	& th,
+	& td {
+		padding: 0.35em;
+	}
+
+	& tr:nth-child(even) {
+		background-color: var(--color-mono-10);
+	}
+}

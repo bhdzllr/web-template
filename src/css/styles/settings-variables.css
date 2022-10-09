@@ -1,0 +1,8 @@
+/**
+ * ********** Variables **********
+ */
+
+:root {
+    --font-web:   'Web Font';
+    --font-stack: var(--font-web), 'Web Font Local', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}

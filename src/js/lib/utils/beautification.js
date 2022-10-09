@@ -1,6 +1,5 @@
-export function beautifyFileInputs(i18n) {
+export function beautifyFileInputs(i18n, selector = '[type="file"]') {
 	if (!document.querySelector('#js-file-styles')) {
-
 		const style = document.createElement('style');
 		style.id = 'js-file-styles';
 
@@ -18,9 +17,16 @@ export function beautifyFileInputs(i18n) {
 			[type="file"] + label {
 				position: relative;
 
+				display: inline-block;
 				width: 300px;
+				padding: 0 0.25em;
+				box-sizing: border-box;
 
+				border: 1px solid #999999;
+				border-radius: 3px;
 				cursor: pointer;
+
+				color: #595959;
 			}
 
 			[type="file"] + label::after {
@@ -34,9 +40,12 @@ export function beautifyFileInputs(i18n) {
 				width: auto;
 				max-width: 100px;
 				margin: 0;
+				padding: 0 0.5em;
 
+				background-color: #e5e5e5;
 				border-radius: 0;
 
+				color: #000000;
 				text-align: center;
 			}
 
@@ -52,7 +61,7 @@ export function beautifyFileInputs(i18n) {
 		document.head.appendChild(style);
 	}
 
-	const fileInputs = document.querySelectorAll('[type="file"]');
+	const fileInputs = document.querySelectorAll(selector);
 
 	for (let i = 0; i < fileInputs.length; i++) {
 		const caption = document.createElement('span');

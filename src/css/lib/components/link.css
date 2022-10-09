@@ -5,13 +5,13 @@
 a,
 a:link,
 a:visited {
-	color: $color-primary;
+	color: var(--color-primary);
 	text-decoration: underline;
 }
 
 a:focus,
 a:hover,
 a:active {
-	color: lighten($color-primary, 5%);
+	color: var(--color-primary-darker);
 	text-decoration: underline;
 }

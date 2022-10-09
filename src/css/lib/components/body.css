@@ -7,10 +7,10 @@ body {
 	margin: 0;
 	padding: 0;
 
-	background-color: $color-background;
+	background-color: var(--color-background);
 
-	color: $color-text;
-	font-family: $font-stack;
+	color: var(--color-text);
+	font-family: var(--font-stack);
 	font-size: 1em;
 	line-height: 1.625;
 }

@@ -6,7 +6,25 @@
 	display: none;
 }
 
-@media #{$screen-min-sm} {
+.sx-show,
+.sm-show,
+.md-show,
+.lg-show,
+.xl-show {
+	display: none;
+}
+
+@media (--min-xs) {
+	.xs-show {
+		display: block;
+	}
+
+	.xs-hidden {
+		display: none;
+	}
+}
+
+@media (--min-sm) {
 	.sm-show {
 		display: block;
 	}
@@ -16,7 +34,7 @@
 	}
 }
 
-@media #{$screen-min-md} {
+@media (--min-md) {
 	.md-show {
 		display: block;
 	}
@@ -26,7 +44,7 @@
 	}
 }
 
-@media #{$screen-min-lg} {
+@media (--min-lg) {
 	.lg-show {
 		display: block;
 	}
@@ -36,7 +54,7 @@
 	}
 }
 
-@media #{$screen-min-xl} {
+@media (--min-xl) {
 	.xl-show {
 		display: block;
 	}
@@ -44,11 +62,4 @@
 	.xl-hidden {
 		display: none;
 	}
-}
-
-.sm-show,
-.md-show,
-.lg-show,
-.xl-show {
-	display: none;
 }

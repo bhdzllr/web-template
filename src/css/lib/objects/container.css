@@ -1,0 +1,44 @@
+/**
+ * ********** Container **********
+ */
+
+.container {
+	max-width: var(--width-site, 100%);
+	margin: 0 auto;
+	padding: 0;
+}
+
+.container--xs {
+	max-width: var(--break-xs);
+}
+
+.container--sm {
+	max-width: var(--break-sm);
+}
+
+.container--md {
+	max-width: var(--break-md);
+}
+
+.container--lg {
+	max-width: var(--break-lg);
+}
+
+.container--xl {
+	max-width: var(--break-xl);
+}
+
+.container--sh {
+	padding-right: var(--spacing-default);
+	padding-left: var(--spacing-default);
+
+	@media (--min-md) {
+		padding-right: calc(var(--spacing-default) * 2.5);
+		padding-left: calc(var(--spacing-default) * 2.5);
+	}
+}
+
+.container--sv {
+	padding-top: var(--spacing-default);
+	padding-bottom: var(--spacing-default);
+}

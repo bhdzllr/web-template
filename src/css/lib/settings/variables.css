@@ -1,0 +1,80 @@
+/**
+ * ********** Variables **********
+ */
+
+:root {
+	--color-neutral: #ffffff;
+
+	--color-mono: #000000;
+	--color-mono-90: #1a1a1a;
+	--color-mono-85: #262626;
+	--color-mono-80: #333333;
+	--color-mono-70: #4d4d4d;
+	--color-mono-60: #666666;
+	--color-mono-50: #808080;
+	--color-mono-40: #999999;
+	--color-mono-30: #b3b3b3;
+	--color-mono-20: #cccccc;
+	--color-mono-15: #d9d9d9;
+	--color-mono-10: #e5e5e5;
+	--color-mono-5: #f2f2f2;
+
+	--color-primary: #006fe6;
+	--color-primary-lighter: #0078fa;
+	--color-primary-darker: #0066d2;
+
+	--color-secondary: #507599;
+	--color-secondary-lighter: #577fa6;
+	--color-secondary-darker: #496b8c;
+
+	--color-background: #ffffff;
+	--color-shadow: rgba(50, 50, 50, 0.5);
+
+	--color-info: #0c4a6e;
+	--color-info-background: #bae6fd;
+	--color-info-border: #0369a1;
+
+	--color-warning: #713f12;
+	--color-warning-background: #fef08a;
+	--color-warning-border:  #a16207;
+
+	--color-positive: #064e3b;
+	--color-positive-background: #bbf7d0;
+	--color-positive-border: #047857;
+
+	--color-negative: #7d1c1c;
+	--color-negative-background: #fecaca;
+	--color-negative-border: #b91c1c;
+
+	--color-text: #333333;
+	--color-text-i: #ffffff;
+	--color-text-lighter: #595959;
+	--color-text-darker: #121212;
+	--color-mark: #ffff00;
+	--color-selection: #b3d4fc;
+
+	--font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+	--width-site: 1280px;
+	--spacing-default: 1rem;
+	--grid-max-col-size: 240px;
+	--grid-gap: 1rem;
+
+	--break-xs: 320px;
+	--break-sm: 480px;
+	--break-md: 768px;
+	--break-lg: 960px;
+	--break-xl: 1200px;
+}
+
+@custom-media --min-xs (min-width: 321px);
+@custom-media --min-sm (min-width: 481px);
+@custom-media --min-md (min-width: 769px);
+@custom-media --min-lg (min-width: 961px);
+@custom-media --min-xl (min-width: 1201px);
+
+@custom-media --max-xs (max-width: 320px);
+@custom-media --max-sm (max-width: 480px);
+@custom-media --max-md (max-width: 768px);
+@custom-media --max-lg (max-width: 960px);
+@custom-media --max-xl (max-width: 1200px);

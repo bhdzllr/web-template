@@ -3,6 +3,6 @@
  */
 
 ::selection {
-	background: $color-selection;
+	background: var(--color-selection);
 	text-shadow: none;
 }

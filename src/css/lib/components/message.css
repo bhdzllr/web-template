@@ -1,0 +1,59 @@
+/**
+ * ********** Message **********
+ */
+
+.message-container {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.message {
+	width: 100%;
+	padding: 1em;
+	box-sizing: border-box;
+
+	background-color: var(--color-text);
+	border-color: var(--color-text);
+	border-radius: 3px;
+
+	color: var(--color-text-i);
+
+	&.message--info,
+	&.message--warning,
+	&.message--error,
+	&.message--success {
+		border: 2px solid;
+	}
+
+	&.message--info {
+		background-color: var(--color-info-background);
+		border-color: var(--color-info);
+
+		color: var(--color-info);
+	}
+
+	&.message--warning {
+		background-color: var(--color-warning-background);
+		border-color: var(--color-warning);
+
+		color: var(--color-warning);
+	}
+
+	&.message--error {
+		background-color: var(--color-negative-background);
+		border-color: var(--color-negative);
+
+		color: var(--color-negative);
+	}
+
+	&.message--success {
+		background-color: var(--color-positive-background);
+		border-color: var(--color-positive);
+
+		color: var(--color-positive);
+	}
+
+	&.message--overlay {
+		box-shadow: 0 7px 20px var(--color-shadow);
+	}
+}
