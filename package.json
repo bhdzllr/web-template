@@ -18,7 +18,7 @@
     "copy:img": "cpy \"src/img/**/*\" dist/img/",
     "copy:fonts": "cpy \"src/fonts/**/*\" dist/fonts/",
     "copy:docs": "cpy \"src/docs/**/*\" dist/docs/",
-    "copy:res": "cpy \"src/{browserconfig.xml,favicon.ico,icon.png,site.webmanifest,tile.png,tile-wide.png,sw.js}\" dist/ && cpy \"src/js/lib/global/check.js\" dist/js/lib/global/check.js",
+    "copy:res": "cpy --cwd=src \"{browserconfig.xml,favicon.ico,icon.png,site.webmanifest,tile.png,tile-wide.png,sw.js}\" ../dist/ && cpy --cwd=src js/lib/global/check.js ../dist/",
     "copy": "npm-run-all --parallel copy:*",
     "dev:css": "AUTOPREFIXER_GRID=autoplace postcss src/css/main.css --map --use postcss-import autoprefixer postcss-nested postcss-custom-media -o dist/css/style.css",
     "dev:js": "esbuild src/js/main.js --bundle --outfile=dist/js/main.js",
