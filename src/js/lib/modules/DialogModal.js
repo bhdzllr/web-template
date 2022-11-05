@@ -32,6 +32,15 @@ export class DialogModal {
 		this.lastFocusableElement;
 		this.lastElement;
 		this.isOpen = false;
+		this.initialStyles = {
+			documentElement: {
+				overflow: null,
+				scrollbarGutter: null,
+			},
+			body: {
+				overflow: null,
+			}
+		}
 
 		this.initDom();
 		this.initListeners();
@@ -175,13 +184,29 @@ export class DialogModal {
 		if (this.lastElement) this.lastElement.focus();
 	}
 
+	deactivateBodyScroll() {
+		this.initialStyles.documentElement.overflow = document.documentElement.style.overflow;
+		this.initialStyles.documentElement.scrollbarGutter = document.documentElement.style.scrollbarGutter;
+		this.initialStyles.body.overflow = document.body.style.overflow;
+
+		document.documentElement.style.overflow = 'hidden';
+		document.body.style.overflow = 'hidden';
+
+		const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+		const hasScrollbar = document.body.scrollHeight > viewportHeight;
+		if (hasScrollbar) document.documentElement.style.scrollbarGutter = 'stable';
+	}
+
+	activateBodyScroll() {
+		document.documentElement.style.overflow = this.initialStyles.documentElement.overflow || 'auto';
+		document.documentElement.style.scrollbarGutter = this.initialStyles.documentElement.scrollbarGutter || 'auto';
+		document.body.style.overflow = this.initialStyles.body.overflow || 'auto';
+	}
+
 	show() {
 		this.lastElement = document.activeElement;
 
-		if (this.hideRootScrollbars) {
-			document.documentElement.style.overflow = 'hidden';
-			document.body.style.overflow = 'hidden';
-		}
+		if (this.hideRootScrollbars) this.deactivateBodyScroll();
 
 		this.overlay.classList.remove('hidden');
 		this.overlay.hidden = false;
@@ -193,10 +218,7 @@ export class DialogModal {
 	}
 
 	hide() {
-		if (this.hideRootScrollbars) {
-			document.documentElement.style.overflow = 'auto';
-			document.body.style.overflow = 'auto';
-		}
+		if (this.hideRootScrollbars) this.activateBodyScroll();
 
 		this.overlay.classList.add('hidden');
 		this.overlay.hidden = true;
