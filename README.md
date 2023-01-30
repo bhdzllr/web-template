@@ -27,7 +27,7 @@ lazyLoadImages();
 ## Web Font Loading ##
 
 ```CSS
-/** See `index.html`, `css/settings/_fonts.scss` and `css/settings/_variables.scss` for embedding. */
+/** See `index.html`, `css/styles/settings-fonts.css` and `css/styles/settings-variables.css` for embedding. */
 ```
 
 
