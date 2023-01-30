@@ -6,11 +6,6 @@ html {
 	-webkit-text-size-adjust: 100%; /* iOS: Prevent text size adjust after device orientation change. */
 }
 
-main,
-details {
-	display: block;
-}
-
 summary {
 	display: list-item;
 }
@@ -19,9 +14,20 @@ progress {
 	vertical-align: baseline;
 }
 
-[hidden],
-template {
-	display: none;
+b,
+strong {
+	font-weight: bolder;
+}
+
+abbr[title] {
+	text-decoration: underline dotted;
+}
+
+iframe {
+	display: block;
+	margin: 0 auto;
+
+	border: 0;
 }
 
 button,
@@ -34,6 +40,11 @@ textarea {
 	font-size: inherit;
 }
 
+button,
+select {
+	text-transform: none;
+}
+
 button::-moz-focus-inner,
 input::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner,
@@ -41,11 +52,6 @@ input::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner {
 	border: 0;  /* Button size fix */
 	padding: 0; /* Button size fix */
-}
-
-textarea {
-	vertical-align: top;
-	overflow: auto;
 }
 
 button,
@@ -60,7 +66,7 @@ button,
 	outline-offset: -2px;
 }
 
-[type="search"]::-webkit-search-decoration {
+::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
 
@@ -69,9 +75,7 @@ button,
 	font: inherit;
 }
 
-iframe {
-	display: block;
-	margin: 0 auto;
-
-	border: 0;
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
 }
