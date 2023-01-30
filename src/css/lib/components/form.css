@@ -1,6 +1,6 @@
 /**
  * ********** Form **********
- * Always set border radius for inputs (even if it is 0 for iOS)
+ * Inputs: Always set border radius (even if it is 0), `-webkit-appearance: none;` and `box-sizing: border-box;` for consistency (iOS)
  */
 
 [type="checkbox"],
