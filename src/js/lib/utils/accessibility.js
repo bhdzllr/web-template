@@ -1,17 +1,3 @@
-export function addOutlineHandler(className = 'is-tabbing') {
-	document.addEventListener('mousedown', function () {
-		document.documentElement.classList.remove(className);
-	});
-
-	document.addEventListener('keydown', function (e) {
-		const keyCode = e.which || e.keyCode;
-
-		if (keyCode !== 9) return;
-
-		document.documentElement.classList.add(className);
-	});
-}
-
 export function addRoleButtonListener(exceptions = []) {
 	let buttons = document.querySelectorAll('[role="button"]');
 
