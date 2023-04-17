@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
 	const i18n = new I18n(currentLang, de);
 
 	// addServiceWorker('/sw.js');
-	addOutlineHandler();
 	beautifyFileInputs(i18n);
 
 	if (document.querySelector('.js-analytics-opt-out')) {
