@@ -1,15 +1,17 @@
-# Changelog #
+# Changelog
 
-## Version 5.0.0 ##
+## Version 5.0.0
 
 * Remove Gulp and use NPM scripts instead
 * Remove SASS, use PostCSS instead
 * Remove webpack, use esbuild instead
 * Add CSS and JS Linting
 * Add test server
+* Remove lazy loading of images and use native lazy loading
+* Use of better supported browser features for form styling
 
 
-## Version 4.0.0 ##
+## Version 4.0.0
 
 * Add new build pipeline
 * Build and bundling with webpack
@@ -32,12 +34,12 @@
   use No-JS fallback instead.
 
 
-## Version 3.1.1 ##
+## Version 3.1.1
 
 * Remove folder structure from README
 
 
-## Version 3.1.0 ##
+## Version 3.1.0
 
 * Add SCSS file for local fonts
 * Remove placeholder for lining web fonts
@@ -54,7 +56,7 @@
 * Add Grid and update SCSS
 
 
-## Version 3.0.0 ##
+## Version 3.0.0
 
 * Drop lte IE 8 support
 * Update to jQuery 3
@@ -66,7 +68,7 @@
 * Add SCSS file for animations
 
 
-## Version 2.1.0 ##
+## Version 2.1.0
 
 * Remove duplicated FOUC hook
 * Minimal Normalize and SCSS update
@@ -78,12 +80,12 @@
 * Remove outline on input fields and textarea
 
 
-## Version 2.0.0 ##
+## Version 2.0.0
 
 * Move to SASS/SCSS
 
 
-## Version 1.2.0 ##
+## Version 1.2.0
 
 * HTML Update
 * JS syntax changes. Remove responsive fallback in JS, use media query instead
@@ -99,7 +101,7 @@
 * Move `<abbr>` styling to from "Minimal Normalize" to "Base"
 
 
-## Version 1.1.0 ##
+## Version 1.1.0
 
 * Add `<mark>` example
 * Update jQuery from 1.11.3 to 1.12.3
@@ -121,19 +123,19 @@
 * Syntax changes in "gulpfile.js"
 
 
-## Version 1.0.0 ##
+## Version 1.0.0
 
 * Distribute files into "dist" directory with Gulp
 * Add empty favicon
 
 
-## Version 0.0.5 ##
+## Version 0.0.5
 
 * Add JavaScript example
 * Prepare for "dist" folder
 
 
-## Version 0.0.4 ##
+## Version 0.0.4
 
 * Remove "fonts.css", place fonts in "style.css"
 * Remove "print.css" and place code in "style.css" withing media query
@@ -141,7 +143,7 @@
 * Add "screen-reader-text"-class
 
 
-## Version 0.0.3 ##
+## Version 0.0.3
 
 * Prevent FOUC, add class `no-js`. Do not use Modernizr
 * Add "createHTML5Elements.js"
@@ -152,7 +154,7 @@
 * Add basic CSS
 
 
-## Version 0.0.2 ##
+## Version 0.0.2
 
 * HTML Markup examples
 * Meta changes in `<head>`
@@ -160,7 +162,7 @@
 * Add Piwik tracking code
 
 
-## Version 0.0.1 ##
+## Version 0.0.1
 
 * Add "css" directory with empty "style.css" and "fonts.css"
 * Add empty "fonts" directory
@@ -173,7 +175,7 @@
 * Change ".htaccess" absolute path example
 
 
-## Initial commit ##
+## Initial commit
 
 * Basic HTML5 template, with HTML5 doctype, `lang="en"`, `charset="utf-8"`, 
   compatibility mode `IE=edge` and viewport
