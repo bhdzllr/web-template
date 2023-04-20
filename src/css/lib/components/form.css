@@ -318,7 +318,7 @@ progress {
 
 			appearance: none;
 			-webkit-appearance: none;
-			background-color: var(--slider-color-track);
+			background: var(--slider-color-track);
 			border-radius: var(--slider-track-border-radius);
 			border-color: transparent;
 			cursor: pointer;
@@ -331,7 +331,7 @@ progress {
 
 			appearance: none;
 			-webkit-appearance: none;
-			background-color: var(--slider-color-track);
+			background: var(--slider-color-track);
 			border-radius: var(--slider-track-border-radius);
 			border-color: transparent;
 			cursor: pointer;
@@ -344,7 +344,7 @@ progress {
 
 			appearance: none;
 			-webkit-appearance: none;
-			background-color: var(--slider-color-track);
+			background: var(--slider-color-track);
 			border-radius: var(--slider-track-border-radius);
 			border-color: transparent;
 			cursor: pointer;
@@ -357,26 +357,26 @@ progress {
 		}
 
 		&::-ms-fill-lower {
-			background-color: var(--slider-color-track);
+			background: var(--slider-color-track);
 			border-radius: var(--slider-track-border-radiu);
 		}
 
 		&::-ms-fill-upper {
-			background-color: var(--slider-color-track);
+			background: var(--slider-color-track);
 			border-radius: var(--slider-track-border-radiu);
 		}
 
 		&:disabled {
 			&::-webkit-slider-thumb {
-				background-color: var(--slider-color-track-disabled);
+				background: var(--slider-color-track-disabled);
 			}
 
 			&::-moz-range-thumb {
-				background-color: var(--slider-color-track-disabled);
+				background: var(--slider-color-track-disabled);
 			}
 
 			&::-ms-thumb {
-				background-color: var(--slider-color-track-disabled);
+				background: var(--slider-color-track-disabled);
 			}
 
 			&::-webkit-slider-runnable-track {

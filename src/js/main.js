@@ -5,10 +5,10 @@ import { AnalyticsOptOut, addAnalyticsCode } from './lib/modules/Analytics';
 
 document.addEventListener('DOMContentLoaded', async function (e) {
 
-	// addServiceWorker('/sw.js');
-
 	const locale = getRootLocale();
 	const i18n = getLangStrings(locale, langStrings);
+
+	// addServiceWorker('/sw.js');
 
 	if (document.querySelector('.js-analytics-opt-out')) {
 		new AnalyticsOptOut({
