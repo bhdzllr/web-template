@@ -14,7 +14,10 @@ export class DialogModal {
 		showCallback = null,
 		hideCallback = null,
 		hideRootScrollbars = true,
-	}) {
+		i18n = {
+			'general.close': 'Close',
+		},
+	} = {}) {
 		this.contentAsHtml = contentAsHtml;
 		this.title = title;
 		this.showOnCreation = showOnCreation;
@@ -22,6 +25,7 @@ export class DialogModal {
 		this.hideCallback = hideCallback;
 		this.ariaLabelledBy = ariaLabelledBy;
 		this.hideRootScrollbars = hideRootScrollbars;
+		this.i18n = i18n;
 
 		this.overlay;
 		this.dialog;
@@ -67,7 +71,7 @@ export class DialogModal {
 		this.btnClose = document.createElement('button');
 		this.btnClose.classList.add('dm-btn-close');
 		this.btnClose.classList.add('js-dm-btn-close');
-		this.btnClose.setAttribute('aria-label', 'Close');
+		this.btnClose.setAttribute('aria-label', this.i18n['general.close']);
 		this.btnClose.innerHTML = `<span aria-hidden="true">&times;</span>`;
 
 		this.headerBar = document.createElement('div');

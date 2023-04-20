@@ -1,6 +1,11 @@
 export class FlashMessenger {
 
-	constructor(i18n, time = 7000) {
+	constructor({
+		i18n = {
+			'general.close': 'Close',
+		},
+		time = 7000,
+	} = {}) {
 		this.i18n = i18n;
 		this.time = time;
 
@@ -53,7 +58,7 @@ export class FlashMessenger {
 
 		const btnClose = document.createElement('button');
 		btnClose.classList.add('message__btn-close');
-		btnClose.setAttribute('aria-label', this.i18n.get('general.close', 'Close'));
+		btnClose.setAttribute('aria-label', this.i18n['general.close']);
 		btnClose.innerHTML = `<span aria-hidden="true">&times;</span>`;
 		btnClose.addEventListener('click', (e) => {
 			e.preventDefault();

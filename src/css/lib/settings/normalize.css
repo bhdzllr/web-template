@@ -66,8 +66,9 @@ button,
 	outline-offset: -2px;
 }
 
-::-webkit-search-decoration {
-	-webkit-appearance: none;
+::file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
 }
 
 ::-webkit-file-upload-button {
@@ -78,4 +79,8 @@ button,
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
 	height: auto;
+}
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
 }

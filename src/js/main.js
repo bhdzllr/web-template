@@ -1,20 +1,20 @@
-import { default as de } from './lang/de.json';
-
-import { I18n } from './lib/modules/I18n';
-import { AnalyticsOptOut, addAnalyticsCode } from './lib/modules/Analytics';
 // import { addServiceWorker } from './lib/utils/service-worker';
-import { beautifyFileInputs } from './lib/utils/beautification';
+import { default as langStrings } from './lang.json';
+import { getRootLocale, getLangStrings } from './lib/utils/i18n';
+import { AnalyticsOptOut, addAnalyticsCode } from './lib/modules/Analytics';
 
-document.addEventListener('DOMContentLoaded', function (e) {
-
-	const currentLang = document.documentElement.getAttribute('lang') ? document.documentElement.getAttribute('lang') : 'en';
-	const i18n = new I18n(currentLang, de);
+document.addEventListener('DOMContentLoaded', async function (e) {
 
 	// addServiceWorker('/sw.js');
-	beautifyFileInputs(i18n);
+
+	const locale = getRootLocale();
+	const i18n = getLangStrings(locale, langStrings);
 
 	if (document.querySelector('.js-analytics-opt-out')) {
-		new AnalyticsOptOut(document.querySelector('.js-analytics-opt-out'), i18n);	
+		new AnalyticsOptOut({
+			button: document.querySelector('.js-analytics-opt-out'),
+			i18n,
+		});	
 	}
 
 	addAnalyticsCode(function () {
