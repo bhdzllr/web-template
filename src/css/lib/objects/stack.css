@@ -4,10 +4,11 @@
 
 .stack {
 	& > * {
-		margin: 0 0 1em;
+		margin-top: 0;
+		margin-bottom: 1em;
 	}
 
 	& > :last-child {
-		margin: 0;
+		margin-bottom: 0;
 	}
 }
