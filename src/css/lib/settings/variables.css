@@ -19,6 +19,17 @@
 	--color-mono-10: #e5e5e5;
 	--color-mono-5: #f2f2f2;
 
+	--color-text: #333333;
+	--color-text-i: #ffffff;
+	--color-text-lighter: #595959;
+	--color-text-darker: #121212;
+	--color-mark: #ffff00;
+	--color-selection: #b3d4fc;
+	--color-outline: var(--color-text);
+
+	--color-background: #ffffff;
+	--color-shadow: rgba(50, 50, 50, 0.5);
+
 	--color-primary: #006fe6;
 	--color-primary-lighter: #0078fa;
 	--color-primary-darker: #0066d2;
@@ -26,9 +37,6 @@
 	--color-secondary: #507599;
 	--color-secondary-lighter: #577fa6;
 	--color-secondary-darker: #496b8c;
-
-	--color-background: #ffffff;
-	--color-shadow: rgba(50, 50, 50, 0.5);
 
 	--color-info: #0c4a6e;
 	--color-info-background: #bae6fd;
@@ -46,13 +54,6 @@
 	--color-negative-background: #fecaca;
 	--color-negative-border: #b91c1c;
 
-	--color-text: #333333;
-	--color-text-i: #ffffff;
-	--color-text-lighter: #595959;
-	--color-text-darker: #121212;
-	--color-mark: #ffff00;
-	--color-selection: #b3d4fc;
-
 	--font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 	--width-site: 1280px;
@@ -65,6 +66,8 @@
 	--break-md: 768px;
 	--break-lg: 960px;
 	--break-xl: 1200px;
+
+	accent-color: var(--color-primary);
 }
 
 @custom-media --min-xs (min-width: 321px);
