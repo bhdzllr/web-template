@@ -5,7 +5,8 @@
 .container {
 	max-width: var(--width-site, 100%);
 	margin: 0 auto;
-	padding: 0;
+	padding: var(--spacing-default);
+	box-sizing: border-box;
 }
 
 .container--xs {
@@ -14,6 +15,10 @@
 
 .container--sm {
 	max-width: var(--break-sm);
+}
+
+.container--sm2 {
+	max-width: var(--break-sm2);
 }
 
 .container--md {
@@ -28,17 +33,58 @@
 	max-width: var(--break-xl);
 }
 
-.container--sh {
-	padding-right: var(--spacing-default);
-	padding-left: var(--spacing-default);
+.container--no-width {
+	max-width: none;
+}
+
+.container--no-padding {
+	padding: 0;
+}
+
+.container--px {
+	padding-inline: var(--spacing-default);
 
 	@media (--min-md) {
-		padding-right: calc(var(--spacing-default) * 2.5);
-		padding-left: calc(var(--spacing-default) * 2.5);
+		padding-inline: calc(var(--spacing-default) * 2.5);
 	}
 }
 
-.container--sv {
-	padding-top: var(--spacing-default);
-	padding-bottom: var(--spacing-default);
+.container--px1 {
+	padding-inline: 1rem;
+}
+
+.container--px15 {
+	padding-inline: 1.5rem;
+}
+
+.container--px2 {
+	padding-inline: 2rem;
+}
+
+.container--px3 {
+	padding-inline: 3rem;
+}
+
+.container--py {
+	padding-block: var(--spacing-default);
+}
+
+.container--py1 {
+	padding-block: 1rem;
+}
+
+.container--py15 {
+	padding-block: 1.5rem;
+}
+
+.container--py2 {
+	padding-block: 2rem;
+}
+
+.container--py3 {
+	padding-block: 3rem;
+}
+
+.container--content-box {
+	box-sizing: content-box;
 }
