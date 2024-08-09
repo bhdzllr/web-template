@@ -10,7 +10,7 @@
 		margin: 0 auto;
 		padding: 1.5rem 1rem;
 
-		@media (--min-md) {
+		@media (min-width: 769px) {
 			padding-right: calc(var(--spacing-default) * 2.5);
 			padding-left: calc(var(--spacing-default) * 2.5);
 		}

@@ -10,27 +10,27 @@
 }
 
 .container--xs {
-	max-width: var(--break-xs);
+	max-width: var(--min-xs);
 }
 
 .container--sm {
-	max-width: var(--break-sm);
+	max-width: var(--min-sm);
 }
 
 .container--sm2 {
-	max-width: var(--break-sm2);
+	max-width: var(--min-sm2);
 }
 
 .container--md {
-	max-width: var(--break-md);
+	max-width: var(--min-md);
 }
 
 .container--lg {
-	max-width: var(--break-lg);
+	max-width: var(--min-lg);
 }
 
 .container--xl {
-	max-width: var(--break-xl);
+	max-width: var(--min-xl);
 }
 
 .container--no-width {
@@ -44,7 +44,7 @@
 .container--px {
 	padding-inline: var(--spacing-default);
 
-	@media (--min-md) {
+	@media (min-width: 769px) {
 		padding-inline: calc(var(--spacing-default) * 2.5);
 	}
 }

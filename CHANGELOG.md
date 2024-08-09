@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 6.0.0
+
+* Back to No Build
+
+
 ## Version 5.0.0
 
 * Remove Gulp and use NPM scripts instead

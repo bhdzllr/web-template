@@ -14,7 +14,7 @@
 	display: none;
 }
 
-@media (--min-xs) {
+@media (min-width: 321px) {
 	.xs-show {
 		display: block;
 	}
@@ -24,7 +24,7 @@
 	}
 }
 
-@media (--min-sm) {
+@media (min-width: 481px) {
 	.sm-show {
 		display: block;
 	}
@@ -34,7 +34,7 @@
 	}
 }
 
-@media (--min-md) {
+@media (min-width: 769px) {
 	.md-show {
 		display: block;
 	}
@@ -44,7 +44,7 @@
 	}
 }
 
-@media (--min-lg) {
+@media (min-width: 961px) {
 	.lg-show {
 		display: block;
 	}
@@ -54,7 +54,7 @@
 	}
 }
 
-@media (--min-xl) {
+@media (min-width: 1201px) {
 	.xl-show {
 		display: block;
 	}

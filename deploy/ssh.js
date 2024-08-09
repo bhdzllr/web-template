@@ -17,9 +17,9 @@ function main() {
 		upload(() => {
 			unroll([
 				'tar -xvf package.tar',
-				'rsync -av --delete /home/user/dist/ /var/www/html/',
+				'rsync -av --delete /home/user/public/ /var/www/html/',
 				'rm package.tar',
-				'rm -r /home/user/dist',
+				'rm -r /home/user/public',
 			], (output) => {
 				log(output);
 				remove();
@@ -29,7 +29,7 @@ function main() {
 }
 
 function create() {
-	tar.c({ file: 'package.tar', sync: true }, ['dist/']);
+	tar.c({ file: 'package.tar', sync: true }, ['public/']);
 }
 
 function upload(cb) {

@@ -9,7 +9,7 @@
 	grid-gap: 2rem;
 	margin-bottom: var(--spacing-default);
 
-	@media (--min-sm) {
+	@media (min-width: 481px) {
 		display: grid;
 	}
 
@@ -20,7 +20,7 @@
 			display: block;
 			margin-bottom: var(--spacing-default);
 
-			@media (--min-sm) {
+			@media (min-width: 481px) {
 				margin-bottom: 0;
 			}
 		}

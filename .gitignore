@@ -1,6 +1,4 @@
 .DS_Store
-.sass-cache
 node_modules/
 deploy/ssh.json
 deploy/ssh.log
-dist/
