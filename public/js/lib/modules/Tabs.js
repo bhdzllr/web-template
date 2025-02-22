@@ -1,13 +1,3 @@
-const KEYCODE = {
-	TAB: 9,
-	DOWN: 40,
-	LEFT: 37,
-	RIGHT: 39,
-	UP: 38,
-	HOME: 36,
-	END: 35,
-};
-
 const template = document.createElement('template');
 template.innerHTML = `
 	<style>
@@ -28,7 +18,7 @@ template.innerHTML = `
 	</div>
 `;
 
-class Tabs extends HTMLElement {
+export class Tabs extends HTMLElement {
 
 	constructor() {
 		super();
@@ -50,22 +40,19 @@ class Tabs extends HTMLElement {
 	}
 
 	connectedCallback() {
-		if (!this.hasAttribute('wa-aria-label')) console.warn('[Tabs] No "wa-aria-label" attribute set to use for "aria-label".');
+		if (!this.hasAttribute('wa-aria-label') && !this.hasAttribute('aria-labelledby')) {
+			console.warn('[Tabs] No "wa-aria-label" or "aria-labelledby" attribute set to use for "aria-label".');
+		}
 
-		if (this.hasAttribute('wa-aria-label')) this.tabList.setAttribute('aria-label', this.getAttribute('wa-aria-label'));
-	
+		if (this.hasAttribute('wa-aria-label')) {
+			this.tabList.setAttribute('aria-label', this.getAttribute('wa-aria-label'));
+		}
+
 		this.onSlotChangeHandler = this.onSlotChange.bind(this);
 		this.onKeyDownHandler = this.onKeyDown.bind(this);
 
 		this.tabsSlot.addEventListener('slotchange', this.onSlotChangeHandler);
 		this.tabPanelsSlot.addEventListener('slotchange', this.onSlotChangeHandler);
-
-		for (const [i, tab] of this.getTabs().entries()) {
-			tab.addEventListener('click', (e) => {
-				e.preventDefault();
-				e.target.setAttribute('selected', '');
-			});
-		}
 
 		this.addEventListener('keydown', this.onKeyDownHandler);
 
@@ -79,6 +66,8 @@ class Tabs extends HTMLElement {
 	}
 
 	onSlotChange(e) {
+		this.stopSelectedObserver();
+
 		const tabs = this.getTabs();
 		const tabPanels = this.getTabPanels();
 		let isATabSelected = false;
@@ -87,14 +76,18 @@ class Tabs extends HTMLElement {
 			let isTabSelected = tab.hasAttribute('selected') ? true : false;
 			let tabId = tab.id ? tab.id : 'bhdzllr-tabs-tab-' + i;
 
+			tab.hidden = false;
 			tab.setAttribute('id', tabId);
 			tab.setAttribute('role', 'tab');
 			tab.setAttribute('aria-selected', `${isTabSelected}`);
 			if (!tab.hasAttribute('aria-controls')) tab.setAttribute('aria-controls', 'bhdzllr-tabs-panel-' + i);
 			tab.setAttribute('tabindex', `${isTabSelected ? '0' : '-1'}`);
 			tab.dataset.index = i;
+			tab.addEventListener('click', this.onTabClick);
 
-			if (isTabSelected) isATabSelected = true;
+			if (isTabSelected) {
+				isATabSelected = true;
+			}
 
 			if (!tabPanels[i]) {
 				console.warn('[Tabs] There are more tabs defined than panels.');
@@ -109,17 +102,16 @@ class Tabs extends HTMLElement {
 			tabPanel.hidden = !isTabSelected;
 		}
 
-		
 		if (!isATabSelected) {
-			this.selectTab(0);
+			this.selectTab(0, false);
 		}
+
+		this.startSelectedObserver();
 	}
 
 	onKeyDown(e) {
-		const keyCode = e.which || e.keyCode;
-
 		if (e.altKey) return;
-		if (keyCode == KEYCODE.TAB) return;
+		if (e.key === 'Tab') return;
 		if (e.target.getAttribute('role') !== 'tab') return;
 
 		const tabs = this.getTabs();
@@ -127,30 +119,43 @@ class Tabs extends HTMLElement {
 		let newTab = 0;
 
 		for (const [i, tab] of tabs.entries()) {
-			if (tab.hasAttribute('selected')) currentTab = i;
+			if (tab.hasAttribute('selected')) {
+				currentTab = i;
+			}
 		}
 
-		switch (keyCode) {
-			case KEYCODE.LEFT:
-			case KEYCODE.UP:
+		switch (e.key) {
+			case 'ArrowLeft':
+			case 'ArrowUp':
 				newTab = currentTab - 1;
 				break;
-			case KEYCODE.RIGHT:
-			case KEYCODE.DOWN:
+			case 'ArrowRight':
+			case 'ArrowDown':
 				newTab = currentTab + 1;
 				break;
-			case KEYCODE.HOME:
+			case 'Home':
 				break;
-			case KEYCODE.END: 
+			case 'End':
 				newTab = tabs.length - 1;
+				break;
 			default:
 				return;
 		}
 
-		if (newTab < 0) newTab = tabs.length - 1;
-		if (newTab > (tabs.length - 1)) newTab = 0;
+		if (newTab < 0) {
+			newTab = tabs.length - 1;
+		}
+
+		if (newTab > (tabs.length - 1)) {
+			newTab = 0;
+		}
 
 		this.selectTab(newTab);
+	}
+
+	onTabClick(e) {
+		e.preventDefault();
+		this.setAttribute('selected', '');
 	}
 
 	startSelectedObserver() {
@@ -165,7 +170,7 @@ class Tabs extends HTMLElement {
 		this.observer.disconnect();
 	}
 
-	selectTab(index) {
+	selectTab(index, withFocus = true) {
 		const tabs = this.getTabs();
 		const tabPanels = this.getTabPanels();
 
@@ -175,27 +180,45 @@ class Tabs extends HTMLElement {
 			if (i != index) {
 				tab.setAttribute('aria-selected', 'false');
 				tab.setAttribute('tabindex', '-1');
-				if (tab.hasAttribute('selected')) tab.removeAttribute('selected');
+
+				if (tab.hasAttribute('selected')) {
+					tab.removeAttribute('selected');
+				}
+
 				continue;
 			}
 
 			tab.setAttribute('aria-selected', 'true');
 			tab.setAttribute('tabindex', '0');
-			if (!tab.hasAttribute('selected')) tab.setAttribute('selected', '');
 
-			tab.focus();
+			if (!tab.hasAttribute('selected')) {
+				tab.setAttribute('selected', '');
+			}
+
+			if (withFocus) {
+				tab.focus();
+			}
 		}
 
-      	for (const [i, tabPanel] of tabPanels.entries()) {
-      		if (i != index) {
-      			tabPanel.hidden = true;
-      			continue;
-      		}
+		for (const [i, tabPanel] of tabPanels.entries()) {
+			if (i != index) {
+				tabPanel.hidden = true;
+				continue;
+			}
 
-      		tabPanel.hidden = false;
-      	}
+			tabPanel.hidden = false;
+		}
 
-      	this.startSelectedObserver();
+		this.dispatchEvent(
+			new CustomEvent('bhdzllr-tabs-selected', {
+				bubbles: false,
+				detail: {
+					index: Number(index),
+				},
+			}),
+		);
+
+		this.startSelectedObserver();
 	}
 
 	getTabs() {
