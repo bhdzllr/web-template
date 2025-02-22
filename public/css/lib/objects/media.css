@@ -3,54 +3,69 @@
  */
 
 .media {
+	display: grid;
+	grid-template-rows: auto auto;
+	grid-template-areas: 'meta'
+	                     'body';
+	gap: var(--media-spacing-block, 1em);
+}
+
+.media.media--flipped {
+	grid-template-areas: 'body'
+	                     'meta';
+}
+
+.media > :nth-child(1),
+.media > :nth-child(2) {
 	display: block;
-	grid-template-columns: auto 1fr;
+	margin-bottom: 0;
+}
+
+.media > :nth-child(1) {
+	grid-area: meta;
+}
+
+.media > :nth-child(2) {
+	grid-area: body;
+}
+
+.media.media--sm {
+	grid-template-rows: auto;
+	grid-template-columns: fit-content(100%) 1fr;
 	grid-template-areas: 'meta body';
-	grid-gap: 2rem;
-	margin-bottom: var(--spacing-default);
 
-	@media (min-width: 481px) {
-		display: grid;
+	gap: calc(var(--spacing-spacing-inline, 1em) * 2);
+}
+
+.media.media--sm.media--meta-max {
+	grid-template-columns: fit-content(var(--media-meta-max, 25%)) 1fr;
+}
+
+@media (min-width: 481px) {
+	.media {
+		grid-template-rows: auto;
+		grid-template-columns: fit-content(100%) 1fr;
+		grid-template-areas: 'meta body';
+
+		gap: calc(var(--media-spacing-inline, 1em) * 2);
 	}
 
-	& > :nth-child(1) {
-		grid-area: meta;
-
-		& img {
-			display: block;
-			margin-bottom: var(--spacing-default);
-
-			@media (min-width: 481px) {
-				margin-bottom: 0;
-			}
-		}
-	}
-
-	& > :nth-child(2) {
-		grid-area: body;
-		margin-bottom: 0;
-
-		& > :first-child {
-			margin-top: 0;
-		}
-
-		& > :last-child {
-			margin-bottom: 0;
-		}
-	}
-
-	&.media--flipped {
-		grid-template-columns: 1fr auto;
+	.media.media--flipped {
+		grid-template-columns: 1fr fit-content(100%);
 		grid-template-areas: 'body meta';
 	}
 
-	&.media--sm {
-		display: grid;
+	.media.media--flipped-inline {
+		grid-template-columns: 1fr fit-content(100%);
+		grid-template-areas: 'body meta';
+	}
 
-		& > :nth-child(1) {
-			& img {
-				margin-bottom: 0;
-			}
-		}
+	.media.media--meta-max {
+		grid-template-columns: fit-content(var(--media-meta-max, 25%)) 1fr;
+	}
+		
+	.media.media--flipped.media--meta-max,
+	.media.media--flipped-inline.media--meta-max {
+		grid-template-columns: 1fr fit-content(var(--media-meta-max, 25%));
 	}
 }
