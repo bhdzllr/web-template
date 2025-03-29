@@ -16,7 +16,7 @@ progress {
 
 	& + label {
 		display: inline;
-		vertical-align: middle;
+		vertical-align: baseline;
 	}
 }
 
@@ -107,6 +107,10 @@ progress {
 	& [type="datetime-local"],
 	& [type="color"] {
 		min-height: 46px; /* iOS needs height if there is no default value. */
+	}
+
+	& input::-webkit-date-and-time-value {
+	    text-align: left; /* Align input value on left side of field for iOS */
 	}
 
 	& textarea {
