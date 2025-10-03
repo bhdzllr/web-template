@@ -3,8 +3,8 @@
  */
 
 *:focus {
-	outline: 2px solid var(--color-text);
-	outline-offset: 2px;
+	outline: var(--focus-outline);
+	outline-offset: var(--focus-outline-offset)
 }
 
 *:focus:not(:focus-visible) {
@@ -12,8 +12,8 @@
 }
 
 *:focus-visible {
-	outline: 2px solid var(--color-text);
-	outline-offset: 2px;
+	outline: var(--focus-outline);
+	outline-offset: var(--focus-outline-offset)
 }
 
 .offscreen {
@@ -35,8 +35,8 @@
 
 	white-space: nowrap;
 
-	&--focusable:active,
-	&--focusable:focus {
+	&:active,
+	&:focus {
 		position: static;
 
 		width: auto;
@@ -49,3 +49,4 @@
 		white-space: inherit;
 	}
 }
+

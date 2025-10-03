@@ -3,42 +3,46 @@
  */
 
 .module {
+	container-type: inline-size;
+
 	background-color: var(--color-neutral);
 
-	& > div {
-		max-width: var(--width-site);
-		margin: 0 auto;
-		padding: 1.5rem 1rem;
-
-		@media (min-width: 769px) {
-			padding-right: calc(var(--spacing-default) * 2.5);
-			padding-left: calc(var(--spacing-default) * 2.5);
-		}
-
+	& > .container {
+		padding-block: var(--spacing-module-block);
+		
 		& > :last-child {
-			margin-bottom: 0;
+			margin-block-end: 0;
 		}
 	}
 }
 
+.module--default,
 .module--transparent {
 	background-color: transparent;
 }
 
 .module--limited {
-	& > div {
-		max-width: 800px;
-	}
-}
-
-.module--decreased-padding {
-	& > div {
-		padding: 1rem;
+	& > .container {
+		max-width: var(--width-md2);
 	}
 }
 
 .module--edged {
-	& > div {
+	& > .container {
+		max-width: none;
+		margin: 0;
 		padding: 0;
+	}
+}
+
+.module--edged-block-start {
+	& > .container {
+		padding-block-start: 0;
+	}
+}
+
+.module--edged-block-end {
+	& > .container {
+		padding-block-end: 0;
 	}
 }

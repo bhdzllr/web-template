@@ -3,35 +3,28 @@
  */
 
 .container {
-	max-width: var(--width-site, 100%);
+	max-width: var(--container-block-size, 100%);
 	margin: 0 auto;
-	padding: var(--spacing-default);
+	padding-inline: var(--spacing-default);
 	box-sizing: border-box;
+	container-type: inline-size;
 }
 
-.container--xs {
-	max-width: var(--min-xs);
-}
+.container--xs  { max-width: var(--width-xs);  }
+.container--sm  { max-width: var(--width-sm);  }
+.container--sm2 { max-width: var(--width-sm2); }
+.container--md  { max-width: var(--width-md);  }
+.container--lg  { max-width: var(--width-lg);  }
+.container--xl  { max-width: var(--width-xl);  }
+.container--xxl { max-width: var(--width-xxl); }
 
-.container--sm {
-	max-width: var(--min-sm);
-}
-
-.container--sm2 {
-	max-width: var(--min-sm2);
-}
-
-.container--md {
-	max-width: var(--min-md);
-}
-
-.container--lg {
-	max-width: var(--min-lg);
-}
-
-.container--xl {
-	max-width: var(--min-xl);
-}
+.container--50ch { max-width: 50ch; }
+.container--55ch { max-width: 55ch; }
+.container--60ch { max-width: 60ch; }
+.container--65ch { max-width: 65ch; }
+.container--70ch { max-width: 70ch; }
+.container--75ch { max-width: 75ch; }
+.container--80ch { max-width: 80ch; }
 
 .container--no-width {
 	max-width: none;
@@ -41,7 +34,7 @@
 	padding: 0;
 }
 
-.container--px {
+.container--pi {
 	padding-inline: var(--spacing-default);
 
 	@media (min-width: 769px) {
@@ -49,40 +42,40 @@
 	}
 }
 
-.container--px1 {
-	padding-inline: 1rem;
+.container--pi1 {
+	padding-inline: var(--spacing-default);
 }
 
-.container--px15 {
-	padding-inline: 1.5rem;
+.container--pi15 {
+	padding-inline: calc(var(--spacing-default) * 1.5);
 }
 
-.container--px2 {
-	padding-inline: 2rem;
+.container--pi2 {
+	padding-inline: calc(var(--spacing-default) * 2);
 }
 
-.container--px3 {
-	padding-inline: 3rem;
+.container--pi3 {
+	padding-inline: calc(var(--spacing-default) * 3);
 }
 
-.container--py {
+.container--pb {
 	padding-block: var(--spacing-default);
 }
 
-.container--py1 {
-	padding-block: 1rem;
+.container--pb1 {
+	padding-block: var(--spacing-default);
 }
 
-.container--py15 {
-	padding-block: 1.5rem;
+.container--pb15 {
+	padding-block: calc(var(--spacing-default) * 1.5);
 }
 
-.container--py2 {
-	padding-block: 2rem;
+.container--pb2 {
+	padding-block: calc(var(--spacing-default) * 2);
 }
 
-.container--py3 {
-	padding-block: 3rem;
+.container--pb3 {
+	padding-block: calc(var(--spacing-default) * 3);
 }
 
 .container--content-box {

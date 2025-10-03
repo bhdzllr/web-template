@@ -1,0 +1,132 @@
+/**
+ * ********** Text **********
+ */
+
+::selection {
+	background: var(--color-selection);
+	text-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+	margin-block-start: 0;
+
+	line-height: 1.35;
+	text-wrap: balance;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+h1,
+.h1 {
+	font-size: 1.75em;
+
+	@media (min-width: 769px) {
+		font-size: 2.5em;
+	}
+}
+
+h2,
+.h2 {
+	margin-block-start: 1.35em;
+
+	font-size: 1.35em;
+
+	@media (min-width: 769px) {
+		font-size: 1.85em;
+	}
+}
+
+h3,
+.h3 {
+	margin-block-start: 1.15em;
+
+	font-size: 1.15em;
+
+	@media (min-width: 769px) {
+		font-size: 1.45em;
+	}
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+	margin-block-start: 1.05em;
+
+	font-size: 1.05em;
+
+	@media (min-width: 769px) {
+		font-size: 1.15em;
+	}
+}
+
+* > h1,
+* > h2,
+* > h3,
+* > h4,
+* > h5,
+* > h6,
+* > .h1,
+* > .h2,
+* > .h3,
+* > .h4,
+* > .h5,
+* > .h6 {
+	&:first-child {
+		margin-block-start: 0;
+	}
+}
+
+p,
+.p,
+ul,
+.ul,
+ol,
+.ol,
+dl,
+.dl,
+blockquote,
+.blockquote,
+pre,
+.pre,
+details,
+.details {
+	margin: 0;
+	margin-block-end: var(--spacing-default);
+
+	&:last-child {
+		margin-block-end: 0;
+	}
+}
+
+small {
+	display: inline-block;
+
+	color: var(--color-text-lighter);
+	font-size: 0.85em;
+	line-height: 1.35;
+
+	p & {
+		display: inline;
+	}
+}
+
+mark {
+	background: var(--color-mark);
+}
+
+abbr {
+	cursor: help;
+
+	&[title] {
+		text-decoration: underline dotted;
+	}
+}

@@ -1,13 +1,11 @@
-@import 'lib/settings/normalize.css';
 @import 'lib/settings/variables.css';
 
 /*@import 'styles/settings-variables.css';*/
 /*@import 'styles/settings-fonts.css';*/
 
 @import 'lib/components/body.css';
-@import 'lib/components/selection.css';
+@import 'lib/components/text.css';
 @import 'lib/components/link.css';
-@import 'lib/components/stretched-link.css';
 @import 'lib/components/image.css';
 @import 'lib/components/button.css';
 @import 'lib/components/form.css';
@@ -18,6 +16,7 @@
 @import 'lib/objects/stack.css';
 @import 'lib/objects/media.css';
 @import 'lib/objects/grid.css';
+@import 'lib/objects/stretched-link.css';
 @import 'lib/utils/text.css';
 @import 'lib/utils/display.css';
 @import 'lib/utils/visibility.css';
