@@ -1,14 +1,17 @@
 // import { addServiceWorker } from './lib/utils/service-worker';
-import langStrings from './lang.js';
+import { checkJavaScriptSupport } from './lib/utils/compatibility.js';
 import { getRootLocale, getLangStrings } from './lib/utils/i18n.js';
 import { AnalyticsOptOut, addAnalyticsCode } from './lib/modules/Analytics.js';
 
+import langStrings from './lang.js';
+
 document.addEventListener('DOMContentLoaded', async function (e) {
+
+	// addServiceWorker('/sw.js');
+	checkJavaScriptSupport();
 
 	const locale = getRootLocale();
 	const i18n = getLangStrings(locale, langStrings);
-
-	// addServiceWorker('/sw.js');
 
 	if (document.querySelector('.js-analytics-opt-out')) {
 		new AnalyticsOptOut({

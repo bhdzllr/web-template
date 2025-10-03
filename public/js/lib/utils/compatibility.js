@@ -1,5 +1,5 @@
 export function checkJavaScriptSupport() {
-	document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+	document.documentElement.classList.add('js');
 }
 
 export function hasModuleSupport() {

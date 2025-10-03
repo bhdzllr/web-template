@@ -4,6 +4,8 @@
 
 * Back to No Build
 * CSS Features: Nesting, Container Queries, Logical Properties
+* Remove JS check file, use CSS `@media (scripting: enabled)` instead,
+  but keep adding JS class.
 
 
 ## Version 5.0.0
