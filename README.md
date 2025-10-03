@@ -2,7 +2,7 @@
 
 This is a personal template to start a new front-end project.
 
-A server  can be started with `npm start`.
+A server can be started with `npm start`.
 The project can be deployed with `npm run deploy` but first needs SSH configuration
 and path adjustments, see deploy folder.
 

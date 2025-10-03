@@ -3,6 +3,7 @@
 ## Version 6.0.0
 
 * Back to No Build
+* CSS Features: Nesting, Container Queries, Logical Properties
 
 
 ## Version 5.0.0
