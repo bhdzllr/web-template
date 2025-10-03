@@ -5,7 +5,7 @@
 .stack {
 	& > * {
 		margin-top: 0;
-		margin-bottom: 1em;
+		margin-bottom: var(--spacing-default);
 	}
 
 	& > :last-child {

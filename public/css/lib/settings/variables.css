@@ -56,21 +56,40 @@
 
 	--font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-	--width-site: 1280px;
-	--spacing-default: 1rem;
-	--grid-max-col-size: 240px;
-	--grid-gap: 1rem;
+	--focus-outline: 2px solid var(--color-text);
+	--focus-outline-offset: 2px;
 
-	--min-xs: 321px;
-	--min-sm: 481px;
-	--min-sm2: 521px;
-	--min-md: 769px;
-	--min-lg: 961px;
-	--min-xl: 1201px;
+	--container-block-size: 1280px;
+	--spacing-default: 1.25em;
+	--spacing-stack: 1em;
+	--spacing-module-block: 1.5em;
+	--grid-max-col-size: 240px;
+	--grid-gap-row: 1rem;
+	--grid-gap-column: 1rem;
+	--grid-gap: var(--grid-gap-row) var(--grid-gap-column);
+
+	--width-xs: 320px;
+	--width-sm: 480px;
+	--width-sm2: 520px;
+	--width-md: 768px;
+	--width-md2: 800px;
+	--width-lg: 960px;
+	--width-xl: 1200px;
+	--width-xxl: 1440px;
+
+	--min-xs: calc(var(--width-xs) + 1px);
+	--min-sm: calc(var(--width-sm) + 1px);
+	--min-sm2: calc(var(--width-sm2) + 1px);
+	--min-md: calc(var(--width-md) + 1px);
+	--min-md2: calc(var(--width-md2) + 1px);
+	--min-lg: calc(var(--width-lg) + 1px);
+	--min-xl: calc(var(--width-xl) + 1px);
+	--min-xxl: calc(var(--width-xxl) + 1px);
 
 	accent-color: var(--color-primary);
 }
 
+/*
 @custom-media --min-xs (min-width: 321px);
 @custom-media --min-sm (min-width: 481px);
 @custom-media --min-md (min-width: 769px);
@@ -82,3 +101,4 @@
 @custom-media --max-md (max-width: 768px);
 @custom-media --max-lg (max-width: 960px);
 @custom-media --max-xl (max-width: 1200px);
+*/
