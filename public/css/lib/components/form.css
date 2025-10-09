@@ -48,11 +48,11 @@ progress {
 [type="time"],
 [type="datetime-local"],
 [type="color"] {
-	min-height: 46px; /* iOS needs height if there is no default value. */
+	min-block-size: 46px; /* iOS needs height if there is no default value. */
 }
 
 input::-webkit-date-and-time-value {
-	   text-align: left; /* Align input value on left side of field for iOS */
+	   text-align: start; /* Align input value on start side of field for iOS */
 }
 
 textarea {
@@ -60,7 +60,7 @@ textarea {
 }
 
 textarea:not([rows]) {
-  min-height: 10em;
+  min-block-size: 10em;
 }
 
 [type="search"] {
@@ -80,7 +80,7 @@ textarea:not([rows]) {
 
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
-	height: auto;
+	min-block-size: auto;
 }
 
 ::-webkit-search-decoration {
@@ -91,7 +91,7 @@ textarea:not([rows]) {
 	margin: 0 auto;
 
 	& > :last-child {
-		margin-bottom: 0;
+		margin-block-end: 0;
 	}
 
 	& fieldset {
@@ -108,13 +108,13 @@ textarea:not([rows]) {
 		}
 
 		& > :last-child {
-			margin-bottom: 0;
+			margin-block-end: 0;
 		}
 	}
 
 	& label {
 		display: block;
-		padding-bottom: 0.15em;
+		padding-block-end: 0.15em;
 
 		line-height: 1.35;
 	}
@@ -157,8 +157,8 @@ textarea:not([rows]) {
 	}
 
 	& select {
-		min-width: 3em;
-		padding-right: 1.75em;
+		min-inline-size: 3em;
+		padding-inline-end: 1.75em;
 
 		-webkit-appearance: none; /* Remove shadow, without styling select looks like regular input (no arrow) */
 		/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M0 0l4 4 4-4h-8z' transform='translate(0 2)' fill='%23333333' /%3E%3C/svg%3E"); */
@@ -168,7 +168,7 @@ textarea:not([rows]) {
 		background-attachment: scroll;
 		background-size: 0.625em;
 		box-shadow: none;
-		border-bottom-width: 2px;
+		border-block-end-width: 2px;
 
 		&[multiple] {
 			background-image: none;
@@ -192,8 +192,8 @@ textarea:not([rows]) {
 	& [type="radio"] {
 		position: absolute;
 
-		width: 0.1px;
-		height: 0.1px;
+		inline-size: 0.1px;
+		block-size: 0.1px;
 
 		appearance: none;
 		opacity: 0.00001;
@@ -201,7 +201,7 @@ textarea:not([rows]) {
 		& + label {
 			position: relative;
 
-			margin-left: 1.5em;
+			margin-inline-start: 1.5em;
 
 			cursor: pointer;
 		}
@@ -209,13 +209,13 @@ textarea:not([rows]) {
 		& + label::before,
 		&:checked + label::after {
 			position: absolute;
-			top: 50%;
-			left: -1.5em;
+			inset-block-start: 50%;
+			inset-inline-end: -1.5em;
 
 			content: '';
 			display: inline-block;
-			width: 1em;
-			height: 1em;
+			inline-size: 1em;
+			block-size: 1em;
 
 			border: 1px solid var(--color-text-lighter);
 			box-shadow: inset 1px 1px 1px var(--color-mono-10);
@@ -269,7 +269,7 @@ textarea:not([rows]) {
 		appearance: none;
 		background: transparent;
 
-		--slider-track-height: 0.5em;
+		--slider-track-block-size: 0.5em;
 		--slider-thumb-size: 1em;
 		--slider-track-border-radius: 0.15em;
 		--slider-color-track: var(--color-mono-30);
@@ -311,9 +311,9 @@ textarea:not([rows]) {
 
 		&::-webkit-slider-thumb {
 			/* Slider Thumb */
-			width: var(--slider-thumb-size);
-			height: var(--slider-thumb-size);
-			margin-top: calc(var(--slider-track-height) - var(--slider-thumb-size) / 2);
+			inline-size: var(--slider-thumb-size);
+			block-size: var(--slider-thumb-size);
+			margin-block-start: calc(var(--slider-track-block-size) - var(--slider-thumb-size) / 2);
 
 			appearance: none;
 			-webkit-appearance: none;
@@ -324,9 +324,9 @@ textarea:not([rows]) {
 
 		&::-moz-range-thumb {
 			/* Slider Thumb */
-			width: var(--slider-thumb-size);
-			height: var(--slider-thumb-size);
-			margin-top: calc(var(--slider-track-height) - var(--slider-thumb-size) / 2);
+			inline-size: var(--slider-thumb-size);
+			block-size: var(--slider-thumb-size);
+			margin-block-start: calc(var(--slider-track-block-size) - var(--slider-thumb-size) / 2);
 
 			appearance: none;
 			-webkit-appearance: none;
@@ -337,9 +337,9 @@ textarea:not([rows]) {
 
 		&::-ms-thumb {
 			/* Slider Thumb */
-			width: var(--slider-thumb-size);
-			height: var(--slider-thumb-size);
-			margin-top: calc(var(--slider-track-height) - var(--slider-thumb-size) / 2);
+			inline-size: var(--slider-thumb-size);
+			block-size: var(--slider-thumb-size);
+			margin-block-start: calc(var(--slider-track-block-size) - var(--slider-thumb-size) / 2);
 
 			appearance: none;
 			-webkit-appearance: none;
@@ -347,15 +347,15 @@ textarea:not([rows]) {
 			border: 1px solid var(--slider-color-thumb-border);
 			border-radius: 50%;
 
-			margin-top: 0;
-			margin-right: 0.15em;
-			margin-left: 0.15em;
+			margin-block-start: 0;
+			margin-inline-start: 0.15em;
+			margin-inline-end: 0.15em;
 		}
 
 		&::-webkit-slider-runnable-track {
 			/* Slider Track */
-			width: 100%;
-			height: var(--slider-track-height);
+			inline-size: 100%;
+			block-size: var(--slider-track-block-size);
 
 			appearance: none;
 			-webkit-appearance: none;
@@ -367,8 +367,8 @@ textarea:not([rows]) {
 
 		&::-moz-range-track {
 			/* Slider Track */
-			width: 100%;
-			height: var(--slider-track-height);
+			inline-size: 100%;
+			block-size: var(--slider-track-block-size);
 
 			appearance: none;
 			-webkit-appearance: none;
@@ -380,8 +380,8 @@ textarea:not([rows]) {
 
 		&::-ms-track {
 			/* Slider Track */
-			width: 100%;
-			height: var(--slider-track-height);
+			inline-size: 100%;
+			block-size: var(--slider-track-block-size);
 
 			appearance: none;
 			-webkit-appearance: none;
@@ -458,11 +458,11 @@ textarea:not([rows]) {
 
 		&::after {
 			position: absolute;
-			top: 0;
+			inset-block-start: 0;
 
 			display: block;
-			width: 100%;
-			height: 100%;
+			inline-size: 100%;
+			block-size: 100%;
 			content: '';
 
 			background-color: rgba(255, 255, 255, 0.45);
@@ -483,13 +483,13 @@ textarea:not([rows]) {
 	& input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
 	& textarea,
 	& select {
-		width: 100%;
+		inline-size: 100%;
 	}
 }
 
 .form-assistive {
 	display: block;
-	padding-bottom: 0.15em;
+	padding-block-end: 0.15em;
 
 	font-size: 0.8em;
 	color: var(--color-text-lighter);
@@ -499,7 +499,7 @@ textarea:not([rows]) {
 .form-assistive--invalid {
 	display: block;
 	margin: 0;
-	padding-top: 0.25em;
+	padding-block-start: 0.25em;
 
 	color: var(--color-negative);
 	font-size: 1em;

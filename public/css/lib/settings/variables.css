@@ -5,7 +5,7 @@
 :root {
 	--color-neutral: #ffffff;
 
-	--color-mono: #000000;
+	--color-mono:    #000000;
 	--color-mono-90: #1a1a1a;
 	--color-mono-85: #262626;
 	--color-mono-80: #333333;
@@ -17,7 +17,7 @@
 	--color-mono-20: #cccccc;
 	--color-mono-15: #d9d9d9;
 	--color-mono-10: #e5e5e5;
-	--color-mono-5: #f2f2f2;
+	--color-mono-5:  #f2f2f2;
 
 	--color-text: #333333;
 	--color-text-i: #ffffff;
@@ -68,23 +68,23 @@
 	--grid-gap-column: 1rem;
 	--grid-gap: var(--grid-gap-row) var(--grid-gap-column);
 
-	--width-xs: 320px;
-	--width-sm: 480px;
-	--width-sm2: 520px;
-	--width-md: 768px;
-	--width-md2: 800px;
-	--width-lg: 960px;
-	--width-xl: 1200px;
-	--width-xxl: 1440px;
+	--inline-size-xs:   320px;
+	--inline-size-sm:   480px;
+	--inline-size-sm2:  520px;
+	--inline-size-md:   768px;
+	--inline-size-md2:  800px;
+	--inline-size-lg:   960px;
+	--inline-size-xl:  1200px;
+	--inline-size-xxl: 1440px;
 
-	--min-xs: calc(var(--width-xs) + 1px);
-	--min-sm: calc(var(--width-sm) + 1px);
-	--min-sm2: calc(var(--width-sm2) + 1px);
-	--min-md: calc(var(--width-md) + 1px);
-	--min-md2: calc(var(--width-md2) + 1px);
-	--min-lg: calc(var(--width-lg) + 1px);
-	--min-xl: calc(var(--width-xl) + 1px);
-	--min-xxl: calc(var(--width-xxl) + 1px);
+	--min-xs:  calc(var(--inline-size-xs)  + 1px);
+	--min-sm:  calc(var(--inline-size-sm)  + 1px);
+	--min-sm2: calc(var(--inline-size-sm2) + 1px);
+	--min-md:  calc(var(--inline-size-md)  + 1px);
+	--min-md2: calc(var(--inline-size-md2) + 1px);
+	--min-lg:  calc(var(--inline-size-lg)  + 1px);
+	--min-xl:  calc(var(--inline-size-xl)  + 1px);
+	--min-xxl: calc(var(--inline-size-xxl) + 1px);
 
 	accent-color: var(--color-primary);
 }

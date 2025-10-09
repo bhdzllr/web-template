@@ -4,6 +4,6 @@
 
 img,
 picture {
-	max-width: 100%;
-	height: auto;
+	max-inline-size: 100%;
+	block-size: auto;
 }

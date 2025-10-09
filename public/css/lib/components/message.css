@@ -3,13 +3,14 @@
  */
 
 .message-container {
-	width: 100%;
+	inline-size: 100%;
 	box-sizing: border-box;
 }
 
 .message {
-	width: 100%;
-	padding: 1em;
+	inline-size: 100%;
+	padding-block: 1em;
+	padding-inline: 1em;
 	box-sizing: border-box;
 
 	background-color: var(--color-text);

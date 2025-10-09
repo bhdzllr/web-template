@@ -28,6 +28,7 @@ h1,
 
 	@media (min-width: 769px) {
 		font-size: 2.5em;
+		color: red;
 	}
 }
 

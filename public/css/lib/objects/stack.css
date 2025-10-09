@@ -4,11 +4,11 @@
 
 .stack {
 	& > * {
-		margin-top: 0;
-		margin-bottom: var(--spacing-default);
+		margin-block-start: 0;
+		margin-block-end: var(--spacing-default);
 	}
 
 	& > :last-child {
-		margin-bottom: 0;
+		margin-block-end: 0;
 	}
 }

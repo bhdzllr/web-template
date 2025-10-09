@@ -2,14 +2,14 @@
  * ********** Box Alignment **********
  */
 
-.align-left {
-	float: left;
+.align-inline-start {
+	float: inline-start;
 }
 
 .align-center {
 	margin: 0 auto;
 }
 
-.align-right {
-	float: right;
+.align-inline-end {
+	float: inline-end;
 }

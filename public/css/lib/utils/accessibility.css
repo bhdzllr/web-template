@@ -18,14 +18,14 @@
 
 .offscreen {
 	position: absolute;
-	left: -1000em;
+	inset-inline-start: -1000em;
 }
 
 .screen-reader-text {
 	position: absolute;
 
-	width: 1px;
-	height: 1px;
+	inline-size: 1px;
+	block-size: 1px;
 	margin: -1px;
 	padding: 0;
 	overflow: hidden;
@@ -39,8 +39,8 @@
 	&:focus {
 		position: static;
 
-		width: auto;
-		height: auto;
+		inline-size: auto;
+		block-size: auto;
 		margin: 0;
 		overflow: visible;
 

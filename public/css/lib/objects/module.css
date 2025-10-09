@@ -23,13 +23,13 @@
 
 .module--limited {
 	& > .container {
-		max-width: var(--width-md2);
+		max-inline-size: var(--inline-size-md2);
 	}
 }
 
 .module--edged {
 	& > .container {
-		max-width: none;
+		max-inline-size: none;
 		margin: 0;
 		padding: 0;
 	}

@@ -7,47 +7,47 @@
 .m-2 { margin: 2em; }
 .m-3 { margin: 3em; }
 
-.mt-0 { margin-top: 0; }
-.mt-1 { margin-top: 1em; }
-.mt-2 { margin-top: 2em; }
-.mt-3 { margin-top: 3em; }
+.mbs-0 { margin-block-start: 0; }
+.mbs-1 { margin-block-start: 1em; }
+.mbs-2 { margin-block-start: 2em; }
+.mbs-3 { margin-block-start: 3em; }
 
-.mr-0 { margin-right: 0; }
-.mr-1 { margin-right: 1em; }
-.mr-2 { margin-right: 2em; }
-.mr-3 { margin-right: 3em; }
+.mbe-0 { margin-block-end: 0; }
+.mbe-1 { margin-block-end: 1em; }
+.mbe-2 { margin-block-end: 2em; }
+.mbe-3 { margin-block-end: 3em; }
 
-.mb-0 { margin-bottom: 0; }
-.mb-1 { margin-bottom: 1em; }
-.mb-2 { margin-bottom: 2em; }
-.mb-3 { margin-bottom: 3em; }
+.mis-0 { margin-inline-start: 0; }
+.mis-1 { margin-inline-start: 1em; }
+.mis-2 { margin-inline-start: 2em; }
+.mis-3 { margin-inline-start: 3em; }
 
-.ml-0 { margin-left: 0; }
-.ml-1 { margin-left: 1em; }
-.ml-2 { margin-left: 2em; }
-.ml-3 { margin-left: 3em; }
+.mie-0 { margin-inline-end: 0; }
+.mie-1 { margin-inline-end: 1em; }
+.mie-2 { margin-inline-end: 2em; }
+.mie-3 { margin-inline-end: 3em; }
 
 .p-0 { padding: 0; }
 .p-1 { padding: 1em; }
 .p-2 { padding: 2em; }
 .p-3 { padding: 3em; }
 
-.pt-0 { padding-top: 0; }
-.pt-1 { padding-top: 1em; }
-.pt-2 { padding-top: 2em; }
-.pt-3 { padding-top: 3em; }
+.pbs-0 { padding-block-start: 0; }
+.pbs-1 { padding-block-start: 1em; }
+.pbs-2 { padding-block-start: 2em; }
+.pbs-3 { padding-block-start: 3em; }
 
-.pr-0 { padding-right: 0; }
-.pr-1 { padding-right: 1em; }
-.pr-2 { padding-right: 2em; }
-.pr-3 { padding-right: 3em; }
+.pbe-0 { padding-block-end: 0; }
+.pbe-1 { padding-block-end: 1em; }
+.pbe-2 { padding-block-end: 2em; }
+.pbe-3 { padding-block-end: 3em; }
 
-.pb-0 { padding-bottom: 0; }
-.pb-1 { padding-bottom: 1em; }
-.pb-2 { padding-bottom: 2em; }
-.pb-3 { padding-bottom: 3em; }
+.pis-0 { padding-inline-start: 0; }
+.pis-1 { padding-inline-start: 1em; }
+.pis-2 { padding-inline-start: 2em; }
+.pis-3 { padding-inline-start: 3em; }
 
-.pl-0 { padding-left: 0; }
-.pl-1 { padding-left: 1em; }
-.pl-2 { padding-left: 2em; }
-.pl-3 { padding-left: 3em; }
+.pie-0 { padding-inline-end: 0; }
+.pie-1 { padding-inline-end: 1em; }
+.pie-2 { padding-inline-end: 2em; }
+.pie-3 { padding-inline-end: 3em; }
