@@ -1,3 +1,6 @@
+/**
+ * Adapter/Wrapper for easy local storage access
+ */
 export const localStorageAdapter = {
 
 	set(key, value) {
