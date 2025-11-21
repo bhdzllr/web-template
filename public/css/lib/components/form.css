@@ -443,12 +443,12 @@ textarea:not([rows]) {
 				}
 			}
 
-			&:valid + .form__assistive--invalid {
+			&:valid + .form-assistive--invalid {
 				display: none;
 			}
 		}
 
-		& .form__assistive--invalid {
+		& .form-assistive--invalid {
 			display: block;
 		}
 	}
@@ -497,7 +497,7 @@ textarea:not([rows]) {
 }
 
 .form-assistive--invalid {
-	display: block;
+	display: none;
 	margin: 0;
 	padding-block-start: 0.25em;
 

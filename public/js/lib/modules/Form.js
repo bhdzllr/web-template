@@ -1,37 +1,48 @@
+/**
+ * Helper class to set or get form values and manually validate form.
+ * Manual validation needs `novalidate` on form element.
+ */
 export class Form {
+
+	static classNameValidated = 'form--validated';
+
+	#formElement;
+	#submittedCallback;
+	#initialClassList;
 	
 	constructor(formElement, submittedCallback) {
-		this.formElement = formElement;
-		this.submittedCallback = submittedCallback;
-		this.initialClassList = formElement.classList;
+		this.#formElement = formElement;
+		this.#submittedCallback = submittedCallback;
+		this.#initialClassList = formElement.classList;
 
-		this.initListeners();
+		this.#initListeners();
 	}
 
-	initListeners() {
-		this.formElement.addEventListener('submit', (e) => {
+	#initListeners() {
+		this.#formElement.addEventListener('submit', (e) => {
 			e.preventDefault();
 
 			if (this.isValid()) {
-				this.submittedCallback();
+				this.#submittedCallback();
 			}
 		});
 	}
 
 	setValues(values) {
 		for (let key in values) {
-			if (this.formElement.querySelector(`[name="${key}"]`)) {
-				this.formElement.querySelector(`[name="${key}"]`).value = values[key];
+			if (this.#formElement.querySelector(`[name="${key}"]`)) {
+				this.#formElement.querySelector(`[name="${key}"]`).value = values[key];
 			}
 		}
 	}
 
 	getValues() {
-		const formControls = this.formElement.querySelectorAll('input, textarea, select');
+		const formControls = this.#formElement.querySelectorAll('input, textarea, select');
 		const values = [];
 
 		for (let i = 0; i < formControls.length; i++) {
 			const control = formControls[i];
+			if (!control.name) continue;
 
 			switch (control.getAttribute('type')) {
 				case 'checkbox':
@@ -69,22 +80,13 @@ export class Form {
 	}
 
 	isValid() {
-		return isFormValid(this.formElement);
+		this.#formElement.classList.add(Form.classNameValidated);
+		return this.#formElement.checkValidity() === true;
 	}
 
-	reset(classesToRemove = []) {
-		this.formElement.reset();
-		this.formElement.classList.remove(...classesToRemove);
+	reset() {
+		this.#formElement.reset();
+		this.#formElement.classList = this.#initialClassList;
 	}
 
-}
-
-// Don't forget using "novalidate" attribute on form that is validated manually
-export function isFormValid(formElement, classNameValidated = 'form--validated') {
-	if (typeof document.createElement('input').checkValidity == 'function') {
-		formElement.classList.add(classNameValidated);
-		return formElement.checkValidity() === true;
-	}
-
-	return true; // Return true if browser doesn't support `checkValidty()`, we need to check on server anyway. 
 }
