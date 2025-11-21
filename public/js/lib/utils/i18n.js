@@ -11,6 +11,16 @@ export function findLocale(element, fallbackLocale = 'en') {
 	return fallbackLocale;
 }
 
+/**
+ * Create i18n lang string array.
+ * 
+ * @example
+ * import langStrings from './lang.js';
+ * 
+ * const locale = getRootLocale();
+ * const i18n = getLangStrings(locale, langStrings);
+ * console.log(i18n['general.close']);
+ */
 export function getLangStrings(locale, langStrings) {
 	if (langStrings[locale]) return langStrings[locale];
 }

@@ -3,21 +3,13 @@ import { checkJavaScriptSupport } from './lib/utils/compatibility.js';
 import { getRootLocale, getLangStrings } from './lib/utils/i18n.js';
 import { AnalyticsOptOut, addAnalyticsCode } from './lib/modules/Analytics.js';
 
-import langStrings from './lang.js';
-
 document.addEventListener('DOMContentLoaded', async function (e) {
 
 	// addServiceWorker('/sw.js');
 	checkJavaScriptSupport();
 
-	const locale = getRootLocale();
-	const i18n = getLangStrings(locale, langStrings);
-
 	if (document.querySelector('.js-analytics-opt-out')) {
-		new AnalyticsOptOut({
-			button: document.querySelector('.js-analytics-opt-out'),
-			i18n,
-		});
+		new AnalyticsOptOut(document.querySelector('.js-analytics-opt-out'));
 	}
 
 	addAnalyticsCode(function () {
