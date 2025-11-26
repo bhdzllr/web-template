@@ -56,7 +56,7 @@ export class AnalyticsOptOut {
 
 			alert(this.#button.dataset.textDisableAlert);
 		}, false);
-}
+	}
 
 }
 
