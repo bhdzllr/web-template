@@ -1,6 +1,5 @@
 // import { addServiceWorker } from './lib/utils/service-worker';
 import { checkJavaScriptSupport } from './lib/utils/compatibility.js';
-import { getRootLocale, getLangStrings } from './lib/utils/i18n.js';
 import { AnalyticsOptOut, addAnalyticsCode } from './lib/modules/Analytics.js';
 
 document.addEventListener('DOMContentLoaded', async function (e) {
