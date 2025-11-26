@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 6.0.1
+
+* Update Service Worker cached files
+
+
 ## Version 6.0.0
 
 * Back to No Build

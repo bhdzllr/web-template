@@ -1,12 +1,9 @@
 const CACHE_NAME = 'website-cache-v1';
 const FILES_TO_CACHE = [
-	'/css/style.min.css',
-	'/js/lib/js-check.js',
-	'/js/main.min.js',
+	'/css/main.css',
+	'/css/style.css',
+	'/js/main.js',
 	'/site.webmanifest',
-	'/browserconfig.xml',
-	'/tile.png',
-	'/tile-wide.png',
 	'/icon.png',
 ];
 
