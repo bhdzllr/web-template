@@ -1,6 +1,6 @@
 {
   "name": "web-template",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Front-end web template",
   "private": true,
   "engines": {

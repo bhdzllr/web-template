@@ -1,9 +1,5 @@
 # Changelog
 
-## Version 6.0.1
-
-* Update Service Worker cached files
-
 
 ## Version 6.0.0
 
@@ -15,6 +11,7 @@
 * Remove PageVisibiliyObserver because Page Visibility API is widely available.
 * Remove Dialog module, use native HTLM `<dialog>`. Add utils for dialogs.
 * Remove Tabs module, because it's in its own repository.
+* Update Service Worker cached files
 
 
 ## Version 5.0.0
