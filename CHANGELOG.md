@@ -7,6 +7,7 @@
   The `isFocusable()` function was only used in the removed DialogModal module
   and the native `<dialog>` element should not need this function.
 * Remove JS compatibility utils.
+* Refactor JS initialization.
 
 
 ## Version 6.0.0

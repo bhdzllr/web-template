@@ -76,15 +76,21 @@ export function isOptOutActive() {
 		|| document.cookie.includes(`${AnalyticsOptOut.disableString}=true`);
 }
 
+export function disableAnalytics() {
+	window[AnalyticsOptOut.disableString] = true;
+	document.cookie = AnalyticsOptOut.disableString + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; SameSite=Lax; Secure';
+}
+
+export function initAnalyticsOptOut(button) {
+	if (button) {
+		new AnalyticsOptOut(button);
+	}
+}
+
 export function addAnalyticsCode(codeCallback) {
 	if (isOptOutActive()) {
 		window[AnalyticsOptOut.disableString] = true;
 	} else {
 		codeCallback();
 	}
-}
-
-export function disableAnalytics() {
-	window[AnalyticsOptOut.disableString] = true;
-	document.cookie = AnalyticsOptOut.disableString + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; SameSite=Lax; Secure';
 }

@@ -1,14 +1,13 @@
-// import { addServiceWorker } from './lib/utils/service-worker';
-import { AnalyticsOptOut, addAnalyticsCode } from './lib/modules/Analytics.js';
+import { addAnalyticsCode, initAnalyticsOptOut } from './lib/modules/Analytics.js';
 
 document.addEventListener('DOMContentLoaded', async function (e) {
 
 	document.documentElement.classList.add('js');
 
-	// addServiceWorker('/sw.js');
-
-	if (document.querySelector('.js-analytics-opt-out')) {
-		new AnalyticsOptOut(document.querySelector('.js-analytics-opt-out'));
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function () {
+			navigator.serviceWorker.register('/sw.js');
+		});
 	}
 
 	addAnalyticsCode(function () {
@@ -25,5 +24,7 @@ document.addEventListener('DOMContentLoaded', async function (e) {
 		// 	'data-id': 'siteId',
 		// });
 	});
+
+	initAnalyticsOptOut(document.querySelector('.js-analytics-opt-out'));
 
 });
