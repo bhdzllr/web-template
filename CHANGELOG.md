@@ -6,7 +6,7 @@
 * Remove JS accessibility utils: If it is a button, use a button.
   The `isFocusable()` function was only used in the removed DialogModal module
   and the native `<dialog>` element should not need this function.
-
+* Remove JS compatibility utils.
 
 
 ## Version 6.0.0

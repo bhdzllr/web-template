@@ -1,11 +1,11 @@
 // import { addServiceWorker } from './lib/utils/service-worker';
-import { checkJavaScriptSupport } from './lib/utils/compatibility.js';
 import { AnalyticsOptOut, addAnalyticsCode } from './lib/modules/Analytics.js';
 
 document.addEventListener('DOMContentLoaded', async function (e) {
 
+	document.documentElement.classList.add('js');
+
 	// addServiceWorker('/sw.js');
-	checkJavaScriptSupport();
 
 	if (document.querySelector('.js-analytics-opt-out')) {
 		new AnalyticsOptOut(document.querySelector('.js-analytics-opt-out'));
