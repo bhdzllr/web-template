@@ -8,6 +8,7 @@
   but keep adding JS class. Use Rule of least Power and Progressive Enhancement.
 * Remove FlashMessenger because it's bad for Accessibility and Usability.
 * Remove PageVisibiliyObserver because Page Visibility API is widely available.
+* Remove Dialog module, use native HTLM `<dialog>`. Add utils for dialogs.
 
 
 ## Version 5.0.0
