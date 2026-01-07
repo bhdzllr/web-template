@@ -18,23 +18,24 @@ export function addRangeSlidersProgressIndicator(selector = '.form [type="range"
 		document.head.appendChild(style);
 	}
 
-	const updateSliderProgress = function (slider) {
+	const updateSliderProgress = function (slider, output) {
 		const min = slider.min || 0;
 		const max = slider.max || 100;
 		const value = slider.value;
 		const progress = ((value - min) / (max - min)) * 100;
 
-		console.log(min, max, value);
+		output.textContent = value;
 
 		slider.style.setProperty('--slider-progress', progress + '%');
 	} 
 
 	const sliders = document.querySelectorAll(selector);
 	sliders.forEach(function (slider) {
-		updateSliderProgress(slider);
+		const output = slider.parentElement.querySelector('output');
+		updateSliderProgress(slider, output);
 
-		slider.addEventListener('input', function () {
-			updateSliderProgress(this);
+		slider.addEventListener('input', () => {
+			updateSliderProgress(slider, output);
 		});
 	})
 }
