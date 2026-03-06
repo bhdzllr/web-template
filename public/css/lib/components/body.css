@@ -16,9 +16,9 @@ body {
 }
 
 html {
-	text-size-adjust: none;
-	-moz-text-size-adjust: none;
-	-webkit-text-size-adjust: none; /* iOS: Prevent text size adjust after device orientation change. */
+	text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%; /* iOS: Prevent text size adjust after device orientation change. */
 }
 
 summary {
