@@ -1,3 +1,13 @@
+/**
+ * Get locale form root lang attribute.
+ * 
+ * @example
+ * import langStrings from './lang.js';
+ * 
+ * const locale = getRootLocale();
+ * const i18n = langStrings[locale] ?? {};
+ * console.log(i18n['general.close']);
+ */
 export function getRootLocale() {
 	return document.documentElement.getAttribute('lang') ? document.documentElement.getAttribute('lang') : 'en';
 }
@@ -11,16 +21,14 @@ export function findLocale(element, fallbackLocale = 'en') {
 	return fallbackLocale;
 }
 
-/**
- * Create i18n lang string array.
- * 
- * @example
- * import langStrings from './lang.js';
- * 
- * const locale = getRootLocale();
- * const i18n = getLangStrings(locale, langStrings);
- * console.log(i18n['general.close']);
- */
-export function getLangStrings(locale, langStrings) {
-	if (langStrings[locale]) return langStrings[locale];
+export function getI18nData(element, attributeName = 'message') {
+	const lowerFirst = text => text.charAt(0).toLowerCase() + text.slice(1);
+	const messages = {};
+	for (const name in element.dataset) {
+		if (name.startsWith(attributeName)) {
+			const key = name.replace(attributeName, '');
+			messages[lowerFirst(key)] = element.dataset[name];
+		}
+	}
+	return messages;
 }
