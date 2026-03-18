@@ -250,12 +250,13 @@ if (new == old) {
 							E-Mail
 							<span class="form-assistive">Required</span>
 						</label>
-						<input type="email" name="email" id="email" required /> <!-- Avoid placeholders for usability -->
-						<span class="form-assistive form-assistive--invalid">Please enter a valid e-mail address.</span>
+						<input type="email" name="email" id="email" required aria-invalid="true" aria-describedby="email-invalid" /> <!-- Avoid placeholders for usability -->
+						<span id="email-invalid" class="form-assistive form-assistive--invalid" aria-live="polite">Please enter a valid e-mail address.</span> <!-- For JS validation use "data-message", keep text empty and add after validation -->
 					</p>
 
 					<p>
 						<label for="name">Name</label>
+						<span class="form-assistive">Please enter your full name.</span>
 						<input type="text" name="name" id="name" />
 					</p>
 
